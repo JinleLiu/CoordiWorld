@@ -1,0 +1,14 @@
+# Project artifacts
+data/
+outputs/
+checkpoints/
+wandb/
+
+# Python environment
+.venv/
+__pycache__/
+
+# Model weights / checkpoints
+*.pt
+*.pth
+*.ckpt
