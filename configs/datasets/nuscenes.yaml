@@ -1,0 +1,14 @@
+dataset: nuscenes
+split: val
+max_samples: 10
+root: ${NUSCENES_ROOT}
+candidate_pool:
+  nominal: true
+  speed_scaled: [0.75, 1.0, 1.25]
+  lateral_shift: [-1.0, 0.0, 1.0]
+  curvature_perturbed: [-0.02, 0.0, 0.02]
+  horizon_steps: 6
+  seed: 0
+notes:
+  devkit_required: true
+  used_as_scene_summary_source: true

@@ -4,6 +4,7 @@ import subprocess
 import sys
 
 COMMANDS = [
+    ["-m", "coordiworld.cli.validate_data", "--help"],
     ["-m", "coordiworld.cli.build_scene_summary", "--help"],
     ["-m", "coordiworld.cli.train_stage1", "--help"],
     ["-m", "coordiworld.cli.train_stage2", "--help"],

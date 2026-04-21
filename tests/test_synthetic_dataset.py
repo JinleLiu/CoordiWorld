@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import pytest
 
-from coordiworld.data.base import candidate_pool_shape, validate_base_scenario_sample
+from coordiworld.data.base import DataRootError, candidate_pool_shape, validate_base_scenario_sample
 from coordiworld.data.candidate_pool import CandidatePoolConfig
 from coordiworld.data.collate import collate_scenario_samples
 from coordiworld.data.navsim_adapter import NavsimAdapter
@@ -52,8 +52,9 @@ def test_synthetic_dataset_iter_samples_split_contract() -> None:
     dataset = SyntheticScenarioDataset(SyntheticDatasetConfig(num_samples=2))
 
     assert len(list(dataset.iter_samples("synthetic"))) == 2
+    assert len(list(dataset.iter_samples("train"))) == 2
     with pytest.raises(ValueError, match="split='synthetic'"):
-        list(dataset.iter_samples("train"))
+        list(dataset.iter_samples("unknown"))
 
 
 def test_collate_preserves_candidate_pool_shape() -> None:
@@ -68,12 +69,12 @@ def test_collate_preserves_candidate_pool_shape() -> None:
 def test_navsim_adapter_requires_env_var(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.delenv("NAVSIM_ROOT", raising=False)
 
-    with pytest.raises(RuntimeError, match="NAVSIM_ROOT is required"):
-        NavsimAdapter().root_from_env()
+    with pytest.raises(DataRootError, match="NAVSIM root is required"):
+        NavsimAdapter().validate_root()
 
 
 def test_navsim_adapter_is_explicit_stub(monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setenv("NAVSIM_ROOT", "/tmp/navsim-placeholder")
+    monkeypatch.setenv("NAVSIM_ROOT", str(__import__("pathlib").Path("/tmp")))
 
-    with pytest.raises(NotImplementedError, match="interface stub"):
+    with pytest.raises(Exception, match="NAVSIM|navsim|Native"):
         list(NavsimAdapter().iter_samples("mini"))

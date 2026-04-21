@@ -7,7 +7,11 @@ import math
 import pytest
 
 from coordiworld.data.base import candidate_pool_shape
-from coordiworld.data.candidate_pool import CandidatePoolConfig, build_candidate_pool
+from coordiworld.data.candidate_pool import (
+    CandidatePoolConfig,
+    build_candidate_pool,
+    candidate_pool_config_from_mapping,
+)
 
 
 def test_candidate_pool_contains_required_variant_families() -> None:
@@ -96,3 +100,19 @@ def test_candidate_pool_rejects_empty_variant_set() -> None:
                 curvature_perturbed=(),
             )
         )
+
+
+def test_candidate_pool_config_from_mapping_matches_protocol_fields() -> None:
+    config = candidate_pool_config_from_mapping(
+        {
+            "nominal": True,
+            "speed_scaled": [0.8, 1.2],
+            "lateral_shift": [-1.0, 1.0],
+            "curvature_perturbed": [-0.05, 0.05],
+            "horizon_steps": 3,
+        }
+    )
+
+    pool = build_candidate_pool(config)
+
+    assert pool.shape == (7, 3, 3)

@@ -3,14 +3,29 @@
 from __future__ import annotations
 
 import math
+import os
 from dataclasses import dataclass, field
 from numbers import Real
-from typing import Any
+from pathlib import Path
+from typing import Any, Literal, Protocol
 
 from coordiworld.scene_summary.schema import SceneSummary
 
 Trajectory = list[list[float]]
 CandidateTrajectories = list[Trajectory]
+DatasetSplit = Literal["train", "val", "test", "mini", "synthetic"]
+
+
+class DataRootError(RuntimeError):
+    """Raised when a required dataset root is missing or inaccessible."""
+
+
+class MissingDependencyError(RuntimeError):
+    """Raised when an optional official dataset dependency is unavailable."""
+
+
+class DatasetFormatError(ValueError):
+    """Raised when an adapter cannot parse a dataset record."""
 
 
 @dataclass(frozen=True)
@@ -19,6 +34,15 @@ class ScenarioLabels:
     violation: bool
     pseudo_sim_score: float
     progress: float
+
+
+@dataclass(frozen=True)
+class FutureAgentState:
+    """Optional typed future-agent trajectory record for future adapters."""
+
+    agent_id: str
+    trajectory: Trajectory
+    metadata: dict[str, object] = field(default_factory=dict)
 
 
 @dataclass(frozen=True)
@@ -44,6 +68,22 @@ class BaseScenarioSample:
     @property
     def horizon_steps(self) -> int:
         return len(self.logged_ego_future)
+
+
+class ScenarioDataset(Protocol):
+    """Protocol shared by synthetic, JSONL, and real dataset adapters."""
+
+    def __len__(self) -> int:
+        """Return available sample count if known."""
+
+    def __getitem__(self, index: int) -> BaseScenarioSample:
+        """Return one sample by index."""
+
+    def iter_samples(self, split: str = "val") -> Any:
+        """Yield samples for a split."""
+
+
+DatasetAdapter = ScenarioDataset
 
 
 def validate_base_scenario_sample(sample: BaseScenarioSample) -> None:
@@ -99,6 +139,36 @@ def candidate_pool_shape(candidate_trajectories: CandidateTrajectories) -> tuple
     return len(candidate_trajectories), horizon, 3
 
 
+def validate_future_agent_state(state: FutureAgentState) -> None:
+    """Validate a typed FutureAgentState object."""
+    if not isinstance(state, FutureAgentState):
+        raise ValueError("state must be a FutureAgentState")
+    if not _is_nonempty_string(state.agent_id):
+        raise ValueError("agent_id must be a non-empty string")
+    _validate_trajectory(state.trajectory, "trajectory")
+    _require_dict(state.metadata, "metadata")
+
+
+def resolve_data_root(
+    *,
+    explicit_root: str | Path | None,
+    env_var: str,
+    dataset_name: str,
+) -> Path:
+    """Resolve a dataset root from config/root argument or an environment variable."""
+    raw_root = _resolve_root_value(explicit_root, env_var)
+    if not raw_root:
+        raise DataRootError(
+            f"{dataset_name} root is required. Provide config.root/--root or set {env_var}."
+        )
+    root = Path(raw_root).expanduser()
+    if not root.exists():
+        raise DataRootError(f"{dataset_name} root does not exist: {root}")
+    if not root.is_dir():
+        raise DataRootError(f"{dataset_name} root is not a directory: {root}")
+    return root
+
+
 def _validate_candidate_trajectories(
     trajectories: CandidateTrajectories,
     expected_horizon: int | None,
@@ -138,3 +208,12 @@ def _is_nonempty_string(value: Any) -> bool:
 def _require_dict(value: Any, path: str) -> None:
     if not isinstance(value, dict):
         raise ValueError(f"{path} must be a dict")
+
+
+def _resolve_root_value(explicit_root: str | Path | None, env_var: str) -> str:
+    if explicit_root is not None:
+        raw_value = str(explicit_root).strip()
+        if raw_value.startswith("${") and raw_value.endswith("}"):
+            return os.environ.get(raw_value[2:-1], "").strip()
+        return raw_value
+    return os.environ.get(env_var, "").strip()
