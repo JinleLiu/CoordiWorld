@@ -19,7 +19,6 @@ CoordiWorld is not a trajectory generator. It evaluates a fixed candidate set of
 | attribution utilities | Implemented | Post-hoc entity masking/counterfactual attribution. |
 | CLI and synthetic smoke tests | Implemented | No real data required for synthetic/jsonl checks. |
 
-No real NAVSIM/OpenScene/nuScenes/Waymo/Bench2Drive result is included or claimed.
 
 ## Method Overview
 
