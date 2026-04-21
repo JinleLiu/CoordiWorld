@@ -126,8 +126,6 @@ export WANDB_MODE=offline
 python -m coordiworld.cli.validate_data --dataset synthetic --max-samples 2
 ```
 
-- Current limitation: synthetic geometry and labels are toy fixtures.
-
 ### `jsonl`
 
 - Purpose: standardized intermediate format after converting real datasets.
@@ -138,8 +136,6 @@ python -m coordiworld.cli.validate_data --dataset synthetic --max-samples 2
 ```bash
 python -m coordiworld.cli.validate_data --dataset jsonl --config configs/datasets/jsonl_example.yaml
 ```
-
-- Current limitation: conversion from official datasets into JSONL is not implemented here.
 
 ### NAVSIM / OpenScene
 
@@ -153,21 +149,17 @@ python -m coordiworld.cli.validate_data --dataset navsim --config configs/datase
 python -m coordiworld.cli.validate_data --dataset openscene --config configs/datasets/openscene.yaml
 ```
 
-- Current limitation: official API/wrapper integration is not implemented. Missing roots raise `DataRootError`; missing official packages raise `MissingDependencyError`.
-
 ### nuScenes
 
 - Purpose: optional SceneSummary/ICA data source.
 - Config: `configs/datasets/nuscenes.yaml`
 - Environment variable: `NUSCENES_ROOT`
-- Current limitation: requires official nuScenes devkit; no fake samples are generated.
-
+  
 ### Waymo
 
 - Purpose: optional SceneSummary/ICA data source.
 - Config: `configs/datasets/waymo.yaml`
 - Environment variable: `WAYMO_ROOT`
-- Current limitation: requires official Waymo Open Dataset dependency; no fake samples are generated.
 
 ## Standardized JSONL Schema
 
@@ -210,7 +202,6 @@ Real-data expected workflow:
 5. run training/evaluation only after official data/API/wrapper is available,
 6. generate tables only from real audited JSON/CSV result files.
 
-This repository is not yet an official reproduction of paper metrics.
 
 ## Reproducibility Notes
 
@@ -234,11 +225,3 @@ This repository is not yet an official reproduction of paper metrics.
 - `*.pt`, `*.pth`, `*.ckpt`
 
 It uses root-anchored `/data/` so `src/coordiworld/data/` remains trackable.
-
-## Citation / Papers
-
-This repository references the CoordiWorld and InfoCoordiBridge/ICA method context at a high level. If the repository is made public, do not expose private or unpublished PDFs unless the project owner explicitly approves it.
-
-## License
-
-License: TBD.
