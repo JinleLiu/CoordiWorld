@@ -1,2 +1,5 @@
 # CoordiWorld
-CoordiWorld: SceneSummary-Centric Structured World Modeling for Auditable Trajectory Evaluation in Autonomous Driving
+
+This repository is for implementing CoordiWorld, a provenance-aware structured world model for auditable fixed candidate-set trajectory evaluation in autonomous driving.
+
+Current status: initialization.
