@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Sequence
+from typing import Any
 
 from coordiworld.data.base import BaseScenarioSample, candidate_pool_shape
 
@@ -38,3 +39,36 @@ def collate_scenario_samples(samples: Sequence[BaseScenarioSample]) -> dict[str,
         },
         "candidate_pool_shape": reference_shape,
     }
+
+
+def collate_scenario_samples_as_lists(
+    samples: Sequence[BaseScenarioSample],
+) -> dict[str, object]:
+    """Alias for frameworks that want a dependency-free collate function."""
+    return collate_scenario_samples(samples)
+
+
+def collate_scenario_samples_torch(samples: Sequence[BaseScenarioSample]) -> dict[str, Any]:
+    """Optional PyTorch collate skeleton.
+
+    This function imports torch lazily so data adapters remain usable in a
+    dependency-light environment.
+    """
+    try:
+        import torch
+    except ModuleNotFoundError as error:
+        raise ModuleNotFoundError(
+            "collate_scenario_samples_torch requires the optional torch dependency. "
+            "Install with: pip install -e '.[train]'"
+        ) from error
+
+    batch = collate_scenario_samples(samples)
+    batch["candidate_trajectories_tensor"] = torch.tensor(
+        batch["candidate_trajectories"],
+        dtype=torch.float32,
+    )
+    batch["logged_ego_future_tensor"] = torch.tensor(
+        batch["logged_ego_future"],
+        dtype=torch.float32,
+    )
+    return batch

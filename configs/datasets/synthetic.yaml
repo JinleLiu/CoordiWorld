@@ -1,0 +1,16 @@
+dataset: synthetic
+split: synthetic
+max_samples: 2
+num_samples: 3
+history_length: 2
+coordinate_frame: ego
+scene_id_prefix: synthetic-scene
+candidate_pool:
+  nominal: true
+  speed_scaled: [0.75, 1.25]
+  lateral_shift: [-1.0, 1.0]
+  curvature_perturbed: [-0.02, 0.02]
+  horizon_steps: 6
+  step_time_s: 0.5
+  nominal_speed_mps: 5.0
+  seed: 0

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import math
 from dataclasses import dataclass
+from typing import Any
 
 from coordiworld.data.base import CandidateTrajectories, candidate_pool_shape
 
@@ -101,6 +102,26 @@ def build_shared_candidate_pool(config: CandidatePoolConfig | None = None) -> Ca
     return build_candidate_pool(config)
 
 
+def candidate_pool_config_from_mapping(data: dict[str, Any] | None) -> CandidatePoolConfig:
+    """Build CandidatePoolConfig from config dictionaries used by CLIs/examples."""
+    if not data:
+        return CandidatePoolConfig()
+    return CandidatePoolConfig(
+        nominal=_as_bool(data.get("nominal", CandidatePoolConfig.nominal)),
+        speed_scaled=_as_float_tuple(data.get("speed_scaled", CandidatePoolConfig.speed_scaled)),
+        lateral_shift=_as_float_tuple(data.get("lateral_shift", CandidatePoolConfig.lateral_shift)),
+        curvature_perturbed=_as_float_tuple(
+            data.get("curvature_perturbed", CandidatePoolConfig.curvature_perturbed)
+        ),
+        horizon_steps=int(data.get("horizon_steps", CandidatePoolConfig.horizon_steps)),
+        step_time_s=float(data.get("step_time_s", CandidatePoolConfig.step_time_s)),
+        nominal_speed_mps=float(
+            data.get("nominal_speed_mps", CandidatePoolConfig.nominal_speed_mps)
+        ),
+        seed=int(data.get("seed", CandidatePoolConfig.seed)),
+    )
+
+
 def _build_trajectory(
     config: CandidatePoolConfig,
     *,
@@ -146,3 +167,21 @@ def _validate_config(config: CandidatePoolConfig) -> None:
     for scale in config.speed_scaled:
         if scale <= 0:
             raise ValueError("speed_scaled entries must be > 0")
+
+
+def _as_float_tuple(value: object) -> tuple[float, ...]:
+    if value is None:
+        return ()
+    if isinstance(value, tuple):
+        return tuple(float(item) for item in value)
+    if isinstance(value, list):
+        return tuple(float(item) for item in value)
+    return (float(value),)
+
+
+def _as_bool(value: object) -> bool:
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        return value.strip().lower() in {"1", "true", "yes", "on"}
+    return bool(value)

@@ -1,0 +1,6 @@
+dataset: jsonl
+split: val
+max_samples: 2
+path: examples/data/scenario_sample_minimal.jsonl
+candidate_pool:
+  note: candidate trajectories are read from each JSONL sample

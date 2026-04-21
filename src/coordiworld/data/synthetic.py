@@ -3,12 +3,13 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Iterator
+from typing import Any, Iterator
 
 from coordiworld.data.base import BaseScenarioSample, ScenarioLabels, validate_base_scenario_sample
 from coordiworld.data.candidate_pool import (
     CandidatePoolConfig,
     build_shared_candidate_pool,
+    candidate_pool_config_from_mapping,
 )
 from coordiworld.scene_summary.schema import AgentState, EgoState, MapToken, SceneSummary
 
@@ -20,6 +21,21 @@ class SyntheticDatasetConfig:
     candidate_pool_config: CandidatePoolConfig = field(default_factory=CandidatePoolConfig)
     coordinate_frame: str = "ego"
     scene_id_prefix: str = "synthetic-scene"
+
+    @classmethod
+    def from_mapping(cls, data: dict[str, Any] | None) -> "SyntheticDatasetConfig":
+        mapping = data or {}
+        candidate_pool_data = mapping.get("candidate_pool")
+        if candidate_pool_data is not None and not isinstance(candidate_pool_data, dict):
+            candidate_pool_data = {}
+        num_samples = int(mapping.get("num_samples", mapping.get("max_samples", cls.num_samples)))
+        return cls(
+            num_samples=num_samples,
+            history_length=int(mapping.get("history_length", cls.history_length)),
+            candidate_pool_config=candidate_pool_config_from_mapping(candidate_pool_data),
+            coordinate_frame=str(mapping.get("coordinate_frame", cls.coordinate_frame)),
+            scene_id_prefix=str(mapping.get("scene_id_prefix", cls.scene_id_prefix)),
+        )
 
 
 class SyntheticScenarioDataset:
@@ -87,7 +103,7 @@ class SyntheticScenarioDataset:
             yield self[index]
 
     def iter_samples(self, split: str = "synthetic") -> Iterator[BaseScenarioSample]:
-        if split != "synthetic":
+        if split not in {"synthetic", "train", "val", "test", "mini"}:
             raise ValueError("SyntheticScenarioDataset only supports split='synthetic'")
         yield from self
 

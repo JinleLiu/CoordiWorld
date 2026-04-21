@@ -1,62 +1,244 @@
-# CoordiWorld Engineering Repository
+# CoordiWorld
 
-## 项目目标
-本仓库用于工程化实现一个 **provenance-aware structured world model**，服务于自动驾驶中的 **fixed candidate-set trajectory evaluation**。  
-核心目标来自两篇论文：
-- `papers/IOTJ-V3.pdf`：CoordiWorld evaluator 框架
-- `papers/manuscript-InfoCoordiBridge.pdf`：InfoCoordiBridge / ICA / SceneSummary 方法
+CoordiWorld is a provenance-aware structured world model for auditable fixed candidate-set trajectory evaluation in autonomous driving.
 
-> 重要：CoordiWorld 在本项目中被定义为 **trajectory evaluator**，不是 trajectory generator。
+CoordiWorld is not a trajectory generator. It evaluates a fixed candidate set of ego trajectories using structured world state, predicted interactions, rule grounding, uncertainty, calibration, and post-hoc attribution.
 
-## 论文锚点（实现约束）
-1. 输入：
-   - SceneSummary history `S_{t-h:t}`
-   - candidate ego trajectories `T_t = {tau^(m)}`
-2. 机制：对每条候选轨迹执行 action-conditioned structured rollout。
-3. 输出：
-   - collision risk
-   - map-grounded rule-violation risk
-   - predictive uncertainty
-   - calibrated evaluator score `J(tau)`
-   - post-hoc entity-level attribution
-4. SceneSummary 生成需遵循 ICA：
-   - coordinate normalization
-   - cross-source entity alignment
-   - conflict-aware attribute fusion
-   - provenance / source lineage / ambiguity flags
+## What This Repository Contains
 
-## 当前状态
-- 当前阶段：**项目上下文初始化（spec/init-agents）**
-- 已建立：项目约束文档、概要文档、开发日志、基础忽略规则
-- 尚未开始：模型代码、训练代码、实验代码、真实数据接入
+| Area | Status | Notes |
+| --- | --- | --- |
+| `SceneSummary` schema | Implemented | Structured world state dataclasses, JSON I/O, validator. |
+| ICA-style `SceneSummary` generator | Implemented for synthetic/unit cases | Coordinate normalization, association, conflict-aware fusion, provenance flags. |
+| data adapters | Synthetic/JSONL runnable; native adapters are strict stubs | NAVSIM/OpenScene/nuScenes/Waymo require official data and dependencies. |
+| shared candidate pool | Implemented | Nominal, speed-scaled, lateral-shift, curvature-perturbed variants. |
+| tokenizer | Implemented | Scene, map, and action/candidate trajectory tokenizers. |
+| structured rollout model | Minimal PyTorch implementation | CPU smoke tests only; not an official reproduction. |
+| risk evaluator | Implemented | Collision, rule violation, uncertainty, calibration, final score `J(tau)`. |
+| evaluation metrics | Implemented | Ranking, calibration, robustness, auditability metrics. |
+| attribution utilities | Implemented | Post-hoc entity masking/counterfactual attribution. |
+| CLI and synthetic smoke tests | Implemented | No real data required for synthetic/jsonl checks. |
 
-## 开发路线（Roadmap）
-1. **Spec 阶段**
-   - 明确 CoordiWorld evaluator 接口与模块边界
-   - 明确 SceneSummary schema 与 provenance 字段
-2. **Scaffold 阶段**
-   - 建立 `src/` 包结构与配置系统
-   - 建立最小可运行 mock pipeline（synthetic only）
-3. **Core Implementation 阶段**
-   - 实现 structured rollout evaluator
-   - 实现 deterministic SceneSummary 生成器（非 LLM）
-4. **Evaluation 阶段**
-   - 固定候选集评估流程
-   - 指标统计、校准分析、可解释性归因输出
-5. **Data Integration 阶段（条件满足后）**
-   - 接入真实数据协议（NAVSIM/OpenScene/NuScenes/Waymo）
-   - 逐步替换 synthetic fixtures
+No real NAVSIM/OpenScene/nuScenes/Waymo/Bench2Drive result is included or claimed.
 
-## 实验与结果声明策略
-- 在缺乏真实数据时，仅允许：
-  - interface 定义
-  - mock test
-  - synthetic smoke test
-  - clearly marked stub
-- **禁止**伪造、臆造或硬编码论文实验结果。
-- README 及后续文档中不得声称“已复现论文 SOTA 指标”，除非有可审计实验记录支持。
+## Method Overview
 
-## 仓库使用建议
-- 优先小步提交，保证每步可审阅。
-- 每新增模块必须配套 `pytest`。
-- SceneSummary 相关流程保持 deterministic 与可追溯。
+CoordiWorld consumes:
+
+- `SceneSummary` history `S_{t-h:t}`: structured ego, agents, map tokens, provenance, and metadata.
+- fixed candidate ego trajectories `T_t = {tau^(m)}` shared across methods.
+
+For each candidate trajectory, the pipeline supports:
+
+1. candidate-conditioned structured rollout,
+2. collision-risk estimation,
+3. map-grounded rule-violation risk,
+4. predictive uncertainty,
+5. calibrated lower-is-better score `J(tau)`,
+6. post-hoc entity-level attribution for auditability.
+
+`SceneSummary` is a structured world-state interface, not a natural-language summary. The generation utilities follow InfoCoordiBridge/ICA principles: coordinate normalization, cross-source entity alignment, conflict-aware attribute fusion, and provenance-aware structured summaries.
+
+## Repository Structure
+
+```text
+src/coordiworld/
+  scene_summary/   SceneSummary schema, I/O, validation, ICA-style generation helpers
+  data/            Base sample contracts, registry, synthetic/jsonl/native adapters
+  tokens/          Scene, map, and action tokenizers
+  models/          Minimal structured rollout model
+  risks/           Collision, rule violation, uncertainty, calibration, score J
+  evaluation/      Ranking, calibration, NAVSIM stub, robustness, auditability metrics
+  attribution/     Post-hoc entity masking and counterfactual attribution
+  training/        Stage I losses/smoke trainer and Stage II pairwise batch schema
+  cli/             Dataset validation and dry-run command entry points
+scripts/           Synthetic smoke scripts and table-generation helper
+configs/           Model and dataset config templates
+examples/          Minimal JSON/JSONL examples for smoke tests
+docs/              Setup, data interface, reproducibility, audit, troubleshooting
+tests/             Synthetic and unit tests; no real data required
+```
+
+## Installation
+
+```bash
+git clone <repo-url> CoordiWorld
+cd CoordiWorld
+conda create -n coordiworld python=3.10 -y
+conda activate coordiworld
+pip install -e ".[dev]"
+```
+
+Optional model/training dependencies:
+
+```bash
+pip install -e ".[dev,model,train]"
+```
+
+Development checks:
+
+```bash
+python -m pytest -q
+ruff check src tests
+```
+
+## Quickstart: Synthetic Smoke Test
+
+These commands run without real datasets:
+
+```bash
+python -m coordiworld.cli.validate_data --dataset synthetic --max-samples 2
+python -m coordiworld.cli.validate_data --dataset jsonl --config configs/datasets/jsonl_example.yaml
+python -m coordiworld.cli.build_scene_summary --dataset synthetic --max-samples 1
+bash scripts/run_eval_synthetic.sh
+python -m pytest -q
+```
+
+Synthetic outputs are engineering smoke diagnostics only. They are not benchmark results.
+
+## Data Setup
+
+Real data paths must be provided through environment variables or private local config. Do not commit real paths.
+
+```bash
+export DATA_ROOT=/path/to/datasets
+export NAVSIM_ROOT=/path/to/datasets/navsim
+export OPENSCE_ROOT=/path/to/datasets/opensce
+export NUSCENES_ROOT=/path/to/datasets/nuscenes
+export WAYMO_ROOT=/path/to/datasets/waymo
+export OUTPUT_ROOT=/path/to/coordiworld/outputs
+export CHECKPOINT_ROOT=/path/to/coordiworld/checkpoints
+export WANDB_MODE=offline
+```
+
+`.env.example` is only a template. `.env` and `.env.*` are ignored.
+
+## Dataset Adapters
+
+### `synthetic`
+
+- Purpose: deterministic smoke tests and unit tests.
+- Config: `configs/datasets/synthetic.yaml`
+- Environment variable: none.
+- Validate:
+
+```bash
+python -m coordiworld.cli.validate_data --dataset synthetic --max-samples 2
+```
+
+- Current limitation: synthetic geometry and labels are toy fixtures.
+
+### `jsonl`
+
+- Purpose: standardized intermediate format after converting real datasets.
+- Config: `configs/datasets/jsonl_example.yaml`
+- Environment variable: none for the example.
+- Validate:
+
+```bash
+python -m coordiworld.cli.validate_data --dataset jsonl --config configs/datasets/jsonl_example.yaml
+```
+
+- Current limitation: conversion from official datasets into JSONL is not implemented here.
+
+### NAVSIM / OpenScene
+
+- Purpose: future real benchmark integration.
+- Configs: `configs/datasets/navsim.yaml`, `configs/datasets/openscene.yaml`
+- Environment variables: `NAVSIM_ROOT`, `OPENSCE_ROOT`
+- Validate root/dependency boundary:
+
+```bash
+python -m coordiworld.cli.validate_data --dataset navsim --config configs/datasets/navsim.yaml
+python -m coordiworld.cli.validate_data --dataset openscene --config configs/datasets/openscene.yaml
+```
+
+- Current limitation: official API/wrapper integration is not implemented. Missing roots raise `DataRootError`; missing official packages raise `MissingDependencyError`.
+
+### nuScenes
+
+- Purpose: optional SceneSummary/ICA data source.
+- Config: `configs/datasets/nuscenes.yaml`
+- Environment variable: `NUSCENES_ROOT`
+- Current limitation: requires official nuScenes devkit; no fake samples are generated.
+
+### Waymo
+
+- Purpose: optional SceneSummary/ICA data source.
+- Config: `configs/datasets/waymo.yaml`
+- Environment variable: `WAYMO_ROOT`
+- Current limitation: requires official Waymo Open Dataset dependency; no fake samples are generated.
+
+## Standardized JSONL Schema
+
+`examples/data/scenario_sample_minimal.jsonl` contains one scenario sample per line. Required fields:
+
+- `scene_id`
+- `timestamp`
+- `scene_summary_history`
+- `candidate_trajectories` with shape `[M,H,3]`
+- `logged_ego_future` with shape `[H,3]`
+- `labels`
+
+Recommended fields:
+
+- `sample_id`
+- `coordinate_frame`
+- `future_agents`
+- `provenance`
+- `quality_flags`
+- `metadata`
+
+Each `SceneSummary` record uses the schema in `src/coordiworld/scene_summary/schema.py`.
+
+## Running Training / Evaluation
+
+Synthetic smoke commands:
+
+```bash
+bash scripts/run_stage1_synthetic.sh
+bash scripts/run_stage2_synthetic.sh
+bash scripts/run_eval_synthetic.sh
+```
+
+Real-data expected workflow:
+
+1. install official dataset dependencies,
+2. configure dataset roots via environment variables,
+3. convert or expose real samples as `BaseScenarioSample` or standardized JSONL,
+4. validate with `python -m coordiworld.cli.validate_data`,
+5. run training/evaluation only after official data/API/wrapper is available,
+6. generate tables only from real audited JSON/CSV result files.
+
+This repository is not yet an official reproduction of paper metrics.
+
+## Reproducibility Notes
+
+- Do not commit datasets, checkpoints, logs, API keys, or private server paths.
+- Do not hardcode experiment results or copy paper table numbers.
+- Synthetic smoke metrics are not NAVSIM/OpenScene/Bench2Drive metrics.
+- Real NAVSIM/OpenScene results require official data and official metric wrappers.
+- `scripts/make_tables_from_results.py` refuses to create a real table without real result JSON/CSV input.
+
+## GitHub Project Safety
+
+`.gitignore` is configured to ignore:
+
+- `/data/`
+- `/outputs/`
+- `/checkpoints/`
+- `/wandb/`
+- `.env`
+- `.env.*`
+- `.idea/`
+- `*.pt`, `*.pth`, `*.ckpt`
+
+It uses root-anchored `/data/` so `src/coordiworld/data/` remains trackable.
+
+## Citation / Papers
+
+This repository references the CoordiWorld and InfoCoordiBridge/ICA method context at a high level. If the repository is made public, do not expose private or unpublished PDFs unless the project owner explicitly approves it.
+
+## License
+
+License: TBD.

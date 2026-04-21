@@ -1,0 +1,47 @@
+{
+  "scene_id": "example-scene-000",
+  "timestamp": 0.0,
+  "coordinate_frame": "ego",
+  "ego": {
+    "x": 0.0,
+    "y": 0.0,
+    "yaw": 0.0,
+    "vx": 5.0,
+    "vy": 0.0,
+    "length": 4.8,
+    "width": 2.0
+  },
+  "agents": [
+    {
+      "id": "agent-0",
+      "type": "vehicle",
+      "x": 8.0,
+      "y": 1.5,
+      "yaw": 0.0,
+      "vx": 4.0,
+      "vy": 0.0,
+      "length": 4.5,
+      "width": 1.9,
+      "confidence": 0.95,
+      "covariance_xy": [[0.4, 0.0], [0.0, 0.4]],
+      "existence_prob": 0.99,
+      "source_modalities": ["example"],
+      "source_ids": ["agent-example-0"],
+      "fusion_lineage": ["jsonl_example"],
+      "ambiguity_flags": [],
+      "semantic_attributes": {"color": "blue"}
+    }
+  ],
+  "map_tokens": [
+    {
+      "id": "lane-0",
+      "type": "lane_centerline",
+      "polyline": [[0.0, 0.0], [20.0, 0.0]],
+      "polygon": null,
+      "traffic_state": null,
+      "rule_attributes": {"speed_limit_mps": 13.4}
+    }
+  ],
+  "provenance": {"dataset": "jsonl_example", "real_data": false},
+  "metadata": {"split": "val"}
+}

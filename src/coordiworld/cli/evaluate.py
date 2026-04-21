@@ -8,7 +8,7 @@ import argparse
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="python -m coordiworld.cli.evaluate",
-        description="Run evaluation (skeleton only; not implemented).",
+        description="Run shared-candidate evaluation entry point (synthetic dry-run only here).",
     )
     parser.add_argument("--config", default="configs/default.yaml", help="Path to config file.")
     parser.add_argument("--split", default="val", help="Dataset split placeholder.")
@@ -18,7 +18,8 @@ def build_parser() -> argparse.ArgumentParser:
 def main() -> int:
     parser = build_parser()
     args = parser.parse_args()
-    print("evaluate: not implemented yet")
+    print("evaluate: full real-data evaluation runner is not implemented in this CLI.")
+    print("Use bash scripts/run_eval_synthetic.sh for synthetic diagnostics dry-run.")
     print(f"config={args.config}, split={args.split}")
     return 0
 
