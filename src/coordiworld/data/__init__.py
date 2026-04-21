@@ -1,0 +1,1 @@
+"""coordiworld.data package scaffold."""

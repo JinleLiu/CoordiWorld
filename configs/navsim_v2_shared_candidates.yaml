@@ -1,0 +1,12 @@
+candidate_pool:
+  nominal:
+    enabled: true
+  speed_scaled:
+    enabled: true
+    scales: [0.8, 1.0, 1.2]
+  lateral_shift:
+    enabled: true
+    offsets_m: [-0.5, 0.0, 0.5]
+  curvature_perturbed:
+    enabled: true
+    deltas: [-0.1, 0.0, 0.1]

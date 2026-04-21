@@ -1,0 +1,1 @@
+"""coordiworld.training package scaffold."""

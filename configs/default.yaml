@@ -1,0 +1,16 @@
+project:
+  name: coordiworld
+  task: evaluator_scaffold
+
+paths:
+  root: .
+  data_root: ${COORDIWORLD_DATA_ROOT:-./data}
+  output_root: ${COORDIWORLD_OUTPUT_ROOT:-./outputs}
+
+seed: 42
+
+device: cpu
+
+logging:
+  level: INFO
+  format: text

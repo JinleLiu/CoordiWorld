@@ -1,0 +1,1 @@
+"""coordiworld.visualization package scaffold."""
