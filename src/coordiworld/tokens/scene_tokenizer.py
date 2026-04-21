@@ -8,7 +8,12 @@ from numbers import Real
 from typing import Sequence
 
 from coordiworld.scene_summary.schema import AgentState, SceneSummary
-from coordiworld.tokens.map_tokenizer import MAP_FEATURE_DIM, MapTokenizer, MapTokenizerConfig
+from coordiworld.tokens.map_tokenizer import (
+    MAP_FEATURE_DIM,
+    MapTokenizer,
+    MapTokenizerConfig,
+    map_feature_order,
+)
 
 AGENT_FEATURE_DIM = 16
 EGO_FEATURE_DIM = 7
@@ -83,6 +88,7 @@ class SceneTokenizer:
             feature_metadata={
                 "ego_feature_order": ego_feature_order(),
                 "agent_feature_order": agent_feature_order(),
+                "map_feature_order": map_feature_order(),
                 "map_feature_dim": MAP_FEATURE_DIM,
             },
         )

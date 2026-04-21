@@ -85,6 +85,28 @@ def test_scene_tokenizer_shapes_and_masks() -> None:
     assert sum(tokenized.masks["agents"]) == 2
     assert sum(tokenized.masks["map_tokens"]) == 1
     assert tokenized.local_slot_indices == {"a": 0, "b": 1}
+    assert tokenized.feature_metadata["ego_feature_order"] == [
+        "x",
+        "y",
+        "yaw",
+        "vx",
+        "vy",
+        "length",
+        "width",
+    ]
+    assert tokenized.feature_metadata["agent_feature_order"][-1] == "risk_score"
+    assert tokenized.feature_metadata["map_feature_order"] == [
+        "rel_center_x",
+        "rel_center_y",
+        "center_distance",
+        "point_count",
+        "geometry_span",
+        "type_code",
+        "traffic_state_code",
+        "has_polyline",
+        "has_polygon",
+        "rule_attribute_count",
+    ]
 
 
 def test_agent_selection_keeps_near_and_risky_agents() -> None:

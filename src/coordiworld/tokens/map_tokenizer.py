@@ -69,6 +69,22 @@ class MapTokenizer:
         )
 
 
+def map_feature_order() -> list[str]:
+    return [
+        "rel_center_x",
+        "rel_center_y",
+        "center_distance",
+        "point_count",
+        "geometry_span",
+        "type_code",
+        "traffic_state_code",
+        "has_polyline",
+        "has_polygon",
+        "rule_attribute_count",
+    ]
+
+
+  
 def select_map_tokens(
     map_tokens: Sequence[MapToken],
     ego: EgoState,
