@@ -1,0 +1,35 @@
+experiment:
+  name: navsim_v2_shared_candidates
+  mode: navsim_v2
+  dry_run: false
+  benchmark_result_requires_official_wrapper: true
+
+environment:
+  device: cpu
+  wandb_mode: ${WANDB_MODE}
+
+paths:
+  data_root: ${DATA_ROOT}
+  navsim_root: ${NAVSIM_ROOT}
+  opensce_root: ${OPENSCE_ROOT}
+  output_root: ${OUTPUT_ROOT}
+  checkpoint_root: ${CHECKPOINT_ROOT}
+
+data:
+  dataset: navsim
+  adapter: coordiworld.data.navsim_adapter.NAVSIMScenarioAdapter
+  split: val
+  shared_candidate_pool:
+    nominal: true
+    speed_scaled: [0.8, 1.0, 1.2]
+    lateral_shift: [-1.0, 0.0, 1.0]
+    curvature_perturbed: [-0.05, 0.0, 0.05]
+    deterministic_seed: 0
+
+evaluation:
+  official_navsim_wrapper_required_for_epdms: true
+  dry_run_stub_allowed_for_plumbing_only: true
+  forbidden_without_real_results:
+    - paper_table_claims
+    - hardcoded_epdms
+    - copied_iotj_v3_numbers
