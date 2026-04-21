@@ -1,8 +1,8 @@
 # Project artifacts
-data/
-outputs/
-checkpoints/
-wandb/
+/data/
+/outputs/
+/checkpoints/
+/wandb/
 
 # Python environment
 .venv/
