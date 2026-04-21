@@ -1,0 +1,34 @@
+experiment:
+  name: synthetic_smoke
+  mode: synthetic
+  dry_run: true
+  real_data: false
+  benchmark_result: false
+
+environment:
+  device: cpu
+  wandb_mode: offline
+
+data:
+  dataset: synthetic
+  num_samples: 2
+  history_length: 2
+  candidate_pool:
+    nominal: true
+    speed_scaled: [0.8, 1.2]
+    lateral_shift: [-1.0, 1.0]
+    curvature_perturbed: [-0.05, 0.05]
+    horizon_steps: 3
+
+stage1:
+  script: scripts/run_stage1_synthetic.sh
+  one_batch_only: true
+
+stage2:
+  script: scripts/run_stage2_synthetic.sh
+  schema_dry_run_only: true
+
+evaluation:
+  script: scripts/run_eval_synthetic.sh
+  synthetic_metrics_only: true
+  navsim_metrics: dry_run_stub
