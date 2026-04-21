@@ -17,7 +17,7 @@ CoordiWorld is not a trajectory generator. It evaluates a fixed candidate set of
 | risk evaluator | Implemented | Collision, rule violation, uncertainty, calibration, final score `J(tau)`. |
 | evaluation metrics | Implemented | Ranking, calibration, robustness, auditability metrics. |
 | attribution utilities | Implemented | Post-hoc entity masking/counterfactual attribution. |
-| CLI and synthetic smoke tests | Implemented | No real data required for synthetic/jsonl checks. |
+| CLI and synthetic smoke tests | Implemented |
 
 
 ## Method Overview
@@ -55,7 +55,7 @@ scripts/           Synthetic smoke scripts and table-generation helper
 configs/           Model and dataset config templates
 examples/          Minimal JSON/JSONL examples for smoke tests
 docs/              Setup, data interface, reproducibility, audit, troubleshooting
-tests/             Synthetic and unit tests; no real data required
+tests/             Synthetic and unit tests
 ```
 
 ## Installation
