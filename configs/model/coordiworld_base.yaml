@@ -1,0 +1,5 @@
+model:
+  name: coordiworld_base
+  hidden_dim: 256
+  num_layers: 4
+  num_heads: 8

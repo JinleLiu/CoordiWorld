@@ -1,0 +1,5 @@
+model:
+  name: coordiworld_tiny
+  hidden_dim: 128
+  num_layers: 2
+  num_heads: 4

@@ -1,0 +1,1 @@
+"""coordiworld.models package scaffold."""

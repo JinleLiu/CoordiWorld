@@ -1,0 +1,1 @@
+"""coordiworld.cli package scaffold."""
