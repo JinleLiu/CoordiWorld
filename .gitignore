@@ -12,3 +12,11 @@ __pycache__/
 *.pt
 *.pth
 *.ckpt
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# PyCharm local project files
+.idea/
