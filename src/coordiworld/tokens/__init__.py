@@ -1,1 +1,0 @@
-"""coordiworld.tokens package scaffold."""

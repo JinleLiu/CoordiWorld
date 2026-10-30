@@ -1,25 +1,9 @@
-# Project artifacts
-/data/
-/outputs/
-/checkpoints/
-/wandb/
-
-# Python environment
-.venv/
 __pycache__/
-.pytest_cache/
-.ruff_cache/
-*.egg-info/
+*.pyc
+.venv/
+workdir/
+runs/
+reproduction.json
+models/world/reference_world.pt
 
-# Model weights / checkpoints
-*.pt
-*.pth
-*.ckpt
-
-# Local environment files
-.env
-.env.*
-!.env.example
-
-# PyCharm local project files
-.idea/
+public_checks.json

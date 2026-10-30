@@ -1,0 +1,99 @@
+{
+  "target": "reference_world.pt",
+  "bytes": 3359338,
+  "sha256": "fa04f85c81781a67b60755977c5027d9e0e2490d6d672eac4f4f5ca46e63f3a2",
+  "parts": [
+    {
+      "index": 0,
+      "path": "reference_world.pt.part000",
+      "bytes": 262144,
+      "sha256": "0bcfbdea2a63736ae54906cc70c5da37437b18f2420e8c8d922e343fa2331b17",
+      "git_blob_sha": "e56e95ca9533db6f456a33ddbe5668b637fbfc54"
+    },
+    {
+      "index": 1,
+      "path": "reference_world.pt.part001",
+      "bytes": 262144,
+      "sha256": "525b1052957c845718dd0fb5ae4b7efacbb8ce5468ba465391a53bf60ba8d13f",
+      "git_blob_sha": "948cc2d06b8ccfbc7a8f48fe8e1ef1155889f18c"
+    },
+    {
+      "index": 2,
+      "path": "reference_world.pt.part002",
+      "bytes": 262144,
+      "sha256": "b266c545cfdf49efcd07d10b010b36b11be613c1068f737e4d2cd6e799718821",
+      "git_blob_sha": "af28619c0bcfde8810d4405cec9e17300969eeda"
+    },
+    {
+      "index": 3,
+      "path": "reference_world.pt.part003",
+      "bytes": 262144,
+      "sha256": "4a2c9152c93caec49c7e1b405d4df32753c7939fc847711ad4b85ae6928ddf48",
+      "git_blob_sha": "f7f68531e310ed4f5d75fa82d3f05eeae7be9603"
+    },
+    {
+      "index": 4,
+      "path": "reference_world.pt.part004",
+      "bytes": 262144,
+      "sha256": "8e5a6b01a504190973f81fd0537e8d4ed7db87425a72dddc0d94986dd2cea9a7",
+      "git_blob_sha": "0e45955c51204c9da2927c5ee1e58da5efd20c59"
+    },
+    {
+      "index": 5,
+      "path": "reference_world.pt.part005",
+      "bytes": 262144,
+      "sha256": "1ddd3c042e81e4d7bc6257d20833f3098b8e7a3af95b364e527549756a118a47",
+      "git_blob_sha": "b192d52330a6737027d7643a1d9179bda2afd365"
+    },
+    {
+      "index": 6,
+      "path": "reference_world.pt.part006",
+      "bytes": 262144,
+      "sha256": "56619c678021b28b2e9bcb7b174bcf5234be39bdf7e5ca599d94b9d96ac3516e",
+      "git_blob_sha": "e6e81e4aaa641838c62430290fd94209a9456dd4"
+    },
+    {
+      "index": 7,
+      "path": "reference_world.pt.part007",
+      "bytes": 262144,
+      "sha256": "388fb220718f946301a4d4d4326e0e92eaf50de1333c577f69c1fc2efb768156",
+      "git_blob_sha": "4023d55199d19cfadff8fd1f0b6b005b95c4231d"
+    },
+    {
+      "index": 8,
+      "path": "reference_world.pt.part008",
+      "bytes": 262144,
+      "sha256": "b85bb0a907173c637550864800f744620b1b19c747cd68a8c8cfd19c4683ac66",
+      "git_blob_sha": "7eb21a82b9f3dea69e1852b1a846f104aa8b20c0"
+    },
+    {
+      "index": 9,
+      "path": "reference_world.pt.part009",
+      "bytes": 262144,
+      "sha256": "d3b66deaee377fafe578e9af690ff2fcff2c18c352c59f4b3e2a0b7db0b1b38f",
+      "git_blob_sha": "b1486940565772b766070cfc1d2fd7e818ac480e"
+    },
+    {
+      "index": 10,
+      "path": "reference_world.pt.part010",
+      "bytes": 262144,
+      "sha256": "44f6d1574428d8b30bc5c971c7987168ce08d9b945fb4a74c9a64a142ddbecdc",
+      "git_blob_sha": "a336da06d578708d4583b2b2d48ba9064c703e26"
+    },
+    {
+      "index": 11,
+      "path": "reference_world.pt.part011",
+      "bytes": 262144,
+      "sha256": "a64b05229bc3f81a28f7b71274f17c93cbb7839ec06114c39de4881e57a5ab42",
+      "git_blob_sha": "723e9bab16adc76242d657ae0e54e74bcd93806f"
+    },
+    {
+      "index": 12,
+      "path": "reference_world.pt.part012",
+      "bytes": 213610,
+      "sha256": "c735946fde970f6347af56756d7e668df42b03b911f5a4be29a8659621f4732e",
+      "git_blob_sha": "4997875efc6f69d5fbf7aff1a80bf97b2c86acb1"
+    }
+  ],
+  "reason": "The unchanged checkpoint is stored in ordered <=256 KiB binary transport parts to keep individual transfer requests small."
+}

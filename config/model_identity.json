@@ -1,0 +1,118 @@
+{
+  "primary_method": "PNC_H3P",
+  "freeze_sha256": "7c0351a01075ce581eee2236dd5aecde7c948cbec916a1219a2824dc2e9bc7e3",
+  "world_checkpoint_sha256": "fa04f85c81781a67b60755977c5027d9e0e2490d6d672eac4f4f5ca46e63f3a2",
+  "models": {
+    "models_PNC": {
+      "q": {
+        "path": "models/PNC/q/model.ubj",
+        "sha256": "ac34252f0924c2280d7402192529fb2db55a6ef30877774238211b1e712af5a9"
+      },
+      "qp": {
+        "path": "models/PNC/qp/model.ubj",
+        "sha256": "9d9dc78c29886495cd5129bc9348114a5fef5149fd51b53a71a57d91519bd79e"
+      },
+      "qttc": {
+        "path": "models/PNC/qttc/model.ubj",
+        "sha256": "6bd88c2b459d02b3bfe3d2337ddbb74692cd1f564fe7c29ea37f09db58147bee"
+      },
+      "qlk": {
+        "path": "models/PNC/qlk/model.ubj",
+        "sha256": "4e95021489c045d1bbc26c97517fcdda9a2592c312bd3aa0c49e91b4b2cdeb13"
+      },
+      "dac_event": {
+        "path": "models/PNC/dac_event/model.ubj",
+        "sha256": "e87085383b5a60c5e4a62f0192caf55b10d0d42ac9726f9820c221cccd17f7aa"
+      },
+      "physical_nc": {
+        "path": "models/PNC/physical_nc/model.ubj",
+        "sha256": "ee6218b40d2bdc59759a266902174839ba8876628326452df9a2c0e67d14ce9c"
+      }
+    },
+    "models_IC0": {
+      "q": {
+        "path": "models/IC0/q/model.ubj",
+        "sha256": "7c1eca6121661ac2fa1ef92147867eabdd10443e4845e4b346851f7aca5199c2"
+      },
+      "qp": {
+        "path": "models/IC0/qp/model.ubj",
+        "sha256": "176d707e99e8f02dd5bd764727d2139630b092bc7f0a019f6faceeb5cd4454e0"
+      },
+      "qttc": {
+        "path": "models/IC0/qttc/model.ubj",
+        "sha256": "64a6a07aaee674dc7774c01cb57e2147f7cb7cbfd3bab992beb030677d849679"
+      },
+      "qlk": {
+        "path": "models/IC0/qlk/model.ubj",
+        "sha256": "b59d8a5c40eab427a11f69fe90169c85e5737e5b9cc1ee01b5cd600414fd031d"
+      },
+      "dac_event": {
+        "path": "models/IC0/dac_event/model.ubj",
+        "sha256": "e87085383b5a60c5e4a62f0192caf55b10d0d42ac9726f9820c221cccd17f7aa"
+      },
+      "nc_rank": {
+        "path": "models/IC0/nc_rank/model.ubj",
+        "sha256": "7ec30d9167b579f5fdfcb1d8d875139d9d1fcdaa4d154f2bc9530f3fabc48e1e"
+      }
+    }
+  },
+  "original_environment": {
+    "xgboost": "2.1.4",
+    "numpy": "1.26.4",
+    "torch": "2.8.0+cu126",
+    "pyquaternion": "0.9.9"
+  },
+  "world_model_config": {
+    "hidden_dim": 128,
+    "heads": 4,
+    "history_layers": 2,
+    "feedforward_dim": 512,
+    "dropout": 0.0,
+    "rollout_blocks": 1,
+    "dt": 0.5,
+    "max_history": 8,
+    "max_agents": 300,
+    "use_provenance": true,
+    "use_confidence": true,
+    "action_conditioned": false,
+    "motion_prior": "constant_velocity",
+    "position_residual_scale": 2.0,
+    "velocity_residual_scale": 2.0,
+    "yaw_residual_scale": 0.3
+  },
+  "world_checkpoint_training_metadata": {
+    "mode": "kinematic_residual",
+    "seed": 17,
+    "epochs": 5,
+    "tau": 2
+  },
+  "note": "Checkpoint and main readout weight bytes are unchanged. Legacy generic risk defaults are not the adopted PNC readout.",
+  "consumed_world_decoder": {
+    "class": "BodyHeadingKinematicResidual",
+    "motion_feedback_dimensions": [
+      10,
+      128,
+      128
+    ],
+    "acceleration_head_dimensions": [
+      138,
+      128,
+      2
+    ],
+    "history_decay_tau_seconds": 2,
+    "acceleration_residual_bound_m_per_s2": 2,
+    "yaw_rate_residual_bound_rad_per_s": 0.2,
+    "integration": "midpoint speed and heading",
+    "load_state_dict": "default strict=True in the recorded runtime",
+    "checkpoint_parameter_keys_present": [
+      "motion_feedback.0.weight",
+      "motion_feedback.0.bias",
+      "motion_feedback.2.weight",
+      "motion_feedback.2.bias",
+      "acceleration_head.0.weight",
+      "acceleration_head.0.bias",
+      "acceleration_head.2.weight",
+      "acceleration_head.2.bias"
+    ]
+  }
+}

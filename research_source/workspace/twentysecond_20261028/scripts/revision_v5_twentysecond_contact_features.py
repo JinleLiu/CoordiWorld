@@ -1,0 +1,34 @@
+"""C32 predicted contact semantics. Current/frozen-world only, never native truth.
+Front-segment SAT, stopped/rear/lateral classification mirrors official concepts;
+world/ego errors and unknown current actor velocities remain explicit limitations.
+"""
+from revision_v5_twentysecond_common import *
+from revision_v5_twentysecond_kinematics import views
+from revision_v5_sixteenth_semantics import interpolate,sat,current_areas
+import numpy as np,argparse,time
+NAMES=['fault_proxy_agent','fault_proxy_static','first_fault_time_over4','fault_time_fraction','contact_time_fraction','min_front_margin_m','min_eligible_margin_m','first_fault_ego_speed_mps','first_fault_actor_initial_speed_mps','first_fault_closing_long_mps','first_fault_relative_lat_mps','first_fault_long_m','first_fault_lat_m','first_fault_front','first_fault_stopped_actor','first_fault_lateral_area','first_fault_physical','first_fault_factual','first_fault_currentCV','first_fault_current_known','initial_overlap_count','initial_fault_proxy','nonfault_excluded_actor_count','late_fault_only','front_contact_fraction','lateral_fault_fraction','stopped_actor_contact_fraction','speed_stop_before_contact','min_margin_after_stop_m','current_unknown_actor_fraction','world_valid_fraction','terminal_front_margin_m']
+def contact_features(a,current,area):
+ v=views(a,current);ex=v['execution_feature_scene'];native=v['execution_native'];pred,pvalid=interpolate(a);M,T=ex.shape[:2];N=len(a['actor_valid']);out=np.zeros((M,32),np.float32);trace={}
+ if not N:return out,dict(first_actor=np.full(M,-1),first_step=np.full(M,-1),proxy_fault=np.zeros((M,T),bool))
+ yaw=ex[...,2];fw=np.stack([np.cos(yaw),np.sin(yaw)],-1);lf=np.stack([-np.sin(yaw),np.cos(yaw)],-1);off=float(a['rear_axle_offset'].ravel()[0]);length,width=a['ego_box'];center=ex[...,:2]+off*fw;eb=np.concatenate([center,yaw[...,None],np.broadcast_to([length,width],(M,T,2))],-1);ab=np.concatenate([pred[...,:3],pred[...,5:7]],-1);gap=sat(eb[:,:,None],ab[None]);fb=eb.copy();fb[...,:2]+=length/2*fw;fb[...,3]=0.;frontgap=sat(fb[:,:,None],ab[None]);contact=(gap<=0)&pvalid[None];front=(frontgap<=0)&contact;rel=pred[None,...,:2]-ex[:,:,None,:2];lon=(rel*fw[:,:,None]).sum(-1);lat=(rel*lf[:,:,None]).sum(-1);behind=np.abs(np.arctan2(lat,lon))>5*np.pi/6;speed=np.linalg.norm(native[...,3:5],axis=-1);initialspeed=np.linalg.norm(a['current'][:,3:5],axis=-1);stopped=(initialspeed<=.05)&a['current_known'];movingego=speed>.05;lateral=~front&~behind&~stopped[None,None];areaflag=(area['multiple']|area['nondrive'])&area['known'];faultclass=stopped[None,None]|(~behind&front)|(lateral&areaflag[:,:,None]);fault=contact&movingego[:,:,None]&faultclass
+ # Separate known nonfault contact exclusion. Native initial history exclusion
+ # cannot be recovered exactly; current initial overlaps remain explicit input.
+ seen=np.zeros((M,N),bool);ff=np.zeros_like(fault)
+ for t in range(T):
+  ff[:,t]=fault[:,t]&~seen;seen|=contact[:,t]&~fault[:,t]
+ timefault=ff.any(-1);h=timefault.any(-1);first=np.where(h,timefault.argmax(-1),0);actor=np.array([np.flatnonzero(ff[j,first[j]])[0]if h[j]else 0 for j in range(M)]);ii=np.arange(M);relv=pred[first,actor,3:5]-ex[ii,first,3:5];typ=a['types'][None,None];agent=(typ>=1)&(typ<=3);elig=pvalid[None]&movingego[:,:,None]&faultclass
+ def mn(g,m):return np.clip(np.where(m,g,np.inf).min((1,2)), -50,50)
+ firstvals=np.stack([speed[ii,first],initialspeed[actor],-(relv*fw[ii,first]).sum(-1),(relv*lf[ii,first]).sum(-1),lon[ii,first,actor],lat[ii,first,actor],front[ii,first,actor],stopped[actor],(lateral&areaflag[:,:,None])[ii,first,actor],a['sources'][actor]=='physical',a['sources'][actor]=='frozen_factual',a['sources'][actor]=='current_CV_unsupported',a['current_known'][actor]],-1);firstvals[~h]=0
+ out[:,0]=(ff&agent).any((1,2));out[:,1]=(ff&~agent).any((1,2));out[:,2]=np.where(h,first/40,1);out[:,3]=timefault.mean(-1);out[:,4]=contact.any(-1).mean(-1);out[:,5]=mn(frontgap,pvalid[None]);out[:,6]=mn(gap,elig);out[:,7:20]=firstvals;out[:,20]=np.log1p(contact[:,0].sum(-1));out[:,21]=timefault[:,0];out[:,22]=np.log1p(seen.sum(-1));out[:,23]=h&(first>31);out[:,24]=front.any(-1).mean(-1);out[:,25]=(ff&lateral).any(-1).mean(-1);out[:,26]=(contact&stopped[None,None]).any(-1).mean(-1);out[:,27]=np.array([bool((speed[j,:first[j]+1]<=.05).any())if h[j]else bool((speed[j]<=.05).any())for j in range(M)]);out[:,28]=mn(gap,pvalid[None]&(speed<=.05)[:,:,None]);out[:,29]=float((a['actor_valid']&~a['current_known']).sum()/max(a['actor_valid'].sum(),1));out[:,30]=pvalid.mean();out[:,31]=np.clip(np.where(pvalid[-1][None],frontgap[:,-1],np.inf).min(-1),-50,50);out[~a['candidate_valid']]=0
+ return out,dict(first_actor=np.where(h,actor,-1),first_step=np.where(h,first,-1),proxy_fault=timefault,first_token=np.where(h,a['tokens'][actor],''),first_support=np.where(h,a['sources'][actor],''))
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--scope',default='train',choices=['train','full140','exposed408']);args=ap.parse_args();scope=args.scope;dest=BASE/'contact32'/scope;dest.mkdir(parents=True,exist_ok=True);a=np.load(BASE/'features'/scope/'dataset.npz');rows=[dict(scene_id=str(s),source_folder=str(B16/'features/assets_train'/str(s)))for s in a['scene_ids']]if scope=='train'else json.load(open(B21/scope/'choices.json'));features=[];traces=[];t=time.monotonic();record('contact32_'+scope,'Minimum-margin identity omits first-contact NC classification and path history','32 current/frozen-world contact semantics; add to corrected inputs; labels never used in export',scope)
+ for i,r in enumerate(rows):
+  sid=r['scene_id'];src=Path(r['source_folder']);asset=dict(np.load(src/('assets.npz'if scope=='train'else'world_assets.npz')));cur=json.load(open(src/'current.json'))
+  if scope=='train':old=np.load(B16/'features/S64_train'/(sid+'.npz'));area={k:old['area_'+k]for k in ['known','multiple','nondrive','intersection']}
+  else:area,_=current_areas(cur,asset['execution_full_local'],ROOT/'data/maps')
+  f,tr=contact_features(asset,cur,area);features.append(f);traces.append(tr)
+  if i<4 or sid in ['study_scene_001572','study_scene_002136','study_scene_002334']:np.savez_compressed(dest/(sid+'.npz'),features=f,**tr)
+ np.savez_compressed(dest/'features.npz',scene_ids=a['scene_ids'],features=np.stack(features),names=np.array(NAMES),**{k:np.stack([t[k]for t in traces])for k in traces[0]});write(dest/'receipt.json',dict(complete=True,created_utc=now(),seconds=time.monotonic()-t,names=NAMES,source_sha=sha(__file__),official_concepts_pin=PIN,scope=scope,limitations=['current overlap not exact native collided history','frozen reference world only; no candidate response','interpolated actor motion/current stopped classification may differ from real traffic']))
+ print('B22_CONTACT_EXPORT',scope,len(rows),round(time.monotonic()-t,2),flush=True)
+if __name__=='__main__':main()

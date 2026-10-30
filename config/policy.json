@@ -1,0 +1,22 @@
+{
+  "id": "PNC_H3P",
+  "base_candidates": 12,
+  "horizon_seconds": 4,
+  "submitted_interval_seconds": 0.5,
+  "native_interval_seconds": 0.1,
+  "history_join_seconds": 2,
+  "history_variant": "dynamic",
+  "raw_nc_class_boundary": 0.5,
+  "extra_dac_class_boundary": 0.5,
+  "extra_admission": "valid executed trajectory and EC > 0",
+  "extra_progress_override": "only appended candidates with known current-state P0 replace predicted QP with predicted Q times P0",
+  "utility_weights": {
+    "P": 5,
+    "TTC": 5,
+    "LK": 2,
+    "HC": 2,
+    "EC": 2
+  },
+  "utility_denominator": 16,
+  "risk_semantics": "classification boundaries and reference-relative gates; no probability guarantee"
+}

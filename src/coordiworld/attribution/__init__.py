@@ -1,1 +1,0 @@
-"""coordiworld.attribution package scaffold."""

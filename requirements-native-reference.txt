@@ -1,0 +1,11 @@
+# Original scientific environment versions recorded by the frozen artifacts.
+# Install the pinned NAVSIM and nuplan stack separately; see docs/DATA.md.
+# This is a reference list, not a verified clean-room native lockfile.
+numpy==1.26.4
+xgboost==2.1.4
+torch==2.8.0
+pyquaternion==0.9.9
+PyYAML
+scipy
+pandas
+shapely

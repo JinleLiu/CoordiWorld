@@ -1,1 +1,0 @@
-"""coordiworld.evaluation package scaffold."""

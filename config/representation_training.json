@@ -1,0 +1,27 @@
+{
+  "arms": [
+    "current",
+    "cv",
+    "hybrid"
+  ],
+  "rounds": 150,
+  "params": {
+    "objective": "reg:squarederror",
+    "tree_method": "hist",
+    "max_leaves": 15,
+    "max_depth": 0,
+    "grow_policy": "lossguide",
+    "eta": 0.05,
+    "reg_lambda": 10,
+    "min_child_weight": 5,
+    "seed": 17,
+    "subsample": 1,
+    "colsample_bytree": 1,
+    "nthread": 1,
+    "disable_default_eval_metric": true
+  },
+  "folds": 3,
+  "fold_unit": "drive",
+  "weight": "inverse scenes per drive times inverse candidates per scene, normalized to mean one",
+  "upstream_bank": "frozen; this is conditional readout OOF, not an independently cross-fitted complete pipeline"
+}

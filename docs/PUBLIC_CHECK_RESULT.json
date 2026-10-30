@@ -1,0 +1,35 @@
+{
+  "model_checks": {
+    "unchanged_model_hashes": [
+      "models_PNC/q",
+      "models_PNC/qp",
+      "models_PNC/qttc",
+      "models_PNC/qlk",
+      "models_PNC/dac_event",
+      "models_PNC/physical_nc",
+      "models_IC0/q",
+      "models_IC0/qp",
+      "models_IC0/qttc",
+      "models_IC0/qlk",
+      "models_IC0/dac_event",
+      "models_IC0/nc_rank",
+      "world"
+    ],
+    "synthetic_smoke": {
+      "rows": 12,
+      "input": "All numerical features zero, all candidates valid, geometry reference 0.",
+      "six_head_outputs_first_row": {
+        "q": 0.03887231647968292,
+        "qp": 0.184287428855896,
+        "qttc": -0.04392693564295769,
+        "qlk": -0.11031629890203476,
+        "dac_event": 0.0017395158065482974,
+        "physical_nc": 0.5921725034713745
+      },
+      "selected_index": 0,
+      "scope": "Execution smoke test only; synthetic inputs are not a benchmark or evidence of prediction accuracy."
+    }
+  },
+  "passed": true,
+  "scope": "Public code/weight identity and synthetic execution checks only. All scientific numerical replay is supplied separately in the accompanying numerical supplement."
+}

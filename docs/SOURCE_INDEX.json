@@ -1,0 +1,1144 @@
+[
+  {
+    "path": "src/coordiworld/__init__.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/__init__.py",
+    "source_sha256": "5b8e854d1b69ad300175023095f7943ec76f36a438e1064da6fbdb2dfb94f39b",
+    "public_sha256": "aa15cd4c784aa5b1d67ded012cba464ab87b162a38ed0b4f20be6e201345f826",
+    "changes": "Configurable workspace paths and public-facing docstring only."
+  },
+  {
+    "path": "src/coordiworld/candidates.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/candidates.py",
+    "source_sha256": "63a1efd106bd3c307d96628bf5ba5a06d8ac3809b012c3c766e5d78d8be4163e",
+    "public_sha256": "ef24139528be196847aaf85de8dcfabcc3450eb02eb8c03a24e34e5be1cb0f29",
+    "changes": "Configurable workspace paths and public-facing docstring only."
+  },
+  {
+    "path": "src/coordiworld/data/__init__.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/data/__init__.py",
+    "source_sha256": "bf1e94bcca838ff6d07e0bd1e958a2c1d1b0483efe9f8bb1944336a3871456bc",
+    "public_sha256": "bf1e94bcca838ff6d07e0bd1e958a2c1d1b0483efe9f8bb1944336a3871456bc",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/data/maps.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/data/maps.py",
+    "source_sha256": "eedb46a6f87ce4f77aa7591f02f0518b4f4786cd915c83c8aff4efc833883494",
+    "public_sha256": "eedb46a6f87ce4f77aa7591f02f0518b4f4786cd915c83c8aff4efc833883494",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/data/openscene.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/data/openscene.py",
+    "source_sha256": "c053827b1fd8e72ac9e3547fb8359e637cdcbf0ddb1a5505b1c8b0294e342e42",
+    "public_sha256": "c053827b1fd8e72ac9e3547fb8359e637cdcbf0ddb1a5505b1c8b0294e342e42",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/data/pdm_proposer.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/data/pdm_proposer.py",
+    "source_sha256": "0067801e68f06d1fe4fbcb9b0abc957ba2e260337c7a902366ba53c8e7549531",
+    "public_sha256": "0067801e68f06d1fe4fbcb9b0abc957ba2e260337c7a902366ba53c8e7549531",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/geometry.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/geometry.py",
+    "source_sha256": "ed040c0067c87004184d8eb9053d1b185cf9ea101e96b25666001a4d4d94f73c",
+    "public_sha256": "ed040c0067c87004184d8eb9053d1b185cf9ea101e96b25666001a4d4d94f73c",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/model.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/model.py",
+    "source_sha256": "cc7c4d401f5fec24ae9b397eeb30f78f1823d4e05a68a5f3199e48fde1a37939",
+    "public_sha256": "cc7c4d401f5fec24ae9b397eeb30f78f1823d4e05a68a5f3199e48fde1a37939",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/__init__.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/__init__.py",
+    "source_sha256": "ff4777b4e7ed919d0a0cca0c863bc2736e4b29b8310176b4554a107d99dae70d",
+    "public_sha256": "ff4777b4e7ed919d0a0cca0c863bc2736e4b29b8310176b4554a107d99dae70d",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/absolute_planning_graph.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/absolute_planning_graph.py",
+    "source_sha256": "7f4b3589e4ccb1e45c4e2d4bf0e1ba17998930c53c9b4b80659bc0888c8551a3",
+    "public_sha256": "7f4b3589e4ccb1e45c4e2d4bf0e1ba17998930c53c9b4b80659bc0888c8551a3",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/absolute_planning_world.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/absolute_planning_world.py",
+    "source_sha256": "aa1940e3aed294855d12e4bb2d34056f1ba7cb8cd3cc41b1496a40f285b661a2",
+    "public_sha256": "aa1940e3aed294855d12e4bb2d34056f1ba7cb8cd3cc41b1496a40f285b661a2",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/body_heading.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/body_heading.py",
+    "source_sha256": "725badb06e78c0c18f143f193bfbe5a1bff2b5151e5bcbe83b3a4fc17315da9a",
+    "public_sha256": "725badb06e78c0c18f143f193bfbe5a1bff2b5151e5bcbe83b3a4fc17315da9a",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/captured_factual_v2.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/captured_factual_v2.py",
+    "source_sha256": "b7bc242d13d785d4bd40d450c3458c775bcd7d411190d3eca3c269809f8d5c55",
+    "public_sha256": "b7bc242d13d785d4bd40d450c3458c775bcd7d411190d3eca3c269809f8d5c55",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/common_coverage_b13.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/common_coverage_b13.py",
+    "source_sha256": "8a7c3b806ffe3b50f2a7eebb4af6f8ea2e84d08162d5b90cee73b22b8abd2a17",
+    "public_sha256": "8a7c3b806ffe3b50f2a7eebb4af6f8ea2e84d08162d5b90cee73b22b8abd2a17",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/compiled_controller.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/compiled_controller.py",
+    "source_sha256": "03e268a22523922b319d4ea5ade47ef707c09c4590c8e3eb1dc24544befc787e",
+    "public_sha256": "03e268a22523922b319d4ea5ade47ef707c09c4590c8e3eb1dc24544befc787e",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/compiled_controller_kernel.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/compiled_controller_kernel.py",
+    "source_sha256": "315c89fd7f74e4032e33712c7e680cd57e42064e4f5ce713ff309a284fd45eef",
+    "public_sha256": "315c89fd7f74e4032e33712c7e680cd57e42064e4f5ce713ff309a284fd45eef",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/compiled_solve_controller.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/compiled_solve_controller.py",
+    "source_sha256": "899f88c8d2dfb47c634df00a1556ae4c2fabdb4cf50e2bfcfaef6508c4b16bba",
+    "public_sha256": "899f88c8d2dfb47c634df00a1556ae4c2fabdb4cf50e2bfcfaef6508c4b16bba",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/compiled_solve_kernel.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/compiled_solve_kernel.py",
+    "source_sha256": "f1065b5a1af4474277b58c7635691bd5ff002741a647e2ce3aefdfa6a04501a7",
+    "public_sha256": "f1065b5a1af4474277b58c7635691bd5ff002741a647e2ce3aefdfa6a04501a7",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/component_known_b13.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/component_known_b13.py",
+    "source_sha256": "7ce8fd7a9da2627586163012fb8413a0916bcd0b1dad875921ba6ef8aade4754",
+    "public_sha256": "7ce8fd7a9da2627586163012fb8413a0916bcd0b1dad875921ba6ef8aade4754",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/conservative_rail_graph.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/conservative_rail_graph.py",
+    "source_sha256": "3fce7703d083bee4f3e6a2141f54903759a86213cf7a9e5f1843744f725e7605",
+    "public_sha256": "3fce7703d083bee4f3e6a2141f54903759a86213cf7a9e5f1843744f725e7605",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/contracts.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/contracts.py",
+    "source_sha256": "d971e7cd182a2c052cedcd55ad186380fdc1dfd7b209e13a5993f9c184236e20",
+    "public_sha256": "d971e7cd182a2c052cedcd55ad186380fdc1dfd7b209e13a5993f9c184236e20",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/controller_profile_solve.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/controller_profile_solve.py",
+    "source_sha256": "6cc4afd7a08b1515ef81497716588bf55879db47f02c4e4d7b4abadf2e5a2edf",
+    "public_sha256": "6cc4afd7a08b1515ef81497716588bf55879db47f02c4e4d7b4abadf2e5a2edf",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/current_history_comfort.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/current_history_comfort.py",
+    "source_sha256": "07eb99e9b49f5cfc05757d3b7b7dda3a87fc88b077c4e2ba34c0723f8d902fb5",
+    "public_sha256": "07eb99e9b49f5cfc05757d3b7b7dda3a87fc88b077c4e2ba34c0723f8d902fb5",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/current_rail_response.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/current_rail_response.py",
+    "source_sha256": "637bc3b35dfed1915e5fefc423166a180a2dca6d0234c17c3f8c2ece4be152e0",
+    "public_sha256": "637bc3b35dfed1915e5fefc423166a180a2dca6d0234c17c3f8c2ece4be152e0",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/data.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/data.py",
+    "source_sha256": "c544486da3bb4871514d0574af9d97c809f5354043de113b186fc1a82fb1852c",
+    "public_sha256": "c544486da3bb4871514d0574af9d97c809f5354043de113b186fc1a82fb1852c",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/fast_rail_v3.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/fast_rail_v3.py",
+    "source_sha256": "1a4e6b2dacc203caa069426ad838eff562c183fedea97dff0f4a208688e0b052",
+    "public_sha256": "1a4e6b2dacc203caa069426ad838eff562c183fedea97dff0f4a208688e0b052",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/idm_teacher_geometry.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/idm_teacher_geometry.py",
+    "source_sha256": "b0f6b1bd4c8587df5c8afbf6dc48fde9348d1106133360936194d23909a3547e",
+    "public_sha256": "b0f6b1bd4c8587df5c8afbf6dc48fde9348d1106133360936194d23909a3547e",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/kinematic_residual.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/kinematic_residual.py",
+    "source_sha256": "4af4949f668551b44ad2e9555be07001e0f5d98af2885dd4f8c859f21d5d0aa8",
+    "public_sha256": "4af4949f668551b44ad2e9555be07001e0f5d98af2885dd4f8c859f21d5d0aa8",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/losses.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/losses.py",
+    "source_sha256": "6941df9881ff77d3e0b260a4b1d9e8dd596b23dba9457282f7ad94959aa2a250",
+    "public_sha256": "6941df9881ff77d3e0b260a4b1d9e8dd596b23dba9457282f7ad94959aa2a250",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/model.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/model.py",
+    "source_sha256": "bb81d251ec9ff788b826aa5ee0a6b3ed288bdb04041ceb20968c8f7326cb6326",
+    "public_sha256": "bb81d251ec9ff788b826aa5ee0a6b3ed288bdb04041ceb20968c8f7326cb6326",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/native_adapter.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/native_adapter.py",
+    "source_sha256": "5f6e5a7c39e91f8bc8d5d350f976c81fb14a7c9617f6bce150017eb6abc1b31f",
+    "public_sha256": "5f6e5a7c39e91f8bc8d5d350f976c81fb14a7c9617f6bce150017eb6abc1b31f",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/native_sampling.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/native_sampling.py",
+    "source_sha256": "7a30fcad2cf9c7418bb8d96371a062a70244d15c0d5c9f37b40b4087f50ae312",
+    "public_sha256": "7a30fcad2cf9c7418bb8d96371a062a70244d15c0d5c9f37b40b4087f50ae312",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/packed_path_contact.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/packed_path_contact.py",
+    "source_sha256": "fbd43900f0968a8ba8c17484634a3b3fe733ce178f45da63d34498ef4d5238be",
+    "public_sha256": "fbd43900f0968a8ba8c17484634a3b3fe733ce178f45da63d34498ef4d5238be",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/rail_contact.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/rail_contact.py",
+    "source_sha256": "34d5b65c8b30147a90fc4227fdb03ca3273de76aee14ff5ee7d7ec9209d41db1",
+    "public_sha256": "34d5b65c8b30147a90fc4227fdb03ca3273de76aee14ff5ee7d7ec9209d41db1",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/rail_geometry_capture.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/rail_geometry_capture.py",
+    "source_sha256": "3ccf3f4c6520379d3058fcdc841e275234519c63ae54daa2b2e5dad598f9cf0b",
+    "public_sha256": "3ccf3f4c6520379d3058fcdc841e275234519c63ae54daa2b2e5dad598f9cf0b",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/route_template_cache.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/route_template_cache.py",
+    "source_sha256": "bd0b6635f8c65352ed716acc34db325152b093ce77b8937a672c7e1b14bedeb4",
+    "public_sha256": "bd0b6635f8c65352ed716acc34db325152b093ce77b8937a672c7e1b14bedeb4",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/sparse_swept_graph.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/sparse_swept_graph.py",
+    "source_sha256": "0dcdf8e2a78e831e954234e64433ade56f32d6c3e7b74713ab1c51c712c155f1",
+    "public_sha256": "0dcdf8e2a78e831e954234e64433ade56f32d6c3e7b74713ab1c51c712c155f1",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/sparse_swept_rollout.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/sparse_swept_rollout.py",
+    "source_sha256": "75a87fed6390c06281fed4336f1179a29cb2cbe851e6a6348eddd44fc505851e",
+    "public_sha256": "75a87fed6390c06281fed4336f1179a29cb2cbe851e6a6348eddd44fc505851e",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/sparse_swept_step.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/sparse_swept_step.py",
+    "source_sha256": "e3c1ee076d1fed54f6f6a41fbc19c68fee57cd24c7b23e50c4bebba95cbb74c1",
+    "public_sha256": "e3c1ee076d1fed54f6f6a41fbc19c68fee57cd24c7b23e50c4bebba95cbb74c1",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/static_indexed_map.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/static_indexed_map.py",
+    "source_sha256": "a4be27c81129df3b9fb1c1645f6af63b44baf20249ea9ef25cda77f74180329d",
+    "public_sha256": "a4be27c81129df3b9fb1c1645f6af63b44baf20249ea9ef25cda77f74180329d",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/structured_lqr.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/structured_lqr.py",
+    "source_sha256": "8d825f4afe46e3c6fa997a6a1a8ec80eda2000d7331cf74c2a81cff8444c56ae",
+    "public_sha256": "8d825f4afe46e3c6fa997a6a1a8ec80eda2000d7331cf74c2a81cff8444c56ae",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/swept_full_state_graph.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/swept_full_state_graph.py",
+    "source_sha256": "4ad5b2263e2f941d2377a79cefe12e222af03a6be792c73449afda642772476a",
+    "public_sha256": "4ad5b2263e2f941d2377a79cefe12e222af03a6be792c73449afda642772476a",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/swept_occupancy_capture.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/swept_occupancy_capture.py",
+    "source_sha256": "c612d563899b5d97f65f1afdd93df68d342694c6daaaf45fb3294c80495458e6",
+    "public_sha256": "c612d563899b5d97f65f1afdd93df68d342694c6daaaf45fb3294c80495458e6",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/swept_occupancy_fused_timestep.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/swept_occupancy_fused_timestep.py",
+    "source_sha256": "4e982fd763dfda9b2ea6acce006c1d8b8970154ba665773b668872535295a170",
+    "public_sha256": "4e982fd763dfda9b2ea6acce006c1d8b8970154ba665773b668872535295a170",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/swept_occupancy_graph_timestep.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/swept_occupancy_graph_timestep.py",
+    "source_sha256": "f61258f1d4e8b7e1236899393de314031cd30c0f53289443ddf2313262462a17",
+    "public_sha256": "f61258f1d4e8b7e1236899393de314031cd30c0f53289443ddf2313262462a17",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/swept_template_features.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/swept_template_features.py",
+    "source_sha256": "276d12e3e41820438cc704910e2dec7f89ac0afc11f538a226bf91716bf1d759",
+    "public_sha256": "276d12e3e41820438cc704910e2dec7f89ac0afc11f538a226bf91716bf1d759",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/revision_v5/world_score_features.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/revision_v5/world_score_features.py",
+    "source_sha256": "24d9c4607c1dd3c8146423fddebf1e7d462a796af30430d4a151fd31c5d1bc5d",
+    "public_sha256": "24d9c4607c1dd3c8146423fddebf1e7d462a796af30430d4a151fd31c5d1bc5d",
+    "changes": "None"
+  },
+  {
+    "path": "src/coordiworld/schema.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfourth_20261029/runtime_src/coordiworld/schema.py",
+    "source_sha256": "6d9127c0f6d7784bba2d15cbe81a0ea21482d00b5907a88d764fcf8c513d37c7",
+    "public_sha256": "6d9127c0f6d7784bba2d15cbe81a0ea21482d00b5907a88d764fcf8c513d37c7",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentyfourth_20261029/scripts/revision_v5_twentyfourth_analysis.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/R14/revision_v5_twentyfourth_analysis.py",
+    "source_sha256": "dbb2b0b083e35fff7321a9a21cefef6e2eb9c66ae1dd5f37a415f15e186fd7fe",
+    "public_sha256": "dbb2b0b083e35fff7321a9a21cefef6e2eb9c66ae1dd5f37a415f15e186fd7fe",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentyfourth_20261029/scripts/revision_v5_twentyfourth_b36_inputs.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/R14/revision_v5_twentyfourth_b36_inputs.py",
+    "source_sha256": "485e9dc738fbfffc0564e8774444de9fbe3d7126c119d3e5832c09fdc2d6c2b9",
+    "public_sha256": "485e9dc738fbfffc0564e8774444de9fbe3d7126c119d3e5832c09fdc2d6c2b9",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentyfourth_20261029/scripts/revision_v5_twentyfourth_common.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/R14/revision_v5_twentyfourth_common.py",
+    "source_sha256": "8c8a198dbcff1f0750b9617b54c3f28375bbaab4e9ca58dc1b3de91e51815efe",
+    "public_sha256": "5fe31cf9ce1bb565c1f60fbad2684a89abf9a5c4f946bc650409fa86d96dfd90",
+    "changes": "Configurable workspace paths and public-facing docstring only."
+  },
+  {
+    "path": "research_source/workspace/twentyfourth_20261029/scripts/revision_v5_twentyfourth_legacy_control.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/R14/revision_v5_twentyfourth_legacy_control.py",
+    "source_sha256": "e4f68ec8598048b9a418a243ad3aa85412ca658292219beb4bf1d9d5c3349e7c",
+    "public_sha256": "e4f68ec8598048b9a418a243ad3aa85412ca658292219beb4bf1d9d5c3349e7c",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentyfourth_20261029/scripts/revision_v5_twentyfourth_mechanism.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/R14/revision_v5_twentyfourth_mechanism.py",
+    "source_sha256": "a55bd8e00056cbfd41844f68465b270ee2e5231bf83d6c39ba2aefa7cc0645fa",
+    "public_sha256": "a55bd8e00056cbfd41844f68465b270ee2e5231bf83d6c39ba2aefa7cc0645fa",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentyfourth_20261029/scripts/revision_v5_twentyfourth_native.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/R14/revision_v5_twentyfourth_native.py",
+    "source_sha256": "abe758f90d344fde8f92b88ccd08286f98e5abcb2d202d8d4fcdaf226f9ffcfc",
+    "public_sha256": "abe758f90d344fde8f92b88ccd08286f98e5abcb2d202d8d4fcdaf226f9ffcfc",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentyfourth_20261029/scripts/revision_v5_twentyfourth_pose_check.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/R14/revision_v5_twentyfourth_pose_check.py",
+    "source_sha256": "cf49978ba864bfb352c51d3a498ad7b6b32e1653ca06cc9fbe1c45275a09efa5",
+    "public_sha256": "cf49978ba864bfb352c51d3a498ad7b6b32e1653ca06cc9fbe1c45275a09efa5",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentyfourth_20261029/scripts/revision_v5_twentyfourth_prepare.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/R14/revision_v5_twentyfourth_prepare.py",
+    "source_sha256": "bb752644624d3dafc3224be50b05dfd932f15e02dfb170a1af5ed753106a9420",
+    "public_sha256": "bb752644624d3dafc3224be50b05dfd932f15e02dfb170a1af5ed753106a9420",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentyfourth_20261029/scripts/revision_v5_twentyfourth_timing.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/R14/revision_v5_twentyfourth_timing.py",
+    "source_sha256": "08f9dee55d98690d0bd372972c24153742316b5acf497aa4dda2076fda5a098c",
+    "public_sha256": "08f9dee55d98690d0bd372972c24153742316b5acf497aa4dda2076fda5a098c",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentyfourth_20261029/scripts/revision_v5_twentyfourth_train_drift_native.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/R14/revision_v5_twentyfourth_train_drift_native.py",
+    "source_sha256": "a0f72b1af48d9970aa2f9936d5924617b286d2c767765105162e9119ee6855cd",
+    "public_sha256": "a0f72b1af48d9970aa2f9936d5924617b286d2c767765105162e9119ee6855cd",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/eighteenth_20261027/scripts/revision_v5_eighteenth_common.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/eighteenth_20261027/scripts/revision_v5_eighteenth_common.py",
+    "source_sha256": "11e39274b8c3c45b2def5c3554c3c438a9b0cb1816204621d1c593ccc122c378",
+    "public_sha256": "72b4565d239088726f564c31373ca91eb1fd2556e3fd396b687bf420b82c5122",
+    "changes": "Configurable workspace paths and public-facing docstring only."
+  },
+  {
+    "path": "research_source/workspace/eighteenth_20261027/scripts/revision_v5_eighteenth_policy.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/eighteenth_20261027/scripts/revision_v5_eighteenth_policy.py",
+    "source_sha256": "2ad1296b333f9ae946d730412896d12d1b8d2cf1347bebeefb70758f05374bf4",
+    "public_sha256": "2ad1296b333f9ae946d730412896d12d1b8d2cf1347bebeefb70758f05374bf4",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/eighteenth_20261027/scripts/revision_v5_eighteenth_projection.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/eighteenth_20261027/scripts/revision_v5_eighteenth_projection.py",
+    "source_sha256": "f0679432df7f88c969f2f70f8219d0a8c1156469e1c8152329fb326e4659309e",
+    "public_sha256": "f0679432df7f88c969f2f70f8219d0a8c1156469e1c8152329fb326e4659309e",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/eighteenth_20261027/scripts/revision_v5_eighteenth_road.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/eighteenth_20261027/scripts/revision_v5_eighteenth_road.py",
+    "source_sha256": "5f1b17fd473af9f59d56481ee55e00e364d4a9687be5e03e5ea8280473d0c26e",
+    "public_sha256": "5f1b17fd473af9f59d56481ee55e00e364d4a9687be5e03e5ea8280473d0c26e",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/eighteenth_20261027/scripts/revision_v5_eighteenth_sat_fast.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/eighteenth_20261027/scripts/revision_v5_eighteenth_sat_fast.py",
+    "source_sha256": "2868252839429b9c7ce3753dddb1adf8f6ddc69acce46b797fd6082e55d77146",
+    "public_sha256": "2868252839429b9c7ce3753dddb1adf8f6ddc69acce46b797fd6082e55d77146",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/eighteenth_20261027/scripts/revision_v5_eighteenth_source_features.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/eighteenth_20261027/scripts/revision_v5_eighteenth_source_features.py",
+    "source_sha256": "c6c77a4ee7cfbbd04cb26a07e54e2b0272712fbae1444c4d3328a96cdcd0ca27",
+    "public_sha256": "c6c77a4ee7cfbbd04cb26a07e54e2b0272712fbae1444c4d3328a96cdcd0ca27",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/eleventh_20261026/output/revision_v5/eleventh_20261026/crossline_current_map/current_map_export.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/eleventh_20261026/output/revision_v5/eleventh_20261026/crossline_current_map/current_map_export.py",
+    "source_sha256": "292603b1d99da6701155db02fe3dbc29130975e757b389ecdaba7ff324dfed34",
+    "public_sha256": "292603b1d99da6701155db02fe3dbc29130975e757b389ecdaba7ff324dfed34",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/eleventh_20261026/output/revision_v5/eleventh_20261026/crossline_current_map/deployment_features.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/eleventh_20261026/output/revision_v5/eleventh_20261026/crossline_current_map/deployment_features.py",
+    "source_sha256": "dc899c2c6375699a8c571e0ba72ee3ae03bf522635c4f8d73fe8a66e0d7eaaf8",
+    "public_sha256": "dc899c2c6375699a8c571e0ba72ee3ae03bf522635c4f8d73fe8a66e0d7eaaf8",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/eleventh_20261026/output/revision_v5/eleventh_20261026/crossline_current_map/static_components.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/eleventh_20261026/output/revision_v5/eleventh_20261026/crossline_current_map/static_components.py",
+    "source_sha256": "b51533557a992e015009ddfe402b81ea4e6a83891d857360ef072cb2f2bd3b3c",
+    "public_sha256": "9ecae1a356fc4eebaebd262d67049ba50cdcedacb1d61ffd535cdf44a627648c",
+    "changes": "None",
+    "release_transform": "Stable anonymous record identifiers; numeric payload unchanged."
+  },
+  {
+    "path": "research_source/workspace/eleventh_20261026/portable/current_progress_penalty.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/eleventh_20261026/portable/current_progress_penalty.py",
+    "source_sha256": "4fe083f566899ed96335c232e63b84b8a5a17ba190484377bf364107383d10bc",
+    "public_sha256": "4fe083f566899ed96335c232e63b84b8a5a17ba190484377bf364107383d10bc",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/eleventh_20261026/scripts/revision_v5_eleventh_choice_common.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/eleventh_20261026/scripts/revision_v5_eleventh_choice_common.py",
+    "source_sha256": "b3fca5580da5a015a29b0bec7a2ddfcc6c1d15f5ff43e546d21e579a9b16b096",
+    "public_sha256": "b3fca5580da5a015a29b0bec7a2ddfcc6c1d15f5ff43e546d21e579a9b16b096",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/eleventh_20261026/scripts/revision_v5_eleventh_factor_choice.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/eleventh_20261026/scripts/revision_v5_eleventh_factor_choice.py",
+    "source_sha256": "946fad73fd33b0df3c4a48aa3f0eb033da5ae3e22dcae229f8dabe1253968697",
+    "public_sha256": "946fad73fd33b0df3c4a48aa3f0eb033da5ae3e22dcae229f8dabe1253968697",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/eleventh_20261026/scripts/revision_v5_eleventh_map_augment.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/eleventh_20261026/scripts/revision_v5_eleventh_map_augment.py",
+    "source_sha256": "dc2a4a56da09fd314339b1e9654f5504a5a479c6f9760ac64638c8f31921a685",
+    "public_sha256": "dc2a4a56da09fd314339b1e9654f5504a5a479c6f9760ac64638c8f31921a685",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/eleventh_20261026/scripts/revision_v5_eleventh_new_scenes_progress.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/eleventh_20261026/scripts/revision_v5_eleventh_new_scenes_progress.py",
+    "source_sha256": "8f6d8765a6f9172503d81be2a0ed1fe8a9b1b7ec0b96711dca6f086ed3917d84",
+    "public_sha256": "de863ee6995ea86901709fc28cb30fe4ad00e63dd3ba81d45d86918e4ce29267",
+    "changes": "Configurable workspace paths and public-facing docstring only."
+  },
+  {
+    "path": "research_source/workspace/eleventh_20261026/scripts/revision_v5_eleventh_relation_features.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/eleventh_20261026/scripts/revision_v5_eleventh_relation_features.py",
+    "source_sha256": "a164834198ea791a10dfde458d238169524eeab658cf8f750d5c987ea27c6e6f",
+    "public_sha256": "a164834198ea791a10dfde458d238169524eeab658cf8f750d5c987ea27c6e6f",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/runtime_s1/scripts/revision_v5_audit_current_rail.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/runtime_s1/scripts/revision_v5_audit_current_rail.py",
+    "source_sha256": "2463a00fe9443de2ac6afa5e4148eacde1eaadb5eca20418094321d9f24ed180",
+    "public_sha256": "2463a00fe9443de2ac6afa5e4148eacde1eaadb5eca20418094321d9f24ed180",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/runtime_s1/scripts/revision_v5_collect_native_pilot.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/runtime_s1/scripts/revision_v5_collect_native_pilot.py",
+    "source_sha256": "7d62107d4d177d5966323cfde835a516c078b01138ae7d62790b7b2083e79a77",
+    "public_sha256": "7d62107d4d177d5966323cfde835a516c078b01138ae7d62790b7b2083e79a77",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/runtime_s1/scripts/revision_v5_collect_paired_teachers_v2.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/runtime_s1/scripts/revision_v5_collect_paired_teachers_v2.py",
+    "source_sha256": "360912316d1280122bcdad24b3215e7bcb5ee12b1cda48df4abfee210ab08f88",
+    "public_sha256": "360912316d1280122bcdad24b3215e7bcb5ee12b1cda48df4abfee210ab08f88",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/runtime_s1/scripts/revision_v5_train_factual_metric_aligned.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/runtime_s1/scripts/revision_v5_train_factual_metric_aligned.py",
+    "source_sha256": "3f348e628f8e70893032d78c8b9946581f367647c9353650cbc33f1b1281cd45",
+    "public_sha256": "61d725aa4b085feddd439027e0ca204987486fb4cee4858258c71956f3d92485",
+    "changes": "None",
+    "release_transform": "Stable anonymous record identifiers; numeric payload unchanged."
+  },
+  {
+    "path": "research_source/workspace/runtime_s1/scripts/revision_v5_train_s1_exploratory.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/runtime_s1/scripts/revision_v5_train_s1_exploratory.py",
+    "source_sha256": "b7a33f71ade709e4c4432f24b1f89315d154a7f9643f8e06745140cf909a8f58",
+    "public_sha256": "b7a33f71ade709e4c4432f24b1f89315d154a7f9643f8e06745140cf909a8f58",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/seventeenth_20261027/scripts/revision_v5_seventeenth_live.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/seventeenth_20261027/scripts/revision_v5_seventeenth_live.py",
+    "source_sha256": "fddc348cb58dc7e7c725fda18bf543abd04eaa9ed457b7e434cd395bf879e886",
+    "public_sha256": "1dcf15101608623c14bdaeadbbc73a3164a73b935115ccee629692a5e4b442ef",
+    "changes": "Configurable workspace paths and public-facing docstring only."
+  },
+  {
+    "path": "research_source/workspace/seventeenth_20261027/scripts/revision_v5_seventeenth_math.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/seventeenth_20261027/scripts/revision_v5_seventeenth_math.py",
+    "source_sha256": "b460a9099d3f5fbbdf8c9c704b124c1e38f3ba68d5be80356194b2597fde9e19",
+    "public_sha256": "b460a9099d3f5fbbdf8c9c704b124c1e38f3ba68d5be80356194b2597fde9e19",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/seventeenth_20261027/scripts/revision_v5_seventeenth_progress.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/seventeenth_20261027/scripts/revision_v5_seventeenth_progress.py",
+    "source_sha256": "e87dde7ae0ae969b7cf95c19034f18c86c3c9208f97ac57385ccb6c789cc1040",
+    "public_sha256": "f3a8cff1615a19d6bcd6ec4f457fd1ef58f411abcfcad94f8fb23d900bc7823b",
+    "changes": "Configurable workspace paths and public-facing docstring only."
+  },
+  {
+    "path": "research_source/workspace/seventeenth_20261027/scripts/revision_v5_seventeenth_raw_history.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/seventeenth_20261027/scripts/revision_v5_seventeenth_raw_history.py",
+    "source_sha256": "d12cf6eff88e1d3df2cfe4400f96f9dcda4affe21d75ac24ba952fdb9e3d9cc1",
+    "public_sha256": "d12cf6eff88e1d3df2cfe4400f96f9dcda4affe21d75ac24ba952fdb9e3d9cc1",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/seventeenth_20261027/scripts/revision_v5_seventeenth_strict_aggregation.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/seventeenth_20261027/scripts/revision_v5_seventeenth_strict_aggregation.py",
+    "source_sha256": "d2db35ec28f72c020cedda5be0d1a0d4eef58a21e0ad24bcb3f3d069a0a781ef",
+    "public_sha256": "d2db35ec28f72c020cedda5be0d1a0d4eef58a21e0ad24bcb3f3d069a0a781ef",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/seventeenth_20261027/scripts/revision_v5_seventeenth_train.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/seventeenth_20261027/scripts/revision_v5_seventeenth_train.py",
+    "source_sha256": "8909e3c288e238ab4d7d059b0d02d0021e28d2fcfa87672525f4fcf4930c2546",
+    "public_sha256": "3dc3a17672bbf05addb6d9e88e02919d50ecd0128c88a8850424e7c68ec2f086",
+    "changes": "Configurable workspace paths and public-facing docstring only."
+  },
+  {
+    "path": "research_source/workspace/sixteenth_20261027/scripts/revision_v5_sixteenth_common.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/sixteenth_20261027/scripts/revision_v5_sixteenth_common.py",
+    "source_sha256": "ae57a0718b8ece018c86ba0ccf99e014405b41534e898a8dd32202610781d72c",
+    "public_sha256": "ae57a0718b8ece018c86ba0ccf99e014405b41534e898a8dd32202610781d72c",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/sixteenth_20261027/scripts/revision_v5_sixteenth_moments.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/sixteenth_20261027/scripts/revision_v5_sixteenth_moments.py",
+    "source_sha256": "d90ddd210e30347fa283d91ce5e8d664bb7eb77e4c0c3b63f80891dc3e3a77e0",
+    "public_sha256": "d90ddd210e30347fa283d91ce5e8d664bb7eb77e4c0c3b63f80891dc3e3a77e0",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/sixteenth_20261027/scripts/revision_v5_sixteenth_semantics.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/sixteenth_20261027/scripts/revision_v5_sixteenth_semantics.py",
+    "source_sha256": "6d247fd7caaa8b27a1667bf6c5d45e4b265db8f5fa09a81204deb9380da0cc87",
+    "public_sha256": "6d247fd7caaa8b27a1667bf6c5d45e4b265db8f5fa09a81204deb9380da0cc87",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentieth_20261028/scripts/revision_v5_twentieth_full.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentieth_20261028/scripts/revision_v5_twentieth_full.py",
+    "source_sha256": "f2b1f15d7931525fbbb62440a3cd6121006dd9ce6b6d0565e7ae0478429a93aa",
+    "public_sha256": "f2b1f15d7931525fbbb62440a3cd6121006dd9ce6b6d0565e7ae0478429a93aa",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentieth_20261028/scripts/revision_v5_twentieth_pool_probe.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentieth_20261028/scripts/revision_v5_twentieth_pool_probe.py",
+    "source_sha256": "fd45cccb926f84eac5c52f11e39346921b6c3dbd0c10b44488c25a4b198a6fbf",
+    "public_sha256": "373faeeeaedfb266301b0ee8d7d307119a1a6065d7a955ec9791e901da05ecd7",
+    "changes": "Configurable workspace paths and public-facing docstring only.",
+    "release_transform": "Stable anonymous record identifiers; numeric payload unchanged."
+  },
+  {
+    "path": "research_source/workspace/twentieth_20261028/scripts/revision_v5_twentieth_q_train.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentieth_20261028/scripts/revision_v5_twentieth_q_train.py",
+    "source_sha256": "078f01514cd48eabbe7f44098b8fbcce0087cff76fa703af8125f25a4d3e1756",
+    "public_sha256": "7c33db9aba8f3cc8957c1f70e1793a64de67f25a001ced7f004662c1a02a43f1",
+    "changes": "Configurable workspace paths and public-facing docstring only."
+  },
+  {
+    "path": "research_source/workspace/twentieth_20261028/scripts/revision_v5_twentieth_route_correct.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentieth_20261028/scripts/revision_v5_twentieth_route_correct.py",
+    "source_sha256": "573a538292821a433f07ea633983c98a4a98f9223d20f61ccccab02410475b71",
+    "public_sha256": "b7369c23db603a52d36e77a346e26c55005235001cd33ebe1f79ec671af11e4e",
+    "changes": "Configurable workspace paths and public-facing docstring only."
+  },
+  {
+    "path": "research_source/workspace/twentieth_20261028/scripts/revision_v5_twentieth_route_signal_policy.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentieth_20261028/scripts/revision_v5_twentieth_route_signal_policy.py",
+    "source_sha256": "56229f761105d9b1fb0dd7a291eebbf0ad627ca393be3f850bea21bfa4459933",
+    "public_sha256": "56229f761105d9b1fb0dd7a291eebbf0ad627ca393be3f850bea21bfa4459933",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentieth_20261028/scripts/revision_v5_twentieth_signal_features.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentieth_20261028/scripts/revision_v5_twentieth_signal_features.py",
+    "source_sha256": "ae5bf09a4c493fc1acc34803270507d83165b1c8cb9e634e003ef353443cd0ab",
+    "public_sha256": "ae5bf09a4c493fc1acc34803270507d83165b1c8cb9e634e003ef353443cd0ab",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentieth_20261028/scripts/revision_v5_twentieth_signal_features_fast.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentieth_20261028/scripts/revision_v5_twentieth_signal_features_fast.py",
+    "source_sha256": "085192f935ebf99b2f7919e995093a18ceb44c69c3350a47cfdae3c74017d0d0",
+    "public_sha256": "085192f935ebf99b2f7919e995093a18ceb44c69c3350a47cfdae3c74017d0d0",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentyfirst_20261028/scripts/revision_v5_twentyfirst_common.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfirst_20261028/scripts/revision_v5_twentyfirst_common.py",
+    "source_sha256": "9364fe995523dfce0c247559e52a5358f04f277572dd0c1575d432b1debe86f8",
+    "public_sha256": "830ede24f7aecb361ffd1240b88d779872b525e9e0cd05fd9fdf65c0193f7859",
+    "changes": "Configurable workspace paths and public-facing docstring only."
+  },
+  {
+    "path": "research_source/workspace/twentyfirst_20261028/scripts/revision_v5_twentyfirst_full.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentyfirst_20261028/scripts/revision_v5_twentyfirst_full.py",
+    "source_sha256": "3501885c420b1ee107e80eb6b7809ef6f3435b163427f9581552095ae71133e1",
+    "public_sha256": "3501885c420b1ee107e80eb6b7809ef6f3435b163427f9581552095ae71133e1",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentysecond_20261028/scripts/revision_v5_twentysecond_common.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentysecond_20261028/scripts/revision_v5_twentysecond_common.py",
+    "source_sha256": "a4216d53cc37685a82b202c64ebd40fd43f390778bbbe822bb769f429d78bbe6",
+    "public_sha256": "171bece8c0fc5f9e3d0a5b06439f31670ca35471be15e6dab870a4fa6b19f5db",
+    "changes": "Configurable workspace paths and public-facing docstring only."
+  },
+  {
+    "path": "research_source/workspace/twentysecond_20261028/scripts/revision_v5_twentysecond_contact_features.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentysecond_20261028/scripts/revision_v5_twentysecond_contact_features.py",
+    "source_sha256": "961aa7f2ad08fa20b33a8f2ca22d1e456838dffa69bb02773cd78042b737942d",
+    "public_sha256": "514ebfb435d59bd33829e383a66bf80e5a4a29771542e939c36d05403c3b6a6e",
+    "changes": "None",
+    "release_transform": "Stable anonymous record identifiers; numeric payload unchanged."
+  },
+  {
+    "path": "research_source/workspace/twentysecond_20261028/scripts/revision_v5_twentysecond_kinematics.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentysecond_20261028/scripts/revision_v5_twentysecond_kinematics.py",
+    "source_sha256": "64d505f37ba7fc0bb703e0924de9391eb488fbf6079385544e13b64876a8a32f",
+    "public_sha256": "64d505f37ba7fc0bb703e0924de9391eb488fbf6079385544e13b64876a8a32f",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentysecond_20261028/scripts/revision_v5_twentysecond_pool_labels.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentysecond_20261028/scripts/revision_v5_twentysecond_pool_labels.py",
+    "source_sha256": "4448e04799b0a941a30ec6df80b772b91e9783d3721162d07ec5a36148bdbcdd",
+    "public_sha256": "4448e04799b0a941a30ec6df80b772b91e9783d3721162d07ec5a36148bdbcdd",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentysecond_20261028/scripts/revision_v5_twentysecond_pool_probe.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentysecond_20261028/scripts/revision_v5_twentysecond_pool_probe.py",
+    "source_sha256": "5761528e8a274b8979efb21f47da685257a5cf4e37398571ebbd976a7b09699a",
+    "public_sha256": "5761528e8a274b8979efb21f47da685257a5cf4e37398571ebbd976a7b09699a",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentysecond_20261028/scripts/revision_v5_twentysecond_primary.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentysecond_20261028/scripts/revision_v5_twentysecond_primary.py",
+    "source_sha256": "7f1e5b16e1da1f35845854390bbfebe319201b3265c66d7dcb955fbd9dcbfa81",
+    "public_sha256": "7f1e5b16e1da1f35845854390bbfebe319201b3265c66d7dcb955fbd9dcbfa81",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentysecond_20261028/scripts/revision_v5_twentysecond_train.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentysecond_20261028/scripts/revision_v5_twentysecond_train.py",
+    "source_sha256": "66e8d0a2d573cf94425d67102b8bce0e8c5901dfeca6001fbe978d370c93c36d",
+    "public_sha256": "66e8d0a2d573cf94425d67102b8bce0e8c5901dfeca6001fbe978d370c93c36d",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentythird_20261029/scripts/revision_v5_twentythird_common.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentythird_20261029/scripts/revision_v5_twentythird_common.py",
+    "source_sha256": "91dd5f30658eaedda0ee9ebacf23675c3a92e6ec74c411370e9b56f22ddc2fdb",
+    "public_sha256": "a2ec18fd49ce7c0703b8584d1d8441cf8b25d35b7feb24df6d25510a561a2e53",
+    "changes": "Configurable workspace paths and public-facing docstring only."
+  },
+  {
+    "path": "research_source/workspace/twentythird_20261029/scripts/revision_v5_twentythird_context_cache.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentythird_20261029/scripts/revision_v5_twentythird_context_cache.py",
+    "source_sha256": "fdb2f85b44be687ac2c44ffd796083c34c7f7dab826ad4c110e47b3d7bbc1d37",
+    "public_sha256": "fdb2f85b44be687ac2c44ffd796083c34c7f7dab826ad4c110e47b3d7bbc1d37",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentythird_20261029/scripts/revision_v5_twentythird_control_progress.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentythird_20261029/scripts/revision_v5_twentythird_control_progress.py",
+    "source_sha256": "f26fc379c9e436ede3a297dbef9c1cbb1f43ceeeac3b4454a6ff891c91272e04",
+    "public_sha256": "f26fc379c9e436ede3a297dbef9c1cbb1f43ceeeac3b4454a6ff891c91272e04",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentythird_20261029/scripts/revision_v5_twentythird_factory.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentythird_20261029/scripts/revision_v5_twentythird_factory.py",
+    "source_sha256": "33ca7532d6200a285895307ef82166737028c10f5435e5685d94cbc0e0e48af2",
+    "public_sha256": "33ca7532d6200a285895307ef82166737028c10f5435e5685d94cbc0e0e48af2",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentythird_20261029/scripts/revision_v5_twentythird_features.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentythird_20261029/scripts/revision_v5_twentythird_features.py",
+    "source_sha256": "e5a0c151c58c913bbab23a412124f8918ae7ff978d542b56f67a6a2dda918c56",
+    "public_sha256": "e5a0c151c58c913bbab23a412124f8918ae7ff978d542b56f67a6a2dda918c56",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentythird_20261029/scripts/revision_v5_twentythird_memo.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentythird_20261029/scripts/revision_v5_twentythird_memo.py",
+    "source_sha256": "bdecff371f0181d4c0c93d2f2d5dc4a45d502342733e82a2ea06307306e8f511",
+    "public_sha256": "bdecff371f0181d4c0c93d2f2d5dc4a45d502342733e82a2ea06307306e8f511",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentythird_20261029/scripts/revision_v5_twentythird_native.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentythird_20261029/scripts/revision_v5_twentythird_native.py",
+    "source_sha256": "d32fe05302252ddcdb180f2f4825d1b8036df2dfbb51578984a6d8809535d6fc",
+    "public_sha256": "d32fe05302252ddcdb180f2f4825d1b8036df2dfbb51578984a6d8809535d6fc",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentythird_20261029/scripts/revision_v5_twentythird_null_probe.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentythird_20261029/scripts/revision_v5_twentythird_null_probe.py",
+    "source_sha256": "a24b0c0e2aacc33f21f983ff0cc5d5dd44ab1d486cf4b26cfb2fe4ff44bf56c3",
+    "public_sha256": "a24b0c0e2aacc33f21f983ff0cc5d5dd44ab1d486cf4b26cfb2fe4ff44bf56c3",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentythird_20261029/scripts/revision_v5_twentythird_policy.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentythird_20261029/scripts/revision_v5_twentythird_policy.py",
+    "source_sha256": "cd3b3ef9bc48076d29eaa77b115fab1dddd6cfd4ffe8c19e858a316b19c24def",
+    "public_sha256": "cd3b3ef9bc48076d29eaa77b115fab1dddd6cfd4ffe8c19e858a316b19c24def",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentythird_20261029/scripts/revision_v5_twentythird_progress_readout.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentythird_20261029/scripts/revision_v5_twentythird_progress_readout.py",
+    "source_sha256": "2ba647d64d2944c7a8d010b87fa05c71c681bd36c204f31b48777606bf7c1cc4",
+    "public_sha256": "2ba647d64d2944c7a8d010b87fa05c71c681bd36c204f31b48777606bf7c1cc4",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentythird_20261029/scripts/revision_v5_twentythird_qualification.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentythird_20261029/scripts/revision_v5_twentythird_qualification.py",
+    "source_sha256": "396020c191ecbe8e938ac01d1185ae3c3f147a65f479883882402c58f221c300",
+    "public_sha256": "396020c191ecbe8e938ac01d1185ae3c3f147a65f479883882402c58f221c300",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentythird_20261029/scripts/revision_v5_twentythird_readout.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentythird_20261029/scripts/revision_v5_twentythird_readout.py",
+    "source_sha256": "e48409b67266cb734aafe2d346deccefd07d9e60dd243133c5b0f3b730d92a02",
+    "public_sha256": "e48409b67266cb734aafe2d346deccefd07d9e60dd243133c5b0f3b730d92a02",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentythird_20261029/scripts/revision_v5_twentythird_spatial_probe.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentythird_20261029/scripts/revision_v5_twentythird_spatial_probe.py",
+    "source_sha256": "984898f6680bff55f8ec2f4d44f370de0e5646bfbb3872a2525c4fef81d2e392",
+    "public_sha256": "984898f6680bff55f8ec2f4d44f370de0e5646bfbb3872a2525c4fef81d2e392",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentythird_20261029/scripts/revision_v5_twentythird_train_analysis.py",
+    "source_artifact": "analysis/manuscript_revision_20261030/code_staging/B14/source/dependencies/twentythird_20261029/scripts/revision_v5_twentythird_train_analysis.py",
+    "source_sha256": "ed8121e7f3882958b0f9a5172ddc17e5c37617b8158b36147115033669fba418",
+    "public_sha256": "ed8121e7f3882958b0f9a5172ddc17e5c37617b8158b36147115033669fba418",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentysixth_20261030/scripts/revision_v5_twentysixth_analysis.py",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R16_\u6700\u5c0f\u590d\u6838_v01_20261030/source/R16/revision_v5_twentysixth_analysis.py",
+    "source_sha256": "4bb1edd7affbd38a74469e48354d9b4c2cb1f483676943ce9285cfddf4e67eee",
+    "public_sha256": "4bb1edd7affbd38a74469e48354d9b4c2cb1f483676943ce9285cfddf4e67eee",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentysixth_20261030/scripts/revision_v5_twentysixth_common.py",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R16_\u6700\u5c0f\u590d\u6838_v01_20261030/source/R16/revision_v5_twentysixth_common.py",
+    "source_sha256": "3741c7713287e30e79981d601a65d011f4e6b0e3d20e4719d459c10dbc129533",
+    "public_sha256": "8bdf0df9a7a8bf66dc150a1caac731fd020f9038e96ca7453eff4b65226cc1d2",
+    "changes": "Configurable workspace paths and public-facing docstring only."
+  },
+  {
+    "path": "research_source/workspace/twentysixth_20261030/scripts/revision_v5_twentysixth_development.py",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R16_\u6700\u5c0f\u590d\u6838_v01_20261030/source/R16/revision_v5_twentysixth_development.py",
+    "source_sha256": "a6ae6a67212c3b62e6ab6b2a2a14da859a4ef04d67589f41103bda8ea4b626e0",
+    "public_sha256": "a6ae6a67212c3b62e6ab6b2a2a14da859a4ef04d67589f41103bda8ea4b626e0",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentysixth_20261030/scripts/revision_v5_twentysixth_execution_recovery.py",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R16_\u6700\u5c0f\u590d\u6838_v01_20261030/source/R16/revision_v5_twentysixth_execution_recovery.py",
+    "source_sha256": "89f09f97e6d6bc41ed5c8ad91add34656be5af79daeb20811eee6f9d8709c281",
+    "public_sha256": "f5919ecfd6f14a47a474c5527f210e281aad01e0ee6a629acd88e923ad59c85e",
+    "changes": "None",
+    "release_transform": "Stable anonymous record identifiers; numeric payload unchanged."
+  },
+  {
+    "path": "research_source/workspace/twentysixth_20261030/scripts/revision_v5_twentysixth_representation.py",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R16_\u6700\u5c0f\u590d\u6838_v01_20261030/source/R16/revision_v5_twentysixth_representation.py",
+    "source_sha256": "7beb4a4d424497bd5db5394791bf5db0b49a523b60a7f283396c3563db4fbdd8",
+    "public_sha256": "7beb4a4d424497bd5db5394791bf5db0b49a523b60a7f283396c3563db4fbdd8",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentysixth_20261030/scripts/revision_v5_twentysixth_supply_development.py",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R16_\u6700\u5c0f\u590d\u6838_v01_20261030/source/R16/revision_v5_twentysixth_supply_development.py",
+    "source_sha256": "61bf55231658db5e82e87acd8a07082e319d1cee8ee9fdf874184f8a2967c079",
+    "public_sha256": "61bf55231658db5e82e87acd8a07082e319d1cee8ee9fdf874184f8a2967c079",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentysixth_20261030/scripts/revision_v5_twentysixth_train.py",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R16_\u6700\u5c0f\u590d\u6838_v01_20261030/source/R16/revision_v5_twentysixth_train.py",
+    "source_sha256": "f59e60af52eb21f282cbf1b3ed45a9a608d2e04c70ccb7cc5b30635871cd27cc",
+    "public_sha256": "f59e60af52eb21f282cbf1b3ed45a9a608d2e04c70ccb7cc5b30635871cd27cc",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/readout_study/train_main.py",
+    "source_artifact": "study/code/train_main.py",
+    "source_sha256": "5868cb007cd600316d67e09b9cd79679ed0c7d7ab90b99f2e5c037a7ecb5f84b",
+    "public_sha256": "5868cb007cd600316d67e09b9cd79679ed0c7d7ab90b99f2e5c037a7ecb5f84b",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/readout_study/train_custom.py",
+    "source_artifact": "study/code/train_custom.py",
+    "source_sha256": "c9ea92e5bb08d4f4b8b102fc4e1188815ce2cf08b5f7b6af7fd6d9ef62293b75",
+    "public_sha256": "c9ea92e5bb08d4f4b8b102fc4e1188815ce2cf08b5f7b6af7fd6d9ef62293b75",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/readout_study/predict_arrays.py",
+    "source_artifact": "study/code/predict_arrays.py",
+    "source_sha256": "d0852657aef239c88f95ec5b1d7ebc9c321977c59b710c130c2d3319f1d160b0",
+    "public_sha256": "d0852657aef239c88f95ec5b1d7ebc9c321977c59b710c130c2d3319f1d160b0",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/readout_study/common.py",
+    "source_artifact": "study/code/common.py",
+    "source_sha256": "f877f137029ca31a5b7677a1a853afed28f1f83db59228b99c367ebc2df158bf",
+    "public_sha256": "f877f137029ca31a5b7677a1a853afed28f1f83db59228b99c367ebc2df158bf",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/readout_study/analyze.py",
+    "source_artifact": "study/code/analyze.py",
+    "source_sha256": "d56daa95895a2bd17a78eaab3769c5f720041bf8d942612bada1e8d351282c24",
+    "public_sha256": "d56daa95895a2bd17a78eaab3769c5f720041bf8d942612bada1e8d351282c24",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentyfifth_20261030/scripts/revision_v5_twentyfifth_common.py",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R15_\u6700\u5c0f\u590d\u6838_v01_20261030/source/R15/revision_v5_twentyfifth_common.py",
+    "source_sha256": "b59755728e4db63cebcbf2a35dd82abdd1a22d0fc59964d46a2b23ebbc77e065",
+    "public_sha256": "08147e863c7080f200fb64167ca4e9afc1870eda5015005ea7ac87eeee482b68",
+    "changes": "Configurable workspace paths and public-facing docstring only."
+  },
+  {
+    "path": "research_source/workspace/twentyfifth_20261030/scripts/revision_v5_twentyfifth_structured.py",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R15_\u6700\u5c0f\u590d\u6838_v01_20261030/source/R15/revision_v5_twentyfifth_structured.py",
+    "source_sha256": "45b6ff49ed1e4d1dfe6f5b834ce4be5d0e11bb0519f43c39cf16824559f286f9",
+    "public_sha256": "45b6ff49ed1e4d1dfe6f5b834ce4be5d0e11bb0519f43c39cf16824559f286f9",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentyfifth_20261030/scripts/revision_v5_twentyfifth_b36_probability.py",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R15_\u6700\u5c0f\u590d\u6838_v01_20261030/source/R15/revision_v5_twentyfifth_b36_probability.py",
+    "source_sha256": "fc2d536ecb03e93c7d08ca6033d01b8ac42966162f8cbc26cd125c75ba7bc5cc",
+    "public_sha256": "fc2d536ecb03e93c7d08ca6033d01b8ac42966162f8cbc26cd125c75ba7bc5cc",
+    "changes": "None"
+  },
+  {
+    "path": "research_source/workspace/twentythird_20261029/scripts/revision_v5_twentythird_timing_active.py",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R13_\u6700\u5c0f\u590d\u6838_v01_20261029/source/R13/revision_v5_twentythird_timing_active.py",
+    "source_sha256": "1a1b3f577ac80c85485d98452b6665b9754e9a316c7bbb29495d909b5e494a93",
+    "public_sha256": "61b6c6f7339d24dcfd034d54fe977c39063ce346b9abd1353973ed755e2b62c7",
+    "changes": "None",
+    "release_transform": "Stable anonymous record identifiers; numeric payload unchanged."
+  },
+  {
+    "path": "research_source/workspace/twentysecond_20261028/scripts/revision_v5_twentysecond_risk_quality.py",
+    "source_artifact": "CoordiWorld_\u518d\u6765\u4e00\u6b21_R13_\u6700\u5c0f\u590d\u6838_v01_20261029/startup-reference/peer_B_R12/source/revision_v5_twentysecond_risk_quality.py",
+    "source_sha256": "c2c74e3025e9eb0aa5f171b57ca20edf7ec0cc74eaad832c8ae60b4f8b78b647",
+    "public_sha256": "c2c74e3025e9eb0aa5f171b57ca20edf7ec0cc74eaad832c8ae60b4f8b78b647",
+    "changes": "None"
+  },
+  {
+    "path": "config/historical_data_adapter.yaml",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/config/group_cache_v2.yaml",
+    "source_sha256": "0606a2a1215823859f5254f86eee532885202493ec318d03513c5ba96cfaac53",
+    "public_sha256": "0606a2a1215823859f5254f86eee532885202493ec318d03513c5ba96cfaac53"
+  },
+  {
+    "path": "models/PNC/q/booster_config.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/q/booster_config.json",
+    "source_sha256": "cc7d9eb785bf77dfa14fedd1a1d6a97353adc44cda93465985e6d3acf9bdc04b",
+    "public_sha256": "1009eb81804e6b9afaf6f033b542b8e5893b6d5e993bdad0b011249c17e7fe4f"
+  },
+  {
+    "path": "models/PNC/q/model.ubj",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/q/model.ubj",
+    "source_sha256": "ac34252f0924c2280d7402192529fb2db55a6ef30877774238211b1e712af5a9",
+    "public_sha256": "ac34252f0924c2280d7402192529fb2db55a6ef30877774238211b1e712af5a9"
+  },
+  {
+    "path": "models/PNC/q/tree_dump.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/q/tree_dump.json",
+    "source_sha256": "ff7619f8e32c6b709846001bd4167140041af0beab5dcd14c7d0e6b285061717",
+    "public_sha256": "947ebf050e7dedbb6798211d8be5678cef06b2d10baf22ab3f0d7824b0da6adf"
+  },
+  {
+    "path": "models/PNC/qp/booster_config.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/qp/booster_config.json",
+    "source_sha256": "d791ea012a83bb22649d83b2d98a52137443af5d382bcf02de9d854285049bd2",
+    "public_sha256": "2f29aeda603c3b5945176cc51a0ed0cb02f89b6e36f01219b3a44b5c9f798003"
+  },
+  {
+    "path": "models/PNC/qp/model.ubj",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/qp/model.ubj",
+    "source_sha256": "9d9dc78c29886495cd5129bc9348114a5fef5149fd51b53a71a57d91519bd79e",
+    "public_sha256": "9d9dc78c29886495cd5129bc9348114a5fef5149fd51b53a71a57d91519bd79e"
+  },
+  {
+    "path": "models/PNC/qp/tree_dump.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/qp/tree_dump.json",
+    "source_sha256": "8e46baf1eb1b1418b342dd27226a935ddf700f204f4d3d86e57cd0e882e42892",
+    "public_sha256": "9e37042790aa16597aa76959af1722c5d7d469b77277bf44960caff7ef84d677"
+  },
+  {
+    "path": "models/PNC/dac_event/booster_config.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/dac_event/booster_config.json",
+    "source_sha256": "b39e1c592ea9cc9fd4fc96b8cc6ebc0c62fd0d1f79813206d2bc929220c6a5e8",
+    "public_sha256": "0cc38bce4578d72165ce5694b0930dd1b967378fb75c8bcc91b2f4eaa8b0fd38"
+  },
+  {
+    "path": "models/PNC/dac_event/model.ubj",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/dac_event/model.ubj",
+    "source_sha256": "e87085383b5a60c5e4a62f0192caf55b10d0d42ac9726f9820c221cccd17f7aa",
+    "public_sha256": "e87085383b5a60c5e4a62f0192caf55b10d0d42ac9726f9820c221cccd17f7aa"
+  },
+  {
+    "path": "models/PNC/dac_event/tree_dump.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/dac_event/tree_dump.json",
+    "source_sha256": "99c76b5c66a086c3b495fce977aaa0435aba1773108749a7c6848ed6a43170a5",
+    "public_sha256": "7d9847cef963b6aef98ce7d482d98074974b6db4ecbe7dc3849574d0d547ffcf"
+  },
+  {
+    "path": "models/PNC/qttc/booster_config.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/qttc/booster_config.json",
+    "source_sha256": "d791ea012a83bb22649d83b2d98a52137443af5d382bcf02de9d854285049bd2",
+    "public_sha256": "2f29aeda603c3b5945176cc51a0ed0cb02f89b6e36f01219b3a44b5c9f798003"
+  },
+  {
+    "path": "models/PNC/qttc/model.ubj",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/qttc/model.ubj",
+    "source_sha256": "6bd88c2b459d02b3bfe3d2337ddbb74692cd1f564fe7c29ea37f09db58147bee",
+    "public_sha256": "6bd88c2b459d02b3bfe3d2337ddbb74692cd1f564fe7c29ea37f09db58147bee"
+  },
+  {
+    "path": "models/PNC/qttc/tree_dump.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/qttc/tree_dump.json",
+    "source_sha256": "bd354d3dfd7e149be73b0595aec78de834a8a8744c2e05d7eb360f321a49dbcd",
+    "public_sha256": "25768e6795933b06bd1e7de816a3aedbaa6c13efb45e47b088a4e9750cc9acea"
+  },
+  {
+    "path": "models/PNC/physical_nc/booster_config.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/physical_nc/booster_config.json",
+    "source_sha256": "724edcb192538b54c100cde9fecfad07c124fbdb55c1b9adf60a89d50c570efb",
+    "public_sha256": "0441d504982096c86c8611a85758beeaf003feb0651e6255eddc79c2cb9a8e0e"
+  },
+  {
+    "path": "models/PNC/physical_nc/model.ubj",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/physical_nc/model.ubj",
+    "source_sha256": "ee6218b40d2bdc59759a266902174839ba8876628326452df9a2c0e67d14ce9c",
+    "public_sha256": "ee6218b40d2bdc59759a266902174839ba8876628326452df9a2c0e67d14ce9c"
+  },
+  {
+    "path": "models/PNC/physical_nc/tree_dump.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/physical_nc/tree_dump.json",
+    "source_sha256": "e4300563153dfce98dc9085cd6c3c683f4ca70ce02d14d4977ef9e37019591e6",
+    "public_sha256": "03292252fdc68333b6ff0614aba669e0485a8d4c4ad77675f879a5d52fb69ce6"
+  },
+  {
+    "path": "models/PNC/qlk/booster_config.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/qlk/booster_config.json",
+    "source_sha256": "d791ea012a83bb22649d83b2d98a52137443af5d382bcf02de9d854285049bd2",
+    "public_sha256": "2f29aeda603c3b5945176cc51a0ed0cb02f89b6e36f01219b3a44b5c9f798003"
+  },
+  {
+    "path": "models/PNC/qlk/model.ubj",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/qlk/model.ubj",
+    "source_sha256": "4e95021489c045d1bbc26c97517fcdda9a2592c312bd3aa0c49e91b4b2cdeb13",
+    "public_sha256": "4e95021489c045d1bbc26c97517fcdda9a2592c312bd3aa0c49e91b4b2cdeb13"
+  },
+  {
+    "path": "models/PNC/qlk/tree_dump.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/PNC/qlk/tree_dump.json",
+    "source_sha256": "39a110ef94aac59ae382d079967105e97964e1283e81eee653b88ee1620f7278",
+    "public_sha256": "663823c33cf905c1d9d10045ffacd19de684f434f1688751e60b46d9f4e15688"
+  },
+  {
+    "path": "models/IC0/q/booster_config.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/IC0/q/booster_config.json",
+    "source_sha256": "cc7d9eb785bf77dfa14fedd1a1d6a97353adc44cda93465985e6d3acf9bdc04b",
+    "public_sha256": "1009eb81804e6b9afaf6f033b542b8e5893b6d5e993bdad0b011249c17e7fe4f"
+  },
+  {
+    "path": "models/IC0/q/model.ubj",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/IC0/q/model.ubj",
+    "source_sha256": "7c1eca6121661ac2fa1ef92147867eabdd10443e4845e4b346851f7aca5199c2",
+    "public_sha256": "7c1eca6121661ac2fa1ef92147867eabdd10443e4845e4b346851f7aca5199c2"
+  },
+  {
+    "path": "models/IC0/qp/booster_config.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/IC0/qp/booster_config.json",
+    "source_sha256": "d791ea012a83bb22649d83b2d98a52137443af5d382bcf02de9d854285049bd2",
+    "public_sha256": "2f29aeda603c3b5945176cc51a0ed0cb02f89b6e36f01219b3a44b5c9f798003"
+  },
+  {
+    "path": "models/IC0/qp/model.ubj",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/IC0/qp/model.ubj",
+    "source_sha256": "176d707e99e8f02dd5bd764727d2139630b092bc7f0a019f6faceeb5cd4454e0",
+    "public_sha256": "176d707e99e8f02dd5bd764727d2139630b092bc7f0a019f6faceeb5cd4454e0"
+  },
+  {
+    "path": "models/IC0/dac_event/booster_config.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/IC0/dac_event/booster_config.json",
+    "source_sha256": "b39e1c592ea9cc9fd4fc96b8cc6ebc0c62fd0d1f79813206d2bc929220c6a5e8",
+    "public_sha256": "0cc38bce4578d72165ce5694b0930dd1b967378fb75c8bcc91b2f4eaa8b0fd38"
+  },
+  {
+    "path": "models/IC0/dac_event/model.ubj",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/IC0/dac_event/model.ubj",
+    "source_sha256": "e87085383b5a60c5e4a62f0192caf55b10d0d42ac9726f9820c221cccd17f7aa",
+    "public_sha256": "e87085383b5a60c5e4a62f0192caf55b10d0d42ac9726f9820c221cccd17f7aa"
+  },
+  {
+    "path": "models/IC0/qttc/booster_config.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/IC0/qttc/booster_config.json",
+    "source_sha256": "d791ea012a83bb22649d83b2d98a52137443af5d382bcf02de9d854285049bd2",
+    "public_sha256": "2f29aeda603c3b5945176cc51a0ed0cb02f89b6e36f01219b3a44b5c9f798003"
+  },
+  {
+    "path": "models/IC0/qttc/model.ubj",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/IC0/qttc/model.ubj",
+    "source_sha256": "64a6a07aaee674dc7774c01cb57e2147f7cb7cbfd3bab992beb030677d849679",
+    "public_sha256": "64a6a07aaee674dc7774c01cb57e2147f7cb7cbfd3bab992beb030677d849679"
+  },
+  {
+    "path": "models/IC0/nc_rank/booster_config.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/IC0/nc_rank/booster_config.json",
+    "source_sha256": "1e5813e1a63115969428e709fb54d1628d4cdad509ab1400f1e29ef629ab207e",
+    "public_sha256": "2fdd2f1d6f0e95828ab6e680a162025e25c5a8852fc7061d7fb889f209041d6e"
+  },
+  {
+    "path": "models/IC0/nc_rank/model.ubj",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/IC0/nc_rank/model.ubj",
+    "source_sha256": "7ec30d9167b579f5fdfcb1d8d875139d9d1fcdaa4d154f2bc9530f3fabc48e1e",
+    "public_sha256": "7ec30d9167b579f5fdfcb1d8d875139d9d1fcdaa4d154f2bc9530f3fabc48e1e"
+  },
+  {
+    "path": "models/IC0/qlk/booster_config.json",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/IC0/qlk/booster_config.json",
+    "source_sha256": "d791ea012a83bb22649d83b2d98a52137443af5d382bcf02de9d854285049bd2",
+    "public_sha256": "2f29aeda603c3b5945176cc51a0ed0cb02f89b6e36f01219b3a44b5c9f798003"
+  },
+  {
+    "path": "models/IC0/qlk/model.ubj",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/models/IC0/qlk/model.ubj",
+    "source_sha256": "b59d8a5c40eab427a11f69fe90169c85e5737e5b9cc1ee01b5cd600414fd031d",
+    "public_sha256": "b59d8a5c40eab427a11f69fe90169c85e5737e5b9cc1ee01b5cd600414fd031d"
+  },
+  {
+    "path": "LICENSES/navsim/LICENSE",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/licenses/navsim/LICENSE",
+    "source_sha256": "de4940fe77d9b191436c278d5419323ac437487aa9883843bfcac06032e8d13d",
+    "public_sha256": "de4940fe77d9b191436c278d5419323ac437487aa9883843bfcac06032e8d13d"
+  },
+  {
+    "path": "LICENSES/nuplan-devkit/LICENSE.txt",
+    "source_artifact": "CoordiWorld_\u53e6\u5bfb\u4ed6\u8def_R14_\u6700\u5c0f\u590d\u6838_v01_20261029/licenses/nuplan-devkit/LICENSE.txt",
+    "source_sha256": "2f43f04335316ee361ed2b75e5da8e152ac7d832145a44caa111344ef4c6fa73",
+    "public_sha256": "2f43f04335316ee361ed2b75e5da8e152ac7d832145a44caa111344ef4c6fa73"
+  }
+]
