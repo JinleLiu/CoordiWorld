@@ -1,0 +1,4 @@
+from revision_v5_twentyeighth_cw_agent_support import CoordiWorldSupportMetrics
+from h_observation import V05Observation
+def get_entry_point():return 'V05Agent'
+class V05Agent(V05Observation,CoordiWorldSupportMetrics):pass

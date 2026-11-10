@@ -1,0 +1,11 @@
+{
+  "data/A_drive_effects_v07.csv": "fa095fedaaca8fda3c22f81ba23b0c7a36da694ecf0052f3940fdd52c8c9583d",
+  "data/A_drive_mapping_v07.csv": "3cdea87099fd695bd14c2d4102e2b826c4ae355a5c28b1914dd79f2253336342",
+  "data/A_paired_effects_v07.csv": "b61568946e77740d15109f3330c2eb2f2cc9833b75f1daca4ddb197c777e325f",
+  "data/B_CASE_CONTROL_TIMELINE_v07.csv": "6cf1e5db6ac5cfb52bbf369cf599b9de012dd2c2d1257be7c4b6f7d2884dfdcb",
+  "data/B_CASE_OUTCOMES_v07.csv": "1c1ec4928116367163475638d9cafb6cdf6371cf37f3784a0c3f8d239b0ff5b2",
+  "data/B_CASE_WINDOW_PROVENANCE_v07.json": "d6d6c0b93fc41c383b0e893e7da9c5a61d47e896af36208821b97e8df3370b29",
+  "data/B_CASE_SEALED_EPISODE_ROWS_v07.json": "f5504707f4a80d341f9b698561243462f7f010faf17265a289d40243ec6f912c",
+  "scripts/plot_saved_results.py": "4b91eb528241c2fa07f48c9760c5f46dd8e76b791119d90e2a91f1309cca5bcf",
+  "SOURCE_FILES.json": "4d14d7ccf2f628ced83a0ab5e5ebc327b2497010ec243aacc5474a36a014867f"
+}

@@ -1,0 +1,15 @@
+"""Pre-register two complete exposed route-seed pairs, original risk heads."""
+import copy,datetime,hashlib,json,xml.etree.ElementTree as ET
+from pathlib import Path
+B=Path('<CW_WORKSPACE>/twentyeighth_20261031');Q=B/'mapsupply_pilot_run/bench2drive';Q.mkdir(parents=True,exist_ok=True)
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def write(p,x):p.write_text(json.dumps(x,indent=2)+'\n')
+assert not (Q/'methods.json').exists(),'Do not overwrite a registration'
+proto=json.load(open(B/'bench2drive/PROTOCOL.json'));root=ET.parse(proto['xml']).getroot();new=ET.Element('routes')
+for rid in ['3514','25424']:new.append(copy.deepcopy(next(r for r in root.findall('route')if r.get('id')==rid)))
+xml=Q/'pilot_routes.xml';ET.ElementTree(new).write(xml,encoding='utf-8',xml_declaration=True)
+base=next(m for m in json.load(open(B/'lowspeed_run/bench2drive/methods.json'))if m['id']=='CoordiWorld_BaseEC');methods=[]
+for mid,enabled in [('CoordiWorld_BaseEC_v05',False),('CoordiWorld_BaseEC_MapSupply_v04',True)]:
+ m=copy.deepcopy(base);m.update(id=mid,agent=str(B/'scripts/revision_v5_twentyeighth_metric_cw_mapsupply.py'),status='ready',eval_seeds=[17]);m['config'].update(bridge_version='v05_map_reference_runway',variant='BaseEC',method_id=mid,map_supply=enabled,policy_version='MapSupply_v04'if enabled else'BaseEC_frozen',P0=False);m['config']['implementation_sha']={n:sha(B/'scripts'/n)for n in ['revision_v5_twentyeighth_reference_runway.py','revision_v5_twentyeighth_map_supply.py','revision_v5_twentyeighth_map_supply_policy.py','revision_v5_twentyeighth_cw_agent_mapsupply.py']};m['config_sha']=hashlib.sha256(json.dumps(m['config'],sort_keys=True).encode()).hexdigest();methods.append(m)
+proto.update(cohort='Dev_two_route_spatial_supply_v03_instruction',routes=[r.attrib for r in new],xml=str(xml),xml_sha=sha(xml),seeds=[17]);write(Q/'PROTOCOL.json',proto);write(Q/'methods.json',methods);write(Q/'queue_control.json',dict(enabled_seeds=[17]));write(Q/'REGISTRATION.json',dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),instruction='R18_after12h_v03',expected_episodes=4,comparison='same v05 BaseEC vs same BaseEC+MapSupply_v04',risk='Frozen six-head PNC, identical NC/DAC qualification and EC scoring; no P0, no guard, no H3',controls='same input permissions, current-map rail repair, v04 speed floor, own policy history, controller, runner; TrafficManager seed17',hypothesis='Actual-state map entry paths may restore qualified forward supply; initial snapshot found valid static-clear path but moving-rear-vehicle risk still rejects it',adoption='Inspect complete paired DS/RC, all events, safe-forward coverage and selections; neutral/negative outcome remains evidence and does not freeze Full as main',development_routes=['3514','25424'],newtype_exposure='none at v03 takeover',clock='unchanged start2026-10-31T02:47:22UTC;24h2026-11-01T02:47:22UTC;36h2026-11-01T14:47:22UTC'))
+print(json.dumps(dict(registered=4,methods=[(m['id'],m['config_sha'])for m in methods],xml_sha=sha(xml))),flush=True)

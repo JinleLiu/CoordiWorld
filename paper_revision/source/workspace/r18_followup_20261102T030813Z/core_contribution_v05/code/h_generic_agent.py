@@ -1,0 +1,10 @@
+from revision_v5_twentyeighth_cw_agent_tight import CoordiWorldSupportMetrics
+from h_observation import V05Observation
+import revision_v5_twentyeighth_cw_agent_mapsupply as spatial
+import revision_v5_twentyeighth_cw_agent_tight as timing_agent
+from h_generic_policy import install as generic
+from h_generic_timing import install as timing
+spatial.supply=generic
+timing_agent.timing=timing
+def get_entry_point():return 'V05Agent'
+class V05Agent(V05Observation,CoordiWorldSupportMetrics):pass

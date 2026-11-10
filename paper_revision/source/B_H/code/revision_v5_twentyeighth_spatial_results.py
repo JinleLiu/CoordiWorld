@@ -1,0 +1,35 @@
+"""Separate cohort/version tables for the v03 spatial-supply experiments."""
+import csv,json,sys
+from pathlib import Path
+import numpy as np
+from revision_v5_twentyeighth_results import main,csvout,EVENTS,paired,summary
+B=Path(sys.argv[1]);O=Path(sys.argv[2]);O.mkdir(parents=True,exist_ok=True);wide=[];episode=[];plans=[]
+for root in ['mapsupply_pilot_run','viability_pilot_run','mapsupply_blocks_run','mapsupply_timing_run','continuation_pilot_run','tight_pilot_run','tight_ablation_run','runway_pilot_run','replication23_run','replication42_run','support_blocked_run','confirmation_run','parking_confirmation_run']:
+ q=B/root/'bench2drive'
+ if not(q/'PROTOCOL.json').exists():continue
+ out=O/root;main(B/root,out);s=json.load(open(out/'summary.json'));proto=json.load(open(q/'PROTOCOL.json'));methods={m['id']:m for m in json.load(open(q/'methods.json'))};cohort=proto['cohort']
+ for mid,v in s['available_unmatched'].items():
+  if not mid.startswith('CoordiWorld'):continue
+  m=methods[mid];rows=[];distance=0.;missing_distance=0
+  for f in (q/'episodes').glob(f'seed*/*/{mid}/FINAL.json'):
+   a=json.load(open(f));rec=a.get('official_record');d=f.parent/f"attempt{a['attempt']}/trace";source=d/'policy/plans.jsonl';pp=list(map(json.loads,open(source)))if source.exists()else[];g={};g['map_triggers']=g['map_admitted_replans']=g['map_selected']=g['pre_guard_forward_restored']=g['guard_active']=g['guard_changed']=g['guard_fallback']=g['guard_stop_selected']=g['timing_triggers']=g['timing_selected']=0;g['replans']=len(pp);g.update(map_attempts=0,map_admissions=0,timing_attempts=0,timing_admissions=0)
+   for p in pp:
+    ms=p['base_receipt'].get('map_supply',{});guard=p['base_receipt'].get('terminal_viability',{});timing=p['base_receipt'].get('map_timing',{});ch=p['choice'];extras=[z['index']for z in ms.get('attempts',[])if z.get('admitted')];flag=dict(timing_triggers=bool(timing.get('trigger')),timing_selected=bool(timing.get('selected_slow')),map_trigger=bool(ms.get('trigger')),map_admitted=bool(extras),map_selected=ch in extras,pre_guard_forward_restored=bool(ms and not ms['old_safe_positive_indices']and ms['new_safe_positive_indices']),guard_active=bool(guard.get('active')),guard_changed=guard.get('original_choice',ch)!=ch,guard_fallback=bool(guard.get('fallback')),guard_stop_selected=guard.get('active',False)and ch==guard.get('stop_index'))
+    # The timing receipt is produced before the continuation witness. Count
+    # the final selected identity, retaining the earlier choice separately.
+    counts=dict(map_attempts=len(ms.get('attempts',[])),map_admissions=sum(bool(z.get('admitted'))for z in ms.get('attempts',[])),timing_attempts=len(timing.get('attempts',[])),timing_admissions=sum(bool(z.get('admitted'))for z in timing.get('attempts',[])));
+    for k,vv in counts.items():g[k]+=vv
+    pre_timing=flag['timing_selected'];flag['timing_selected']=any(x.get('admitted')and x.get('index')==ch for x in timing.get('attempts',[]))
+    for k,vv in flag.items():g[{'map_trigger':'map_triggers','map_admitted':'map_admitted_replans'}.get(k,k)]+=int(vv)
+    plans.append(dict(cohort=cohort,method=mid,route=a['route']['id'],seed=a['seed'],replan=p['replan'],timestamp_us=p['timestamp_us'],choice=ch,EC=p['EC'],seconds=p['seconds'],timing_selected_before_guard=pre_timing,source=str(source),**counts,**flag))
+   hist=d/'observed_history.jsonl';h=list(map(json.loads,open(hist)))if hist.exists()else[]
+   if h:
+    speed=np.array([np.linalg.norm(x['ego_dynamic_state'][:2])for x in h]);xy=np.array([x['ego2global_translation'][:2]for x in h]);g.update(support_removed_frames=sum(bool(x.get('current_support',{}).get('removed'))for x in h),support_removed_actor_observations=sum(len(x.get('current_support',{}).get('removed',[]))for x in h),observed_frames=len(h),moving_frames_v_gt0p5=int((speed>.5).sum()),stationary_frames_v_le0p1=int((speed<=.1).sum()),logged_path_length_m=float(np.linalg.norm(np.diff(xy,axis=0),axis=1).sum()),max_actual_displacement_m=float(np.linalg.norm(xy-xy[0],axis=1).max()))
+   km=None
+   if rec and rec.get('meta',{}).get('route_length')is not None:km=float(rec['meta']['route_length'])*float(rec['scores']['score_route'])/100/1000;distance+=km
+   else:missing_distance+=1
+   events={k:len(rec.get('infractions',{}).get(k,[]))if rec else None for k in EVENTS};er=dict(cohort=cohort,method=mid,route=a['route']['id'],seed=a['seed'],DS=rec['scores']['score_composed']if rec else a.get('score_if_missing',0),RC=rec['scores']['score_route']if rec else 0,official_completed_distance_km=km,wall_seconds=a['wall_seconds'],source=str(f),**g,**events);episode.append(er);rows.append(er)
+  attempts=list((q/'episodes').glob(f'seed*/*/{mid}/attempt*/ATTEMPT.json'));contrast=next((z for k,z in s['paired'].items()if k.startswith(mid+'--')and z['n_route_seed']),None);ci=(contrast or{}).get('route_cluster_bootstrap95')or[None,None]
+  wide.append(dict(method=mid,cohort=cohort,adapter_version=m['config']['bridge_version'],policy_version=m['config'].get('guard_version',m['config'].get('policy_version','NA')),exposure=('Frozen B-development-unexposed route cohort; available method-specific rows here, common prefix in expanded'if root in ['confirmation_run','parking_confirmation_run']else'exposed development pilot; no independent confirmation'),registered_episodes=len(proto['routes'])*len(m['eval_seeds']),completed_episodes=v['route_seed_count'],attempts=len(attempts),official_records=v['official_records'],missing_event_records=v['missing_event_records'],success=v['success'],failure=v['failure'],route_count=v['route_count'],DS_route_equal=v['DS_route_equal'],RC_episode_mean=v['RC_episode_mean'],paired_delta_DS=(contrast or{}).get('delta_DS_route_equal'),paired_ci_low=ci[0],paired_ci_high=ci[1],official_completed_distance_km=distance,distance_missing=missing_distance,vehicle_collisions_per_km=v['collisions_vehicle']/distance if distance>0 and not missing_distance else None,all_collision_penalties_per_km=sum(v[k]for k in ['collisions_vehicle','collisions_pedestrian','collisions_layout'])/distance if distance>0 and not missing_distance else None,**{k:v[k]for k in EVENTS},**{k:sum(r[k]for r in rows)for k in ['map_attempts','map_admissions','timing_attempts','timing_admissions','replans','map_triggers','map_admitted_replans','map_selected','pre_guard_forward_restored','guard_active','guard_changed','guard_fallback','guard_stop_selected','timing_triggers','timing_selected']},config_sha=m['config_sha'],source=str(out/'summary.json')))
+csvout(O/'spatial_cohort_summary.csv',wide);csvout(O/'spatial_per_episode.csv',episode);csvout(O/'spatial_per_replan.csv',plans)
+(O/'SCOPE.txt').write_text('All groups kept separate by cohort and adapter. Pre-guard forward coverage is a predicted current-input property, not a real safety label. Guard and map choices use each live policy own history. Actual observations are separate from predicted EC. Collision denominator is sum official route_length[m] * RC/100 /1000; unknown records/distances are not imputed. Paired intervals resample routes, not replans. Replans are mechanism samples, not independent driving trials.\n')

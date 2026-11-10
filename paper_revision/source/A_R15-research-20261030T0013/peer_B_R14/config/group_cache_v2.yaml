@@ -1,0 +1,78 @@
+protocol: drive_disjoint_development_v2
+description: Frozen data/candidate adapter only; model/training fields are historical R0 reference, not new A/B+P protocol.
+seed: 20261018
+data:
+  dt: 0.5
+  history_frames: 4
+  future_steps: 8
+  max_agents: 32
+  max_map_tokens: 24
+  roi_m: 50.0
+  split_unit: frozen_drive_roster
+  split_roles: [train, validation, calibration_fit, calibration_select, confirmation]
+model:
+  max_agents: 96
+  hidden_dim: 128
+  heads: 4
+  history_layers: 2
+  feedforward_dim: 512
+  dropout: 0.1
+  rollout_blocks: 1
+  dt: 0.5
+  max_history: 8
+  use_provenance: true
+  use_confidence: true
+  action_conditioned: true
+  collision_aggregation: noisy_or
+  uncertainty_aggregation: existence_mean
+  motion_prior: constant_velocity
+  position_residual_scale: 2.0
+  velocity_residual_scale: 2.0
+  yaw_residual_scale: 0.3
+  rule_temperatures: [0.5, 0.5, 0.5, 0.5]
+  violation_beta: 8.0
+  score_weights: [1.0, 1.0, 0.1]
+  uncertainty_scale: 25.0
+candidates:
+  nominal: pdm_closed_current_v1
+  speed_scales: [0.60, 0.80, 1.15]
+  lateral_offsets_m: [-1.0, -0.5, 0.5, 1.0]
+  curvature_offsets_per_m: [-0.004, -0.002, 0.002, 0.004]
+  max_acceleration: 3.0
+  max_deceleration: 6.0
+  max_lateral_acceleration: 4.0
+  max_yaw_rate: 0.5
+  duplicate_tolerance_m: 0.001
+training:
+  batch_size: 16
+  stage1_epochs: 20
+  stage2_epochs: 10
+  stage1_lr: 0.0003
+  stage2_lr: 0.0001
+  weight_decay: 0.01
+  gradient_clip: 1.0
+  precision: bf16
+  schedule: cosine
+  alpha_dyn: 1.0
+  alpha_exist: 0.2
+  alpha_risk: 1.0
+  gamma_collision: 1.0
+  gamma_violation: 1.0
+  beta_rank: 1.0
+  rank_margin: 0.1
+  preference_tolerance: 0.000001
+calibration:
+  algorithm: isotonic
+  fit_split: calibration_fit
+  tune_split: validation
+  test_split: confirmation
+  uncertainty_quantile: 0.95
+  bins: 10
+evaluation:
+  seeds: [17, 29, 43]
+  bootstrap_repetitions: 10000
+  bootstrap_cluster: drive_group
+  attribution_budget: 8
+  attribution_top_k: 3
+  latency_warmup: 20
+  latency_repetitions: 100
