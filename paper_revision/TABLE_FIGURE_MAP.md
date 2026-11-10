@@ -6,7 +6,7 @@ Use the saved-result command for the two current A tables. The paper integration
 |---|---|---|---|
 | `tab:cw_primary` | `STRATEGY_PER_SCENE.csv` and saved event components | `replay/recompute_saved_v05.py` via top-level wrapper | Recalculated and checked |
 | `tab:cw_contrasts` | Above plus `FOUR_ARM_CONDITIONAL.csv`, original expected intervals | Same original script, five fixed comparisons | Recalculated and checked |
-| Fig. 3 | Approved v12 scripts and full-precision A drive/comparison inputs | Original `plot_saved_results.py`, invoked by `scripts/reproduce_figures.py` | Script in Git; data in prepared numerical attachment, awaiting distribution approval |
+| Fig. 3 | Approved v12 scripts and full-precision A drive/comparison inputs | Original `plot_saved_results.py`, invoked by `scripts/reproduce_figures.py` | Script in Git; data in author-approved public numerical Release attachment |
 | Former Fig. 4 / recorded-control appendix | Original v12 script and B saved control window | Original `plot_saved_results.py`, invoked by `scripts/reproduce_figures.py` | Same plot algorithm; route identifier alias only |
 | `tab:b-closed-loop-v07`, difference table | H `all_episodes.csv` + study-specific common_keys; S `FINAL_v01.json`; V `FINAL_v01.json` | B:F0058/F0059, B:F0498 + confirmation_statistics, B:F2222 + v05_statistics | Bytes/source acquired, no new B recalculation |
 | `tab:b-h-strong-references-v07` | H saved study rows, missing official records preserved | Original H analysis and v07 exports | Historical reference; source indexed |
@@ -29,4 +29,4 @@ Install `figures/requirements-figures-v12.txt`, then run `python scripts/reprodu
 
 The final-layout acceptance used Python 3.9.6, NumPy 1.26.4, Matplotlib 3.8.4 and installed DejaVu Sans. The paper source package recorded Python 3.12.4 with the same NumPy/Matplotlib versions. Saved data, coordinates, ordering, time anchors and plotting parameters were checked; only route text is aliased. Five regenerated PDFs are rendered for visual QA. Font files are not distributed. PDF/SVG creation metadata and cross-environment PNG pixels need not be byte-identical.
 
-The numerical attachment is technically ready but not externally accessible until the author approves the final distribution list. See `ACCESS.json`; original internal paper assets and private reverse maps are not uploadable Release attachments.
+The numerical attachment is approved for public Release distribution. See `ACCESS.json` for the exact URL and hash, and the Release notes for anonymous post-publication verification. Original internal paper assets and private reverse maps are excluded.

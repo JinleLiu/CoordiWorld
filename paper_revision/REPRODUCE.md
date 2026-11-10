@@ -13,7 +13,7 @@ The data directory must contain exactly these required identities (extra files a
 | `INPUT_SHA256.json` | Actual publication four-input SHA-256 map |
 | `S1_HISTORY_ACCOUNTING.csv` | 2,919 causal inputs: 1,336 formal plus 1,583 auxiliary |
 
-Install `CoordiWorld_numerics_v12a.zip` with `python scripts/download_paper_inputs.py --archive ARCHIVE`. The default output is `paper_revision/numerics`; the replay defaults to its `inputs/` subdirectory. The archive is not yet externally available: its proposed Release distribution requires author approval, tracked in `ACCESS.json`.
+Install `CoordiWorld_numerics_v12a.zip` with `python scripts/download_paper_inputs.py --archive ARCHIVE`. The default output is `paper_revision/numerics`; the replay defaults to its `inputs/` subdirectory. The author approved public Release distribution; use `python scripts/download_paper_inputs.py` for the configured anonymous URL, or `--archive` for a manually downloaded copy. The actual channel and SHA are tracked in `ACCESS.json`.
 
 Pins in `replay/INPUT_SHA256.json` and `replay/RELEASE_INPUT_BINDINGS.json` verify the actual publication files. A stable, one-to-one scene/drive mapping preserves the original lexical sort order, method pairing, grouping, predecessor links, formal/auxiliary status and row order. All numerical field strings, timestamps, missing values and expected comparisons are retained; no re-sampling or rounding was used to make publication copies. Original and publication SHAs differ and are separately recorded in `SOURCE_PUBLICATION_BINDINGS_v12a.json`. Private reverse mappings are excluded from Git and the numerical attachment.
 

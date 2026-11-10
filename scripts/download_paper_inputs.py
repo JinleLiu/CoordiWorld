@@ -58,13 +58,17 @@ def main():
         if args.archive:
             archive = args.archive.resolve()
         else:
-            url = asset.get('verified_url')
+            url = asset.get('download_url')
             if not url or not url.startswith('https://'):
-                raise RuntimeError('No externally accessible numerical URL has been approved and verified yet; see ACCESS.json')
+                raise RuntimeError('No author-approved numerical download URL is configured; see ACCESS.json')
             archive = Path(directory) / asset['filename']
             request = urllib.request.Request(url, headers={'User-Agent': 'CoordiWorld-public-reproduction'})
-            with urllib.request.urlopen(request, timeout=60) as response, archive.open('wb') as out:
-                shutil.copyfileobj(response, out)
+            try:
+                with urllib.request.urlopen(request, timeout=60) as response, archive.open('wb') as out:
+                    shutil.copyfileobj(response, out)
+            except OSError as exc:
+                raise RuntimeError('Numerical attachment is not reachable at the configured Release URL. '
+                                   'Check the actual Release asset and retry, or use --archive after downloading it.') from exc
         manifest = extract_verified(archive, args.output.resolve(), asset['sha256'])
     print(json.dumps({'status': 'PASS', 'files': len(manifest['files']),
                       'attachment_sha256': asset['sha256'], 'output': str(args.output)}))

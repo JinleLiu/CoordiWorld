@@ -1,16 +1,21 @@
 {
-  "status": "READY_FOR_AUTHOR_DECISION",
-  "code_publication_approved": false,
-  "numerical_distribution_approved": false,
+  "status": "AUTHOR_APPROVED_PUBLIC_DISTRIBUTION",
+  "code_publication_approved": true,
+  "numerical_distribution_approved": true,
   "numerical_attachment": {
     "filename": "CoordiWorld_numerics_v12a.zip",
     "sha256": "dd95120e73df11653f74672269a92ca7dd7bc5eb4f5dd079b1f51f407c333f0a",
     "bytes": 656739,
-    "verified_url": null,
     "controlled_access_identity": null,
-    "permissions": null,
-    "expires_at": null
+    "permissions": "Public anonymous download; no author credentials required",
+    "expires_at": null,
+    "download_url": "https://github.com/JinleLiu/CoordiWorld/releases/download/iotj-revision-v12/CoordiWorld_numerics_v12a.zip",
+    "release_url": "https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-revision-v12"
   },
-  "proposed_destination": "GitHub Release numerical attachment; requires explicit author approval",
-  "private_originals_or_reverse_maps_in_attachment": false
+  "private_originals_or_reverse_maps_in_attachment": false,
+  "destination": "GitHub Release numerical attachment",
+  "external_verification": {
+    "state_at_commit_creation": "Pending tag/Release publication and fresh anonymous acceptance",
+    "verification_record": "Release notes and PUBLICATION_RECEIPT_v12a; local CPU success alone is not external verification"
+  }
 }

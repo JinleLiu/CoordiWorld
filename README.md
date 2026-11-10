@@ -2,18 +2,16 @@
 
 ## How to use
 
-For the current C1 paper's saved-result CPU recalculation, use Python 3.9–3.12 and the pinned requirements. The v12a numerical attachment is technically prepared and tested, but its distribution is **awaiting an explicit author decision**. There is no public or controlled download yet. [ACCESS.json](paper_revision/ACCESS.json) records the actual status and attachment SHA; a local path or hash is not an access entitlement.
-
-Once you have the authorized `CoordiWorld_numerics_v12a.zip`, install it with the hash-checking entry point:
+For the current C1 paper's saved-result CPU recalculation, use Python 3.9–3.12 and the pinned requirements. The author-approved numerical input archive is the **`CoordiWorld_numerics_v12a.zip` attachment** of [iotj-revision-v12](https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-revision-v12). The commands below download it anonymously, verify the archive and each file, and install the required inputs:
 
 ```bash
 python3 -m venv .venv-paper
 .venv-paper/bin/python -m pip install -r paper_revision/requirements-cpu.txt
-.venv-paper/bin/python scripts/download_paper_inputs.py --archive CoordiWorld_numerics_v12a.zip
+.venv-paper/bin/python scripts/download_paper_inputs.py
 .venv-paper/bin/python scripts/reproduce_paper.py --output new_saved_output
 ```
 
-The default installed input directory is `paper_revision/numerics/inputs`. Without `--archive`, the acquisition command requires an approved and verified URL in `ACCESS.json` and currently stops with an explicit unavailable-access message. The proposed destination is a numerical Release attachment; neither that proposal nor deidentification grants distribution rights. See [recalculation instructions](paper_revision/REPRODUCE.md) and [data/model access](paper_revision/DATA_MODELS.md).
+For manual download, use the [numerical attachment](https://github.com/JinleLiu/CoordiWorld/releases/download/iotj-revision-v12/CoordiWorld_numerics_v12a.zip), then run `python scripts/download_paper_inputs.py --archive CoordiWorld_numerics_v12a.zip`. Its SHA-256 is `dd95120e73df11653f74672269a92ca7dd7bc5eb4f5dd079b1f51f407c333f0a`. The default installed directory is `paper_revision/numerics/`. [ACCESS.json](paper_revision/ACCESS.json) records the public channel and exact identity; the downloader stops if the Release asset cannot be reached or its bytes do not match. See [recalculation instructions](paper_revision/REPRODUCE.md), [data/model access](paper_revision/DATA_MODELS.md) and the Release notes for external-verification status.
 
 For source inspection, start with the [method–code map](paper_revision/METHOD_CODE.md) and [source identities](paper_revision/SOURCE_INDEX.csv). The existing public model-integrity test remains available:
 
@@ -58,7 +56,7 @@ The result measures an evaluation-layer increment on shared learned supply in th
 | Original C0/C1/S1 and H/S/V entries | Located historical implementations; require their own original assets and environment |
 | Clean-environment raw-to-result inference or training | Not validated |
 
-Fig. 3 and the former Fig. 4 use the paper integration team's sole approved v12 Python plotting implementation. Its complete publication copy is now in Git; only route identifier strings were replaced by a stable alias. The seven full-precision data/metadata files and source index are in the proposed numerical attachment.
+Fig. 3 and the former Fig. 4 use the paper integration team's sole approved v12 Python plotting implementation. Its complete publication copy is now in Git; only route identifier strings were replaced by a stable alias. The seven full-precision data/metadata files and source index are in the numerical Release attachment.
 
 ```bash
 .venv-paper/bin/python -m pip install -r paper_revision/figures/requirements-figures-v12.txt
@@ -67,6 +65,6 @@ Fig. 3 and the former Fig. 4 use the paper integration team's sole approved v12 
 
 The wrapper verifies the actual publication data and script SHA values. A fresh-layout local run preserved plotted coordinates, ordering, time anchors and text meanings; no new plotting implementation, smoothing or intervals were introduced. See [table/figure mapping](paper_revision/TABLE_FIGURE_MAP.md).
 
-The seven previously isolated complete source files and three historical freeze copies are included in this candidate. Identifier-dependent special branches read [source_identifiers_v12a.json](paper_revision/config/source_identifiers_v12a.json); explicit logical roots resolve through a small standard-library helper. Complete source, extracted portable components and tested saved-statistic entries have distinct validation scopes. See [publication transformations](paper_revision/PUBLICATION_TRANSFORMS.md).
+The seven previously isolated complete source files and three historical freeze copies are included in this revision. Identifier-dependent special branches read [source_identifiers_v12a.json](paper_revision/config/source_identifiers_v12a.json); explicit logical roots resolve through a small standard-library helper. Complete source, extracted portable components and tested saved-statistic entries have distinct validation scopes. See [publication transformations](paper_revision/PUBLICATION_TRANSFORMS.md).
 
 [Version changes](paper_revision/CHANGELOG.md), [release-note candidate](paper_revision/RELEASE_NOTES_CANDIDATE.md), [citation candidate](CITATION.md), and [known scope](paper_revision/SCOPE.md) describe this revision. The earlier README and results remain accessible through [historical documentation](paper_revision/history/INDEX.md). Existing third-party notices and license files are preserved; this candidate assigns no new license.
