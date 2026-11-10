@@ -7,9 +7,9 @@ Start with `selection/` for the three small NumPy components. `SOURCE_INDEX.csv`
 | C1 final selector | [frozen_cw_selector.py](selection/frozen_cw_selector.py) | Unmodified AST extraction of original lines 89–99; only component import checked |
 | Simple S0/S1 | [simple_rules.py](selection/simple_rules.py) | Frozen A_lexicographic; S1 applies the same guard on Simple-valid candidates |
 | Current-only guard | [current_static_geometry_v01.py](selection/current_static_geometry_v01.py) | Stopped vehicle geometry; no future or learned inputs |
-| Full C1 original entry | `A:F0112` in [SOURCE_INDEX.csv](SOURCE_INDEX.csv); full file in local review companion | Original --policy static_guard; full source held locally because it contains a scene identifier |
-| C0 input fallback | `A:F0109` in [SOURCE_INDEX.csv](SOURCE_INDEX.csv); full file in local review companion | Original environment; includes the recorded auxiliary fallback |
-| S1 own-history pipeline | `A:F0077` in [SOURCE_INDEX.csv](SOURCE_INDEX.csv); full file in local review companion | Full source held locally; uses its own committed history |
+| Full C1 original entry | [repair_live_history_v01.py](source/A_R18-research-20261031T1047/code/repair_live_history_v01.py) (`A:F0112`) | Complete --policy static_guard entry; special-case identifier externalized, all branches retained |
+| C0 input fallback | [pnc_inference_input_fallback_v06.py](source/A_R18-research-20261031T1047/code/pnc_inference_input_fallback_v06.py) (`A:F0109`) | Complete original-environment fallback entry; identifier and logical root are explicit |
+| S1 own-history pipeline | [run_simple_own.py](source/A_R18-core-contribution-v05-20261106T1050/code/run_simple_own.py) (`A:F0077`) | Complete S1 pipeline; uses its own committed history, special branch retained |
 | Six-head inference | [pnc_inference_v02.py](source/A_R18-research-20261031T1047/code/pnc_inference_v02.py) | FrozenPNC; unchanged PNC models |
 | Projection and features | [revision_v5_twentysecond_primary.py](source/workspace/twentysecond_20261028/scripts/revision_v5_twentysecond_primary.py) | Four joint moments and x674 feature construction |
 | Eligibility | [revision_v5_twentythird_policy.py](source/workspace/twentythird_20261029/scripts/revision_v5_twentythird_policy.py) | DAC and physical-NC eligibility; original anchor semantics |
@@ -32,7 +32,9 @@ Start with `selection/` for the three small NumPy components. `SOURCE_INDEX.csv`
 
 `config/adopted_policy.json` records current identities and original freeze hashes. Existing `../config/model_identity.json` remains the model identity authority for the unchanged PNC/IC0/world bytes; its historical `primary_method=PNC_H3P` identifies C0, not the added C1 guard.
 
-Source copies preserve full function bodies and historical branches. Path-only substitutions are recorded separately; `<CW_WORKSPACE>`, `<CW_ARCHIVE_ROOT>` and existing `${CW_ARCHIVE_ROOT}` markers are inspection references, not a newly verified runtime path resolver. Core original entries containing scene identifiers are available in the local review companion with explicit SHA bindings. They are not silently anonymized or replaced.
+The seven complete files formerly isolated for identifier handling are now present with every algorithm branch. `source/coordiworld_publication.py` reads explicit root settings and the identifier configuration; restoring original constants and removing only those wrappers reconstructs the complete v12 input AST for all nine affected source/provider files. This is a structural proof of packaging scope, not a model inference equivalence test. See `SOURCE_PUBLICATION_BINDINGS_v12a.json` for original, v12 and new byte identities and [PUBLICATION_TRANSFORMS.md](PUBLICATION_TRANSFORMS.md) for dependency requirements.
+
+The three files in `frozen/` preserve historical configuration and freeze hashes. They document the original implementation; they are not relabeled as a newly validated runtime lock for transformed source bytes. Existing original self-SHA checks, historical deadlines and native/model dependencies remain intact. The publication helper does not bypass them.
 
 The selector extraction is not a complete predictor or pipeline. Its inputs already include real head outputs, base eligibility, execution proxies and a bank receipt. The pre-guard winner is only the pre-guard decision in that supplied context, not proof of C0 own-history equivalence. Import/AST checks do not validate full inference equivalence.
 

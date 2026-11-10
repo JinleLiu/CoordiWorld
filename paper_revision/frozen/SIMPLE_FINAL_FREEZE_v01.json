@@ -1,0 +1,90 @@
+{
+  "at": "2026-11-06T11:56:59.318181+08:00",
+  "rule": "A_lexicographic",
+  "selection_protocol": "Highest scene-equal non-reactive actual U16 of guarded S1 on the fixed complete TRAIN probe. A wins exact ties within1e-12. Also report both unguarded S0 and all safety/rule costs; no TEST adaptation.",
+  "core_freeze_sha256": "dba76f16991ef2a22c10239c2b8909e0b6c0df89433be23257fe99843c1cf098",
+  "source_sha256": "058be83cacb762228c62b231a18d1737681f7b8503482f39095523d798389871",
+  "TRAIN_choices_sha256": "931d5dafa8acdca561ea95fd582382a95641453e65b3e9d0cb600928262ede84",
+  "summary": [
+    {
+      "rule": "A_lexicographic",
+      "arm": "S0",
+      "scenes": 160,
+      "drives": 40,
+      "scene_mean_Score": 80.76038533919038,
+      "events": {
+        "rawNC": 11,
+        "NC": 11,
+        "DAC": 1,
+        "DDC": 0,
+        "TLC": 2,
+        "TTC": 10,
+        "LK": 2,
+        "HC": 10,
+        "EC": 54
+      },
+      "progress": 0.843021292536371
+    },
+    {
+      "rule": "A_lexicographic",
+      "arm": "S1",
+      "scenes": 160,
+      "drives": 40,
+      "scene_mean_Score": 81.32345544552437,
+      "events": {
+        "rawNC": 10,
+        "NC": 10,
+        "DAC": 1,
+        "DDC": 0,
+        "TLC": 2,
+        "TTC": 9,
+        "LK": 2,
+        "HC": 10,
+        "EC": 55
+      },
+      "progress": 0.8435395359390588
+    },
+    {
+      "rule": "B_fixed_utility",
+      "arm": "S0",
+      "scenes": 160,
+      "drives": 40,
+      "scene_mean_Score": 80.76038533919038,
+      "events": {
+        "rawNC": 11,
+        "NC": 11,
+        "DAC": 1,
+        "DDC": 0,
+        "TLC": 2,
+        "TTC": 10,
+        "LK": 2,
+        "HC": 10,
+        "EC": 54
+      },
+      "progress": 0.843021292536371
+    },
+    {
+      "rule": "B_fixed_utility",
+      "arm": "S1",
+      "scenes": 160,
+      "drives": 40,
+      "scene_mean_Score": 81.32345544552437,
+      "events": {
+        "rawNC": 10,
+        "NC": 10,
+        "DAC": 1,
+        "DDC": 0,
+        "TLC": 2,
+        "TTC": 9,
+        "LK": 2,
+        "HC": 10,
+        "EC": 55
+      },
+      "progress": 0.8435395359390588
+    }
+  ],
+  "result_sha256": "2fab5d6fdbfa32bde73d717379cae95fea46f1348eb27350a57ff2f6ca6ee8f3",
+  "before_1336_v05_results": true,
+  "new_models": 0,
+  "classification": "comparator development, exposed upstream, not independent confirmation"
+}

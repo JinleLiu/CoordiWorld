@@ -1,11 +1,12 @@
 """Frozen historical bindings and light data adapters, without fitting."""
+from coordiworld_publication import publication_path
 import os
 for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS']:os.environ[k]='1'
 import ast,copy,csv,datetime,hashlib,json,sys
 from pathlib import Path
 from types import SimpleNamespace
 import numpy as np
-ROOT=Path('${CW_ARCHIVE_ROOT}')
+ROOT=Path(publication_path('${CW_ARCHIVE_ROOT}'))
 R18=ROOT/'A_R18-research-20261031T1047';V03=ROOT/'A_R18-followup-v03-20261102T1447';V04=ROOT/'A_R18-turn-decision-v04-20261105T1832'
 RUN=Path(__file__).resolve().parents[1]
 C0='CoordiWorld-PNC_H3P';C1=C0+'_staticGuard_live_v01';S1='CoordiWorld-SimpleGuard-v05'

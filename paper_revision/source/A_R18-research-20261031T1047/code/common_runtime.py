@@ -1,5 +1,6 @@
+from coordiworld_publication import publication_path
 import os,sys,pathlib,json,hashlib,pickle,lzma,ast
-R=pathlib.Path('${CW_ARCHIVE_ROOT}');N=R/'A_R18-research-20261031T1047'
+R=pathlib.Path(publication_path('${CW_ARCHIVE_ROOT}'));N=R/'A_R18-research-20261031T1047'
 os.environ.update(OMP_NUM_THREADS='2',OPENBLAS_NUM_THREADS='2',NUPLAN_MAP_VERSION='nuplan-maps-v1.0',NUPLAN_MAPS_ROOT=str(R/'data/recovery/raw/maps/nuplan-maps-v1.0'))
 sys.path[:0]=[str(N/'deps'),str(R/'third_party/navsim'),str(R/'third_party/nuplan-devkit')]
 import numpy as np,pandas as pd,torch

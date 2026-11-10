@@ -1,0 +1,16 @@
+{
+  "status": "READY_FOR_AUTHOR_DECISION",
+  "code_publication_approved": false,
+  "numerical_distribution_approved": false,
+  "numerical_attachment": {
+    "filename": "CoordiWorld_numerics_v12a.zip",
+    "sha256": "dd95120e73df11653f74672269a92ca7dd7bc5eb4f5dd079b1f51f407c333f0a",
+    "bytes": 656739,
+    "verified_url": null,
+    "controlled_access_identity": null,
+    "permissions": null,
+    "expires_at": null
+  },
+  "proposed_destination": "GitHub Release numerical attachment; requires explicit author approval",
+  "private_originals_or_reverse_maps_in_attachment": false
+}

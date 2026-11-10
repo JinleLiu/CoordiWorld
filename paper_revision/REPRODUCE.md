@@ -10,10 +10,12 @@ The data directory must contain exactly these required identities (extra files a
 | `FOUR_ARM_CONDITIONAL.csv` | Four arms evaluated in the frozen C1 context |
 | `EVENT_TRANSITIONS.csv` | All 509 saved transitions across five comparisons |
 | `EXPECTED_COMPARISONS.json` | Frozen full-precision comparison and interval assertions |
-| `INPUT_SHA256.json` | Original four-input SHA-256 map |
+| `INPUT_SHA256.json` | Actual publication four-input SHA-256 map |
 | `S1_HISTORY_ACCOUNTING.csv` | 2,919 causal inputs: 1,336 formal plus 1,583 auxiliary |
 
-Pins are supplied in `replay/INPUT_SHA256.json` and `replay/RELEASE_INPUT_BINDINGS.json`. Files retain original bytes, token/drive pairing, timestamps, row order and missing values. They have not been anonymized, re-sampled, rounded or reconstructed from the paper. Distribution remains pending; the local acceptance companion is not an approved public dataset.
+Install `CoordiWorld_numerics_v12a.zip` with `python scripts/download_paper_inputs.py --archive ARCHIVE`. The default output is `paper_revision/numerics`; the replay defaults to its `inputs/` subdirectory. The archive is not yet externally available: its proposed Release distribution requires author approval, tracked in `ACCESS.json`.
+
+Pins in `replay/INPUT_SHA256.json` and `replay/RELEASE_INPUT_BINDINGS.json` verify the actual publication files. A stable, one-to-one scene/drive mapping preserves the original lexical sort order, method pairing, grouping, predecessor links, formal/auxiliary status and row order. All numerical field strings, timestamps, missing values and expected comparisons are retained; no re-sampling or rounding was used to make publication copies. Original and publication SHAs differ and are separately recorded in `SOURCE_PUBLICATION_BINDINGS_v12a.json`. Private reverse mappings are excluded from Git and the numerical attachment.
 
 The wrapper verifies all inputs and the frozen script, copies the original implementation and four statistical inputs into a temporary isolated layout, and executes `replay/recompute_saved_v05.py` unchanged. It only adds path resolution and acceptance assertions. The original code sorts tokens/drives, resamples paired drive clusters 10,000 times with `default_rng(170018)`, and takes the scene-weighted ratio in each draw. Auxiliary inputs do not enter the main mean.
 

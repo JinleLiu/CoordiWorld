@@ -117,8 +117,8 @@ def verify_acceptance(data, output):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--data-dir', type=Path, default=ROOT / 'paper_revision' / 'data',
-                        help='Directory containing the six approved, original-byte input files')
+    parser.add_argument('--data-dir', type=Path, default=ROOT / 'paper_revision' / 'numerics' / 'inputs',
+                        help='Directory containing the six hash-verified publication input files')
     parser.add_argument('--output', type=Path, required=True, help='New or empty output directory')
     args = parser.parse_args()
     require(not sys.flags.optimize, 'Run without -O: the frozen script uses assertions')

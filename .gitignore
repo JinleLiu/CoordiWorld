@@ -7,3 +7,9 @@ reproduction.json
 models/world/reference_world.pt
 
 public_checks.json
+
+# Approved numerical inputs are installed from the separately distributed archive.
+paper_revision/numerics/
+.venv-paper/
+new_saved_output/
+new_figures/

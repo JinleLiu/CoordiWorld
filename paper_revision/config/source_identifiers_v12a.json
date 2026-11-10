@@ -1,0 +1,12 @@
+{
+  "schema": "CoordiWorld-source-identifiers-v12a",
+  "identifier_namespace": "publication aliases; raw-log execution requires explicitly supplied matching private config",
+  "identifiers": {
+    "source_scene_001": "S000647",
+    "source_scene_002": "S000830",
+    "source_scene_003": "S001082",
+    "source_scene_004": "S001214",
+    "source_scene_005": "S001296",
+    "source_scene_006": "S001946"
+  }
+}
