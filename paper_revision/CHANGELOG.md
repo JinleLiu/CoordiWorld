@@ -1,10 +1,10 @@
 # v12a publication packaging
 
-Continues reviewed commit `fda95457ab41c117d8a9eafa4c7874fb855d28fc` without rewriting it. Seven complete source files and three historical freeze copies enter the candidate; two root providers use explicit path resolution. Identifier-dependent source branches read a separate configuration. Frozen originals and historical SHA assertions remain intact.
+Continues reviewed commit `fda95457ab41c117d8a9eafa4c7874fb855d28fc` without rewriting it. Seven complete source files and three historical freeze copies are included; two root providers use explicit path resolution. Identifier-dependent source branches read a separate configuration. Frozen originals and historical SHA assertions remain intact.
 
-A minimal numerical attachment carries six saved-result inputs and seven plot data/metadata files, with source index, README and actual file pins. Stable scene/drive aliases preserve lexical order, pairing, groups and causal links. Private reverse maps remain local. The sole paper plotting implementation enters Git with only route identifier string substitutions. No numerical values, timestamps, ranking, intervals or scientific algorithms are changed.
+A minimal numerical attachment carries six saved-result inputs and seven plot data/metadata files, with source index, README and actual file pins. Stable scene/drive aliases preserve lexical order, pairing, groups and causal links. Private reverse maps remain local. The paper plotting implementation is included in Git with only route identifier string substitutions. No numerical values, timestamps, ranking, intervals or scientific algorithms are changed.
 
-One final-layout saved-result CPU run and one figure generation validate the changed packaging. Download/extraction validates the archive and every member before use. The author approved the exact Git list and numerical attachment for public distribution. A follow-up commit configures the anonymous Release URL and usage instructions; actual external verification is recorded after publication. No license is added and no model identity changes.
+One final-layout saved-result CPU run and one figure generation validate the changed packaging. Download/extraction validates the archive and every member before use. The author approved the exact Git list and numerical attachment for public distribution. A follow-up commit configures the anonymous Release URL and usage instructions; subsequent anonymous verification is recorded in the [published Release](https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-revision-v12). No license is added and no model identity changes.
 
 ## Historical v12 local candidate
 

@@ -2,6 +2,15 @@
 
 Start with `selection/` for the three small NumPy components. `SOURCE_INDEX.csv` maps every imported author source alias to its original SHA, delivered SHA, publication-copy SHA and exact local destination. Full-file source and extracted components remain distinct.
 
+| Label | Exact identity | Comparison context |
+|---|---|---|
+| C1 | `PNC_H3P_staticGuard_live_v01` | C1's own saved history in the main comparison |
+| C0 | Original `PNC_H3P` | C1 context in the conditional four-arm table; historical own-policy results remain separate |
+| S0 | Frozen Simple `A_lexicographic` | C1 context in the conditional table |
+| S1 | The same Simple with the same guard operator | S1's own saved history in the main comparison |
+
+C1 reuses the frozen world and PNC heads. Existing `models/PNC`, `models/IC0` and `models/world` retain their names and bytes. The nominal PDM proposer is rule based; the shared H3 current-profile supply depends on a learned CW shadow choice. A head-independent Simple final ranking does not make the upstream system learning free.
+
 | Module/result | Actual source | Scope |
 |---|---|---|
 | C1 final selector | [frozen_cw_selector.py](selection/frozen_cw_selector.py) | Unmodified AST extraction of original lines 89–99; only component import checked |
