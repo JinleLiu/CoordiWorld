@@ -1,0 +1,2 @@
+# Saved-result replay only; does not install world/native dependencies.
+numpy==1.26.4

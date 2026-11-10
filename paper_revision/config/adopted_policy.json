@@ -1,0 +1,30 @@
+{
+  "title": "CoordiWorld: Penalty-Coupled Utility Learning for Structured Trajectory Evaluation",
+  "role": "release identity descriptor; not a replacement for original frozen configs",
+  "methods": {
+    "C1": "PNC_H3P_staticGuard_live_v01",
+    "C0": "PNC_H3P",
+    "S0": "A_lexicographic",
+    "S1": "A_lexicographic + identical staticGuard operator"
+  },
+  "original_core_freeze_sha256": "dba76f16991ef2a22c10239c2b8909e0b6c0df89433be23257fe99843c1cf098",
+  "original_simple_freeze_sha256": "2d06e8ab413c8d42f32a2ee7fca0c2b24ad1c0d9a2735ea2463173f45a102c28",
+  "original_c1_source_sha256": "35a59a640463c0cf8e97ae6fe9ccbc2fd377d2e42a5b1702144a565f46008539",
+  "original_guard_sha256": "1540f6d783604761ca849a20c22a602d9e7de6c84bb587d08ebdf11f5059d583",
+  "simple_source_sha256": "058be83cacb762228c62b231a18d1737681f7b8503482f39095523d798389871",
+  "world_and_heads": "../../config/model_identity.json",
+  "c1_retrained_world": false,
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 170018,
+    "paired_unit": "drive",
+    "point_weight": "equal scene",
+    "absolute_tolerance": 1e-10
+  },
+  "input_accounting": {
+    "total_causal": 2919,
+    "formal": 1336,
+    "auxiliary": 1583,
+    "drives": 20
+  }
+}

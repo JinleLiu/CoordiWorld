@@ -1,0 +1,5 @@
+from revision_v5_twentyeighth_metric_capture import ActualMetricCapture
+from revision_v5_twentyeighth_w4s_agent import R18World4ScorerAgent
+def get_entry_point():return "MetricAgent"
+class MetricAgent(ActualMetricCapture,R18World4ScorerAgent):
+ pass

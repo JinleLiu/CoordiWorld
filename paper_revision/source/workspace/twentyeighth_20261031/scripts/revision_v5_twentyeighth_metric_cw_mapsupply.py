@@ -1,0 +1,4 @@
+from revision_v5_twentyeighth_cw_agent_mapsupply import CoordiWorldMapSupplyAgent
+from revision_v5_twentyeighth_metric_capture import ActualMetricCapture
+def get_entry_point():return 'CoordiWorldMapSupplyMetrics'
+class CoordiWorldMapSupplyMetrics(ActualMetricCapture,CoordiWorldMapSupplyAgent):pass

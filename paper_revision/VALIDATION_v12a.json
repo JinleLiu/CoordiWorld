@@ -1,0 +1,358 @@
+{
+  "status": "LOCAL_CHECKS_PASS_EXTERNAL_ACCESS_PENDING",
+  "cpu": {
+    "primary": {
+      "comparison": "STRATEGY_C1_minus_S1",
+      "scenes": 1336,
+      "drives": 20,
+      "scene_mean": 2.3642224659106126,
+      "drive_mean": 2.7105347012794767,
+      "drive_cluster_CI95": [
+        1.3342334425852622,
+        3.6479198659883108
+      ],
+      "positive_drives": 19,
+      "negative_drives": 1,
+      "zero_drives": 0,
+      "left_Score": 87.21473047728695,
+      "right_Score": 84.85050801137633,
+      "metrics": {
+        "rawNC": {
+          "paired_known": 1328,
+          "left_known": 1328,
+          "right_known": 1335,
+          "left_mean_known": 0.9567018072289156,
+          "right_mean_known": 0.9404494382022472,
+          "left_events": 58,
+          "right_events": 80,
+          "added": 5,
+          "repaired": 27
+        },
+        "NC": {
+          "paired_known": 1336,
+          "left_known": 1336,
+          "right_known": 1336,
+          "left_mean_known": 0.9569610778443114,
+          "right_mean_known": 0.9404940119760479,
+          "left_events": 58,
+          "right_events": 80,
+          "added": 5,
+          "repaired": 27
+        },
+        "DAC": {
+          "paired_known": 1336,
+          "left_known": 1336,
+          "right_known": 1336,
+          "left_mean_known": 0.9962574850299402,
+          "right_mean_known": 0.9955089820359282,
+          "left_events": 5,
+          "right_events": 6,
+          "added": 0,
+          "repaired": 1
+        },
+        "DDC": {
+          "paired_known": 1336,
+          "left_known": 1336,
+          "right_known": 1336,
+          "left_mean_known": 0.999625748502994,
+          "right_mean_known": 0.999625748502994,
+          "left_events": 1,
+          "right_events": 1,
+          "added": 0,
+          "repaired": 0
+        },
+        "TLC": {
+          "paired_known": 1336,
+          "left_known": 1336,
+          "right_known": 1336,
+          "left_mean_known": 0.9947604790419161,
+          "right_mean_known": 0.9940119760479041,
+          "left_events": 7,
+          "right_events": 8,
+          "added": 0,
+          "repaired": 1
+        },
+        "TTC": {
+          "paired_known": 1336,
+          "left_known": 1336,
+          "right_known": 1336,
+          "left_mean_known": 0.9468562874251497,
+          "right_mean_known": 0.9266467065868264,
+          "left_events": 71,
+          "right_events": 98,
+          "added": 6,
+          "repaired": 33
+        },
+        "LK": {
+          "paired_known": 1336,
+          "left_known": 1336,
+          "right_known": 1336,
+          "left_mean_known": 0.9872754491017964,
+          "right_mean_known": 0.9857784431137725,
+          "left_events": 17,
+          "right_events": 19,
+          "added": 3,
+          "repaired": 5
+        },
+        "HC": {
+          "paired_known": 1336,
+          "left_known": 1336,
+          "right_known": 1336,
+          "left_mean_known": 0.9648203592814372,
+          "right_mean_known": 0.9618263473053892,
+          "left_events": 47,
+          "right_events": 51,
+          "added": 2,
+          "repaired": 6
+        },
+        "EC": {
+          "paired_known": 1336,
+          "left_known": 1336,
+          "right_known": 1336,
+          "left_mean_known": 0.717814371257485,
+          "right_mean_known": 0.6931137724550899,
+          "left_events": 377,
+          "right_events": 410,
+          "added": 27,
+          "repaired": 60
+        },
+        "EP": {
+          "paired_known": 1336,
+          "left_known": 1336,
+          "right_known": 1336,
+          "left_mean_known": 0.9036657289754185,
+          "right_mean_known": 0.9011392180254393
+        }
+      }
+    },
+    "comparisons": 5,
+    "formal_scenes_per_policy": 1336,
+    "drives": 20,
+    "causal_inputs": 2919,
+    "auxiliary_inputs": 1583,
+    "event_transitions": 509,
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 170018,
+    "weighting": "equal scene; paired drive clusters",
+    "tolerance_absolute": 1e-10,
+    "full_bootstrap_runs_this_revision": 1,
+    "end_to_end_inference_verified": false,
+    "original_replay_unmodified": true
+  },
+  "figures": {
+    "full_plot_runs_this_revision": 1,
+    "original_script_sha256": "4b91eb528241c2fa07f48c9760c5f46dd8e76b791119d90e2a91f1309cca5bcf",
+    "publication_script_sha256": "884108a03985b493568c94dfb030e9e485e54bf3719935a2ac65be3df1537f3e",
+    "data_checks_identical": true,
+    "figure_parameters_equal_except_route_identifier": true,
+    "geometry_comparisons": [
+      {
+        "name": "CW_Fig3_drive_effects_v12",
+        "geometry_equal": true,
+        "text_equal_after_route_alias": true,
+        "elements": 114
+      },
+      {
+        "name": "CW_controls_brake_v12",
+        "geometry_equal": true,
+        "text_equal_after_route_alias": true,
+        "elements": 79
+      },
+      {
+        "name": "CW_controls_combined_preview_v12",
+        "geometry_equal": true,
+        "text_equal_after_route_alias": true,
+        "elements": 235
+      },
+      {
+        "name": "CW_controls_steer_v12",
+        "geometry_equal": true,
+        "text_equal_after_route_alias": true,
+        "elements": 85
+      },
+      {
+        "name": "CW_controls_throttle_v12",
+        "geometry_equal": true,
+        "text_equal_after_route_alias": true,
+        "elements": 80
+      }
+    ],
+    "dependencies": {
+      "python": "3.9.6",
+      "numpy": "1.26.4",
+      "matplotlib": "3.8.4"
+    },
+    "font": {
+      "family": "DejaVu Sans",
+      "file_basename": "DejaVuSans.ttf",
+      "from_installed_matplotlib": true
+    },
+    "visual_inspection": "PASS: all five regenerated PDF pages rendered and inspected; coordinates, labels, axes and legends legible; route alias is explicit; no clipping or overlap"
+  },
+  "packaging": {
+    "status": "PASS",
+    "local_archive_extraction": true,
+    "archive_members": 16,
+    "per_member_SHA_verification": true,
+    "tampered_archive_rejected": true,
+    "unsafe_member_rejected": true,
+    "no_unapproved_URL_used": true,
+    "identifier_config_keys": 6,
+    "explicit_roots_required": true,
+    "complete_sources_parsed": 9,
+    "complete_model_source_imported": false
+  },
+  "transformations": {
+    "status": "PASS",
+    "scene_aliases": 2924,
+    "drive_aliases": 20,
+    "route_aliases": 1,
+    "bijections": true,
+    "token_sort_order_preserved": true,
+    "drive_sort_order_preserved": true,
+    "paired_membership_preserved": true,
+    "previous_links_preserved": true,
+    "formal": 1336,
+    "auxiliary": 1583,
+    "total": 2919,
+    "train_roster_recomputed": false,
+    "numerical_field_checks": [
+      {
+        "file": "EVENT_TRANSITIONS.csv",
+        "rows": 509,
+        "row_order_preserved": true,
+        "numeric_and_missing_fields_unchanged": true
+      },
+      {
+        "file": "FOUR_ARM_CONDITIONAL.csv",
+        "rows": 5344,
+        "row_order_preserved": true,
+        "numeric_and_missing_fields_unchanged": true
+      },
+      {
+        "file": "S1_HISTORY_ACCOUNTING.csv",
+        "rows": 2919,
+        "row_order_preserved": true,
+        "numeric_and_missing_fields_unchanged": true
+      },
+      {
+        "file": "STRATEGY_PER_SCENE.csv",
+        "rows": 2672,
+        "row_order_preserved": true,
+        "numeric_and_missing_fields_unchanged": true
+      },
+      {
+        "file": "paper_assets/data/A_drive_effects_v07.csv",
+        "numeric_and_missing_fields_unchanged": true,
+        "row_order_preserved": true
+      },
+      {
+        "file": "paper_assets/data/A_drive_mapping_v07.csv",
+        "numeric_and_missing_fields_unchanged": true,
+        "row_order_preserved": true
+      },
+      {
+        "file": "paper_assets/data/A_paired_effects_v07.csv",
+        "numeric_and_missing_fields_unchanged": true,
+        "row_order_preserved": true
+      },
+      {
+        "file": "paper_assets/data/B_CASE_CONTROL_TIMELINE_v07.csv",
+        "numeric_and_missing_fields_unchanged": true,
+        "row_order_preserved": true
+      },
+      {
+        "file": "paper_assets/data/B_CASE_OUTCOMES_v07.csv",
+        "numeric_and_missing_fields_unchanged": true,
+        "row_order_preserved": true
+      },
+      {
+        "file": "paper_assets/data/B_CASE_SEALED_EPISODE_ROWS_v07.json",
+        "numeric_and_missing_fields_unchanged": true,
+        "row_order_preserved": true
+      },
+      {
+        "file": "paper_assets/data/B_CASE_WINDOW_PROVENANCE_v07.json",
+        "numeric_and_missing_fields_unchanged": true,
+        "row_order_preserved": true
+      }
+    ],
+    "source_AST_checks": [
+      {
+        "path": "paper_revision/source/A_R18-core-contribution-v05-20261106T1050/code/run_simple_own.py",
+        "complete_original_AST_restored": true,
+        "replaced_identifier_literals": 1,
+        "path_wrappers": false,
+        "algorithm_branch_deletions": 0,
+        "full_model_equivalence_claim": false
+      },
+      {
+        "path": "paper_revision/source/A_R18-followup-v03-20261102T1447/code/prepare_p_own_history_manifest.py",
+        "complete_original_AST_restored": true,
+        "replaced_identifier_literals": 1,
+        "path_wrappers": false,
+        "algorithm_branch_deletions": 0,
+        "full_model_equivalence_claim": false
+      },
+      {
+        "path": "paper_revision/source/A_R18-research-20261031T1047/code/pnc_inference_input_fallback_v06.py",
+        "complete_original_AST_restored": true,
+        "replaced_identifier_literals": 1,
+        "path_wrappers": true,
+        "algorithm_branch_deletions": 0,
+        "full_model_equivalence_claim": false
+      },
+      {
+        "path": "paper_revision/source/A_R18-research-20261031T1047/code/repair_live_history_v01.py",
+        "complete_original_AST_restored": true,
+        "replaced_identifier_literals": 1,
+        "path_wrappers": false,
+        "algorithm_branch_deletions": 0,
+        "full_model_equivalence_claim": false
+      },
+      {
+        "path": "paper_revision/source/versions/ee90d05eb2c8/workspace/twentieth_20261028/scripts/revision_v5_twentieth_pool_probe.py",
+        "complete_original_AST_restored": true,
+        "replaced_identifier_literals": 2,
+        "path_wrappers": true,
+        "algorithm_branch_deletions": 0,
+        "full_model_equivalence_claim": false
+      },
+      {
+        "path": "paper_revision/source/workspace/twentieth_20261028/scripts/revision_v5_twentieth_pool_probe.py",
+        "complete_original_AST_restored": true,
+        "replaced_identifier_literals": 2,
+        "path_wrappers": false,
+        "algorithm_branch_deletions": 0,
+        "full_model_equivalence_claim": false
+      },
+      {
+        "path": "paper_revision/source/workspace/twentysecond_20261028/scripts/revision_v5_twentysecond_contact_features.py",
+        "complete_original_AST_restored": true,
+        "replaced_identifier_literals": 3,
+        "path_wrappers": false,
+        "algorithm_branch_deletions": 0,
+        "full_model_equivalence_claim": false
+      },
+      {
+        "path": "paper_revision/source/A_R18-core-contribution-v05-20261106T1050/code/experiment_common.py",
+        "complete_original_AST_restored": true,
+        "replaced_identifier_literals": 0,
+        "path_wrappers": true,
+        "algorithm_branch_deletions": 0,
+        "full_model_equivalence_claim": false
+      },
+      {
+        "path": "paper_revision/source/A_R18-research-20261031T1047/code/common_runtime.py",
+        "complete_original_AST_restored": true,
+        "replaced_identifier_literals": 0,
+        "path_wrappers": true,
+        "algorithm_branch_deletions": 0,
+        "full_model_equivalence_claim": false
+      }
+    ],
+    "plot_AST_restored_except_route_identifier": true,
+    "private_mapping_in_public_artifacts": false
+  },
+  "external_download_tested": false
+}

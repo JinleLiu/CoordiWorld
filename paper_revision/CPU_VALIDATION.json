@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "scope": "saved-result CPU recalculation and source-bound acceptance only",
+  "comparisons": 5,
+  "formal_scenes_per_policy": 1336,
+  "drives": 20,
+  "causal_inputs": 2919,
+  "auxiliary_inputs": 1583,
+  "event_transitions": 509,
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 170018,
+  "weighting": "equal scene; paired drive clusters",
+  "tolerance_absolute": 1e-10,
+  "model_inference": false,
+  "native_scoring": false,
+  "training": false,
+  "end_to_end_inference_verified": false,
+  "original_replay_unmodified": true,
+  "python": "3.9.6",
+  "numpy": "1.26.4",
+  "synthetic_smoke_passed": true,
+  "component_imports": [
+    "simple_rules",
+    "frozen_cw_selector",
+    "current_static_geometry_v01"
+  ],
+  "full_saved_recalculation_runs": 1,
+  "input_hashes": {
+    "STRATEGY_PER_SCENE.csv": "0a740c557b0338cf07fb923eb0e1fce78b574cad45b5e83cfc283fa91b9b3785",
+    "FOUR_ARM_CONDITIONAL.csv": "3ea06a7a807ef54815a5306f4ffb0878de20cfd78659ffce0e1acd6d906b0133",
+    "EVENT_TRANSITIONS.csv": "8f02debd566eb5771d55b7c101566f7cd2e0230ef030dd065278a1636717c73f",
+    "EXPECTED_COMPARISONS.json": "0514a7c0daf3260f9f0815cb9a5869d76b2e3df883d5ea3ba72e26b7b8b4d051",
+    "INPUT_SHA256.json": "f4789329cb374f5a49fd13229aa6a54a40788eec7c11b3b400b844f12cc5852f",
+    "S1_HISTORY_ACCOUNTING.csv": "be51f82fef1bce77fafe1b17d93affb7894aab3ba74ee6cffa96b13bed72363b",
+    "recompute_saved_v05.py": "8167fcb8b57ffd6d3c3c6b7bea393cc3cb14a2acf77aa9c599e14dc749030933"
+  }
+}
