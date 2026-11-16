@@ -17,5 +17,29 @@
   "external_verification": {
     "state_at_commit_creation": "Pending tag/Release publication and fresh anonymous acceptance",
     "verification_record": "Release notes and PUBLICATION_RECEIPT_v12a; local CPU success alone is not external verification"
+  },
+  "return_numerics_v01": {
+    "state_at_document_preparation": "DISTRIBUTION_APPROVAL_PENDING",
+    "distribution_approved": false,
+    "published": false,
+    "anonymous_public_acceptance": false,
+    "candidate_filename": "CoordiWorld_Return_Numerics_v01_candidate.zip",
+    "proposed_distribution_filename": "CoordiWorld_Return_Numerics_v01.zip",
+    "filename_alias_only": true,
+    "sha256": "bd032d49278bb866aa0527bd8ebc061c8a2ac6a3febd9c8d848514c7fd041278",
+    "bytes": 7243715,
+    "proposed_tag": "iotj-return-numerics-v01",
+    "published_commit": null,
+    "release_url": null,
+    "download_url": null,
+    "controlled_access_identity": null,
+    "permissions": "Not granted for the new exact file list",
+    "expires_at": null,
+    "archive_root": "CoordiWorld_Return_Numerics_v01",
+    "entrypoint": "scripts/reproduce_all.py",
+    "entrypoint_location": "inside the numerical archive, not repository root",
+    "local_saved_value_acceptance": "PASS; no public URL acceptance yet",
+    "scope": "current Table I–IV, Fig.3 pressure plots, mechanism, geometry, predecessor sensitivity and minimal H/S/V saved-value counts; no model/native/training replay",
+    "package_metadata_scope": "creation-state records retained unchanged; they do not establish later distribution approval or online verification"
   }
 }

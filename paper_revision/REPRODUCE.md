@@ -1,4 +1,55 @@
-# Recalculate saved paper results
+# Recalculate saved results by version
+
+## Unified return numerical supplement
+
+The archive is prepared and locally accepted but **not yet authorized for distribution or publicly available**. [ACCESS.json](ACCESS.json) records `return_numerics_v01`; its download and Release URLs are null until an actual channel exists. The proposed independent tag is `iotj-return-numerics-v01`. Manuscript labels such as `final-r12` are editorial versions, not aliases for the earlier repository tag `iotj-revision-v12`.
+
+Exact archive identity: 7243715 bytes, SHA-256 `bd032d49278bb866aa0527bd8ebc061c8a2ac6a3febd9c8d848514c7fd041278`. Proposed distribution filename `CoordiWorld_Return_Numerics_v01.zip` is only an alias of `CoordiWorld_Return_Numerics_v01_candidate.zip`; both designate the same unchanged bytes. Packaging-state messages inside the archive describe its creation state and do not establish subsequent permission, publication or anonymous verification. No internal manifest or scientific file is rewritten by renaming the outer ZIP.
+
+After an authorized copy is actually provided, start in the directory containing the ZIP, outside a repository checkout:
+
+```bash
+unzip CoordiWorld_Return_Numerics_v01.zip
+cd CoordiWorld_Return_Numerics_v01
+python3 -m venv ../reader_env
+../reader_env/bin/python -m pip install -r requirements.txt
+../reader_env/bin/python -I scripts/reproduce_all.py --output ../reproduced
+```
+
+If using the original candidate filename, pass that filename to `unzip`; the extracted folder is identical. The environment and output must stay outside the extracted package, and the output directory must not exist. To check only inventory and SHA identities, add `--verify-only` to the last command. There is no new repository downloader or top-level wrapper for this package.
+
+The unified entry verifies all 78 non-self outer members, including code, documentation and data; the manifest also enumerates 37 nested archive files. It stages supplied inputs, runs the existing analyzers, compares all adopted full-precision values at rtol=0 / atol=1e-10 and generates figures from the recalculated tables. All interval calculations load the sealed draw matrices. Three legacy script copies replace deterministic RNG reconstruction with saved-draw loading; the original files and exact diffs are retained in the package. No scenes, thresholds or intervals are selected again.
+
+Outputs under `../reproduced/` include:
+
+| Subdirectory | Result |
+|---|---|
+| `pressure/`, `figures/pressure_I.*`, `figures/pressure_E.*` | A0, all five A1 conditions, components/events, current Table I and Fig. 3 |
+| `policy_history/` | Original C1/S1 and conditional comparisons, current Table II |
+| `systems/` | Full system components, EP, tail and ranking outputs, current Table III |
+| `layout/mechanisms/` | All three matched-refit contrasts and diagnostics, current Table IV |
+| `history/` | B0/E2, both predecessors and comparators, components, missing denominators and interaction |
+| `layout/geometry/` | Frozen geometry strata, GP1/GP2 summary and original numerical plots |
+| `closed_loop/` | H/S/V deterministic count checks from minimal real source fields |
+
+The unchanged archive `legacy/CoordiWorld_TableI_Supplementary_Data_and_Code.zip` has a historical TableI filename and now corresponds to **Table III**. H preserves historical study/method summaries and common keys; S/V retain real episode-level projections, with S's prestart failure separate and V's six bridges excluded from 72 confirmations. No H episodes are fabricated from summary counts. These minimal inputs are present, but their new distribution permission remains pending.
+
+HistorySensitivity's original `SELECTIONS_v01.csv.bank_sha256` remains the feature-NPZ identity. The separate `history/SELECTION_BANK_VIEW_v01.csv` joins it to the true `frozen_pool` SHA. RawNC unknown values are not filled: E2/C1 known counts are 231/96/231 and E2/S1 228/96/229 (CW/GTRS/Simple), with paired support handled separately. See the package dictionary and the [table/figure map](TABLE_FIGURE_MAP.md).
+
+Local acceptance used Python 3.9.6, NumPy 1.26.4, pandas 2.2.3, Matplotlib 3.8.4, ReportLab 4.2.5 and pypdfium2 4.30.0. Pressure and geometry plotting used DejaVu Sans and Helvetica; font files are not distributed. Local arithmetic and figure checks do not establish an accessible public download or full raw-to-result inference.
+
+## Original public version: iotj-revision-v12
+
+These commands run from the **repository root** and retain their original scope. They do not generate the current common-candidate Fig. 3:
+
+```bash
+python3 -m venv .venv-paper
+.venv-paper/bin/python -m pip install -r paper_revision/requirements-cpu.txt
+.venv-paper/bin/python scripts/download_paper_inputs.py
+.venv-paper/bin/python scripts/reproduce_paper.py --output new_saved_output
+.venv-paper/bin/python -m pip install -r paper_revision/figures/requirements-figures-v12.txt
+.venv-paper/bin/python scripts/reproduce_figures.py --assets-dir paper_revision/numerics/paper_assets --output new_figures
+```
 
 Use `scripts/reproduce_paper.py --data-dir INPUT_DIRECTORY --output NEW_DIRECTORY` after installing `paper_revision/requirements-cpu.txt` in a fresh virtual environment. Python 3.9.6 and NumPy 1.26.4 were used for this local release acceptance. The original historical receipt used Python 3.12.14 / NumPy 2.3.5; the new acceptance follows the original requirement `numpy==1.26.4`.
 

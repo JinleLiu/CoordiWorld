@@ -1,32 +1,34 @@
-# Locate table and figure inputs
+# Locate current tables and figures
 
-Use the saved-result command for the two current A tables and the figure command below for the saved-data plots.
+The mappings below follow the current manuscript's LaTeX labels and content. Figure/table numbers are the checked return-manuscript numbering; manuscript identifiers such as `final-r12` do not rename the repository's `iotj-revision-v12` tag. See [access state and working directories](REPRODUCE.md) before running commands.
 
-| Paper label/asset | Input | Actual implementation | Available material |
-|---|---|---|---|
-| `tab:cw_primary` | `STRATEGY_PER_SCENE.csv` and saved event components | `replay/recompute_saved_v05.py` via top-level wrapper | Recalculated and checked |
-| `tab:cw_contrasts` | Above plus `FOUR_ARM_CONDITIONAL.csv`, original expected intervals | Same original script, five fixed comparisons | Recalculated and checked |
-| Fig. 3 | v12 plotting script and full-precision A drive/comparison inputs | Original `plot_saved_results.py`, invoked by `scripts/reproduce_figures.py` | Script in Git; data in the public numerical Release attachment |
-| Former Fig. 4 / recorded-control appendix | Original v12 script and B saved control window | Original `plot_saved_results.py`, invoked by `scripts/reproduce_figures.py` | Same plot algorithm; route identifier alias only |
-| `tab:b-closed-loop-v07`, difference table | H `all_episodes.csv` + study-specific common_keys; S `FINAL_v01.json`; V `FINAL_v01.json` | B:F0058/F0059, B:F0498 + confirmation_statistics, B:F2222 + v05_statistics | Bytes/source acquired, no new B recalculation |
-| `tab:b-h-strong-references-v07` | H saved study rows, missing official records preserved | Original H analysis and v07 exports | Historical reference; source indexed |
-| `tab:cw_public_context` | Sealed A historical baseline table | Existing baseline source bindings and A saved exports | Historical, not substituted for C1/S1 |
+## Unified return supplement
 
-For B, S has 216 confirmation rows and V has 72 confirmation rows plus six bridge rows. Do not combine H/S/V or replace strict success with Completed. The recorded-control window follows each policy's own history near first plan divergence; it is not a shared counterfactual or collision-time geometry.
+All paths in this table are relative to the extracted **`CoordiWorld_Return_Numerics_v01/` numerical package**, not the repository. Run its `scripts/reproduce_all.py`; the individual analyzers below are staged by that entry. The package's exact file list is still awaiting distribution approval.
 
-Install `paper_revision/figures/requirements-figures-v12.txt`, then run `python scripts/reproduce_figures.py --assets-dir paper_revision/numerics/paper_assets --output new_figures` from the repository. Eight external data/index pins in `figures/INPUT_SHA256.json` and the Git script pin in `figures/CODE_SHA256.json` are checked before execution. The wrapper stages the original layout and invokes the paper’s Python plotting implementation. Only the route identifier text has a publication alias; the wrapper contains no plotting logic.
+| Manuscript identity | Package inputs | Actual package implementation and output |
+|---|---|---|
+| Table I(a/b), `tab:cw_pressure_e2`; Supplement S3, Tables S4–S7 | `pressure/inputs/PER_SCENE_v01.csv`, `BOOTSTRAP_DRAWS_v01.npz`, sealed summaries and events | `scripts/pressure_saved.py`; `reproduced/pressure/` contains all A0/five-condition comparisons and components |
+| **Fig. 3**, `fig:cw_pressure` | Freshly recalculated `B_RECALCULATED_SUMMARY_v01.csv` and `B_PAIRED_COMPARISONS_v01.csv`, staged with the original plotting filenames | `scripts/plot_pressure.py`; `reproduced/figures/pressure_I.pdf` and `pressure_E.pdf`; no smoothing or new sampling |
+| Table II, `tab:cw_matched` / `tab:cw_primary` / `tab:cw_contrasts`; Supplement S2 | `policy_history/data/STRATEGY_PER_SCENE.csv`, `FOUR_ARM_CONDITIONAL.csv`, expected values and event identities | `policy_history/scripts/recompute_saved_v05.py`; original own-history and fixed-context contrasts remain distinct |
+| **Table III**, `tab:cw_public_context`; Supplement S1 | `legacy/CoordiWorld_TableI_Supplementary_Data_and_Code.zip`, preserved byte-for-byte | `scripts/systems_saved.py`; `reproduced/systems/` retains all 11 complete configurations and the separate PNC-bank diagnostic; TableI in the filename is historical |
+| Table IV, `tab:cw_mechanisms`; Supplement S4, Tables S16–S18 | `mechanisms/inputs/`, `CORE_PROTOCOL_v01.json`, sealed draw matrix and expected contrasts | `scripts/mechanisms_saved.py`; `reproduced/layout/mechanisms/CORE_RESULTS_v01.csv`; four matched-refit arms, all three contrasts, not new deployed C1 weights |
+| Section IV-B; Supplement S3.1, `sec:s_history`, Tables S8–S15 | `history/inputs/`, `SOURCE_MANIFEST_v01.json`, `SELECTION_BANK_VIEW_v01.csv` | `scripts/history_saved.py`; `reproduced/history/`; B0/E2, both common predecessors, both comparators and full components/rawNC support |
+| Section IV-F; Supplement S5, Tables S19–S22 | `geometry/attributes/`, frozen protocol, legacy system tables and draws; `geometry/expected/GEOMETRY_PRESSURE_SUMMARY_v01.csv` | `scripts/geometry_saved.py`, `scripts/plot_geometry.py`; all strata, primary summary and numerical plots in `reproduced/layout/geometry/` |
+| Supplement S6, Tables S23–S28 | `closed_loop/inputs/H_studies.json`, `S_FINAL_v01.json`, `V_FINAL_v01.json`; frozen count export | `scripts/closed_counts.py`; `reproduced/closed_loop/COUNTS_BY_SEED.csv`; H keeps summary granularity, S/V retain real episode fields |
 
-| Figure input in numerical attachment | Role |
-|---|---|
-| `A_drive_effects_v07.csv` | Saved drive effects, original row/order/values |
-| `A_drive_mapping_v07.csv` | D01–D20 display labels to stable public drive aliases |
-| `A_paired_effects_v07.csv` | Saved paired effects and intervals |
-| `B_CASE_CONTROL_TIMELINE_v07.csv` | Each policy's own recorded control sequence and time anchors |
-| `B_CASE_OUTCOMES_v07.csv` | Case outcomes; missing/failed observations retained |
-| `B_CASE_SEALED_EPISODE_ROWS_v07.json` | Sealed case metadata, paths/route alias only |
-| `B_CASE_WINDOW_PROVENANCE_v07.json` | Window definition and source provenance, paths/route alias only |
-| `SOURCE_FILES.json` | Actual publication SHA values and separate original SHA values |
+GP1 is keyed by `(margin:narrow, C1, PDM-Closed, DAC)` and GP2 by `(curvature_nonintersection:high, C1, World4Scorer-v2-lam1, LK)` in `geometry/expected/PAIRED_STATS_v01.csv`. Their primary summary retains the original **97.5%** intervals; those are distinct from the paired table's 95% intervals. GP2 remains an operational sampled-route proxy, with exact continuous-path/current-ego intersection status unverified.
 
-The final-layout acceptance used Python 3.9.6, NumPy 1.26.4, Matplotlib 3.8.4 and installed DejaVu Sans. The paper source package recorded Python 3.12.4 with the same NumPy/Matplotlib versions. Saved data, coordinates, ordering, time anchors and plotting parameters were checked; only route text is aliased. Five regenerated PDFs passed visual inspection. Font files are not distributed. PDF/SVG creation metadata and cross-environment PNG pixels need not be byte-identical.
+The original pressure data, full components, adverse changes, rawNC unknowns and negative/cross-zero mechanism outcomes remain. HistorySensitivity preserves `bank_sha256` as the candidate-feature NPZ SHA; the separate view supplies the actual frozen-pool SHA. H-main and the four ParkingExit routes remain separate; S has 216 confirmations and a separate prestart failure; V has 72 confirmations and six excluded bridges. Strict success and Completed are not interchangeable.
 
-The numerical attachment is public. See [ACCESS.json](ACCESS.json) for its URL and hash, and the [Release validation summary](https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-revision-v12) for anonymous verification. Private reverse maps are excluded.
+## Historical public plots and current supplementary use
+
+The unchanged [iotj-revision-v12 Release](https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-revision-v12) supplies the following data via `CoordiWorld_numerics_v12a.zip`. The repository's `scripts/reproduce_figures.py` invokes `paper_revision/figures/scripts/plot_saved_results.py` with its SHA-checked data.
+
+| Current content identity | Historical artifact and input | Scope |
+|---|---|---|
+| **Supplementary Fig. S1**, `fig:cw_drive_effects` (main-document reference `supp-fig:cw_drive_effects`) | `CW_Fig3_drive_effects_v12.pdf`; `A_drive_effects_v07.csv`, `A_drive_mapping_v07.csv`, `A_paired_effects_v07.csv` | Original 20-drive plot and overall C1−S1 interval. Its historical Fig3 filename is retained; it is not current main Fig. 3. |
+| Supplementary Fig. S2, `fig:cw_event_counts` / `fig:cw_paired_effects` | Manuscript composition `CW_supporting_statistics_v10.pdf`; penalty and paired-contrast values remain in the policy-history tables | Panel values are recalculated by the saved-result entry. The manuscript's composed v10 layout is not claimed as an output of the v12 plotting wrapper or the new package. |
+| Recorded-control appendix, formerly main Fig. 4 | `B_CASE_CONTROL_TIMELINE_v07.csv`, `B_CASE_OUTCOMES_v07.csv`, sealed metadata/provenance and `SOURCE_FILES.json`; original `CW_controls_*_v12` plots | Each policy's own recorded history near first plan divergence; not a shared counterfactual, collision-time geometry or a new CARLA execution. |
+
+The eight legacy data/index pins and plotting-code pin remain unchanged. The former drive/comparison figure identity remains accessible in the fixed tag's [historical map](https://github.com/JinleLiu/CoordiWorld/blob/iotj-revision-v12/paper_revision/TABLE_FIGURE_MAP.md). The new supplement does not change or relabel any frozen numerical experiment.

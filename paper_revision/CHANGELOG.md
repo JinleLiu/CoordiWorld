@@ -1,4 +1,10 @@
-# v12a publication packaging
+# Return numerical supplement (prepared; distribution pending)
+
+Adds documentation for the common-candidate main table and Fig. 3, matched-refit mechanisms, geometric strata and predecessor sensitivity. The unified archive remains byte-identical to its accepted candidate; only its proposed outer filename has an alias. Current Table III retains the historical TableI archive identity, and the old drive figure maps to Supplementary Fig. S1.
+
+The original v12 tag, numerical attachment, models, source and all scientific inputs remain unchanged. Public or controlled access and a new tag are not established by these documentation changes. See [ACCESS.json](ACCESS.json) and [version-specific commands](REPRODUCE.md).
+
+## v12a publication packaging
 
 Continues reviewed commit `fda95457ab41c117d8a9eafa4c7874fb855d28fc` without rewriting it. Seven complete source files and three historical freeze copies are included; two root providers use explicit path resolution. Identifier-dependent source branches read a separate configuration. Frozen originals and historical SHA assertions remain intact.
 
