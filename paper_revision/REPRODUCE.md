@@ -2,11 +2,11 @@
 
 ## Unified return numerical supplement
 
-The author has approved the exact archive for public distribution at the independent [iotj-return-numerics-v01 Release](https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-return-numerics-v01). Publication and fresh anonymous acceptance are in progress. [ACCESS.json](ACCESS.json) records the current state separately from historical preparation metadata. Manuscript labels such as `final-r12` are editorial versions, not aliases for the earlier repository tag `iotj-revision-v12`.
+The public [iotj-return-numerics-v01 Release](https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-return-numerics-v01) provides the author-approved exact archive. Anonymous download and fresh-environment saved-value/figure acceptance passed on 2026-11-17. [ACCESS.json](ACCESS.json) records the current state separately from historical preparation metadata. Manuscript labels such as `final-r12` are editorial versions, not aliases for the earlier repository tag `iotj-revision-v12`.
 
 Exact archive identity: 7243715 bytes, SHA-256 `bd032d49278bb866aa0527bd8ebc061c8a2ac6a3febd9c8d848514c7fd041278`. Distribution filename `CoordiWorld_Return_Numerics_v01.zip` is only an alias of `CoordiWorld_Return_Numerics_v01_candidate.zip`; both designate the same unchanged bytes. Packaging-state messages inside the archive describe its creation state and do not establish subsequent permission, publication or anonymous verification. No internal manifest or scientific file is rewritten by renaming the outer ZIP.
 
-Obtain [CoordiWorld_Return_Numerics_v01.zip](https://github.com/JinleLiu/CoordiWorld/releases/download/iotj-return-numerics-v01/CoordiWorld_Return_Numerics_v01.zip) once the Release is published. Start in the directory containing the ZIP, outside a repository checkout:
+Obtain [CoordiWorld_Return_Numerics_v01.zip](https://github.com/JinleLiu/CoordiWorld/releases/download/iotj-return-numerics-v01/CoordiWorld_Return_Numerics_v01.zip) from the public Release; no author credentials are required. Start in the directory containing the ZIP, outside a repository checkout:
 
 ```bash
 unzip CoordiWorld_Return_Numerics_v01.zip
@@ -36,7 +36,7 @@ The unchanged archive `legacy/CoordiWorld_TableI_Supplementary_Data_and_Code.zip
 
 HistorySensitivity's original `SELECTIONS_v01.csv.bank_sha256` remains the feature-NPZ identity. The separate `history/SELECTION_BANK_VIEW_v01.csv` joins it to the true `frozen_pool` SHA. RawNC unknown values are not filled: E2/C1 known counts are 231/96/231 and E2/S1 228/96/229 (CW/GTRS/Simple), with paired support handled separately. See the package dictionary and the [table/figure map](TABLE_FIGURE_MAP.md).
 
-Local acceptance used Python 3.9.6, NumPy 1.26.4, pandas 2.2.3, Matplotlib 3.8.4, ReportLab 4.2.5 and pypdfium2 4.30.0. Pressure and geometry plotting used DejaVu Sans and Helvetica; font files are not distributed. Local arithmetic and figure checks do not establish an accessible public download or full raw-to-result inference.
+Public-reader acceptance on 2026-11-17 used a fresh macOS arm64 environment: Python 3.9.6, NumPy 1.26.4, pandas 2.2.3, Matplotlib 3.8.4, ReportLab 4.2.5 and pypdfium2 4.30.0, installed from public PyPI with cache disabled. Anonymous archive size/SHA, all outer/nested member identities, saved-value arithmetic, sealed-draw replay, 36 pressure plot cells, 90 geometry plot-data rows and minimal H/S/V counts passed. The original pressure/geometry figures were generated and visually checked. DejaVu Sans and Helvetica were used; no font files are distributed. The Release records the verification scope; no full raw-to-result inference, native scoring or training was run.
 
 ## Original public version: iotj-revision-v12
 
