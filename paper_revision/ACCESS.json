@@ -20,7 +20,7 @@
   },
   "return_numerics_v01": {
     "state_at_document_preparation": "DISTRIBUTION_APPROVAL_PENDING",
-    "distribution_approved": false,
+    "distribution_approved": true,
     "published": false,
     "anonymous_public_acceptance": false,
     "candidate_filename": "CoordiWorld_Return_Numerics_v01_candidate.zip",
@@ -33,13 +33,18 @@
     "release_url": null,
     "download_url": null,
     "controlled_access_identity": null,
-    "permissions": "Not granted for the new exact file list",
+    "permissions": "Author-approved public anonymous download; no author credentials or controlled-review access required",
     "expires_at": null,
     "archive_root": "CoordiWorld_Return_Numerics_v01",
     "entrypoint": "scripts/reproduce_all.py",
     "entrypoint_location": "inside the numerical archive, not repository root",
     "local_saved_value_acceptance": "PASS; no public URL acceptance yet",
     "scope": "current Table I–IV, Fig.3 pressure plots, mechanism, geometry, predecessor sensitivity and minimal H/S/V saved-value counts; no model/native/training replay",
-    "package_metadata_scope": "creation-state records retained unchanged; they do not establish later distribution approval or online verification"
+    "package_metadata_scope": "creation-state records retained unchanged; they do not establish later distribution approval or online verification",
+    "current_status": "AUTHOR_APPROVED_PUBLICATION_IN_PROGRESS",
+    "approval_scope": "Eight reviewed Git documentation/access files plus the exact 7243715-byte archive: 79 outer and 37 nested members; access-state/link updates authorized",
+    "approved_review_commit": "e9b5374bf330102f5dcaf54d67130e892328917d",
+    "planned_release_url": "https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-return-numerics-v01",
+    "planned_download_url": "https://github.com/JinleLiu/CoordiWorld/releases/download/iotj-return-numerics-v01/CoordiWorld_Return_Numerics_v01.zip"
   }
 }

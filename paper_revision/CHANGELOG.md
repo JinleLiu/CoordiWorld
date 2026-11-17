@@ -1,8 +1,8 @@
-# Return numerical supplement (prepared; distribution pending)
+# Return numerical supplement: iotj-return-numerics-v01
 
-Adds documentation for the common-candidate main table and Fig. 3, matched-refit mechanisms, geometric strata and predecessor sensitivity. The unified archive remains byte-identical to its accepted candidate; only its proposed outer filename has an alias. Current Table III retains the historical TableI archive identity, and the old drive figure maps to Supplementary Fig. S1.
+Adds documentation for the common-candidate main table and Fig. 3, matched-refit mechanisms, geometric strata and predecessor sensitivity. The unified archive remains byte-identical to its accepted candidate; only its outer filename has an alias. Current Table III retains the historical TableI archive identity, and the old drive figure maps to Supplementary Fig. S1.
 
-The original v12 tag, numerical attachment, models, source and all scientific inputs remain unchanged. Public or controlled access and a new tag are not established by these documentation changes. See [ACCESS.json](ACCESS.json) and [version-specific commands](REPRODUCE.md).
+The original v12 tag, numerical attachment, models, source and all scientific inputs remain unchanged. The author approved the exact archive and eight documentation/access files. This independent numerical release adds no model or scientific version change; publication and fresh anonymous acceptance are tracked separately from preparation-state records. Table/figure labels and assets were checked against final-r12 without rerunning analysis for page-number changes. See [ACCESS.json](ACCESS.json) and [version-specific commands](REPRODUCE.md).
 
 ## v12a publication packaging
 

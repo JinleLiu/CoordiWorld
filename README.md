@@ -14,9 +14,9 @@ These are related protocols on an exposed cohort, not three independent test set
 
 ## Install and reproduce saved results
 
-The unified return supplement contains the current statistics and Fig. 3 entry point. Its exact file list awaits distribution approval; there is currently no public or controlled download for that supplement. [Access identity](paper_revision/ACCESS.json) and [reproduction instructions](paper_revision/REPRODUCE.md) distinguish it from the existing public version.
+The unified return supplement contains the current statistics and Fig. 3 entry point. The author has approved its exact file list for public distribution through the independent [iotj-return-numerics-v01 Release](https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-return-numerics-v01). Publication and anonymous-reader verification are in progress; consult that Release for the current availability and verification record. [Access identity](paper_revision/ACCESS.json) and [reproduction instructions](paper_revision/REPRODUCE.md) distinguish it from the existing public version.
 
-Given an approved copy of the archive, extract it and run **inside its `CoordiWorld_Return_Numerics_v01/` directory** (Python 3.9–3.12):
+After downloading `CoordiWorld_Return_Numerics_v01.zip` from that Release, extract it and run **inside its `CoordiWorld_Return_Numerics_v01/` directory** (Python 3.9–3.12):
 
 ```bash
 python3 -m venv ../reader_env

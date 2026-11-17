@@ -2,11 +2,11 @@
 
 ## Unified return numerical supplement
 
-The archive is prepared and locally accepted but **not yet authorized for distribution or publicly available**. [ACCESS.json](ACCESS.json) records `return_numerics_v01`; its download and Release URLs are null until an actual channel exists. The proposed independent tag is `iotj-return-numerics-v01`. Manuscript labels such as `final-r12` are editorial versions, not aliases for the earlier repository tag `iotj-revision-v12`.
+The author has approved the exact archive for public distribution at the independent [iotj-return-numerics-v01 Release](https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-return-numerics-v01). Publication and fresh anonymous acceptance are in progress. [ACCESS.json](ACCESS.json) records the current state separately from historical preparation metadata. Manuscript labels such as `final-r12` are editorial versions, not aliases for the earlier repository tag `iotj-revision-v12`.
 
-Exact archive identity: 7243715 bytes, SHA-256 `bd032d49278bb866aa0527bd8ebc061c8a2ac6a3febd9c8d848514c7fd041278`. Proposed distribution filename `CoordiWorld_Return_Numerics_v01.zip` is only an alias of `CoordiWorld_Return_Numerics_v01_candidate.zip`; both designate the same unchanged bytes. Packaging-state messages inside the archive describe its creation state and do not establish subsequent permission, publication or anonymous verification. No internal manifest or scientific file is rewritten by renaming the outer ZIP.
+Exact archive identity: 7243715 bytes, SHA-256 `bd032d49278bb866aa0527bd8ebc061c8a2ac6a3febd9c8d848514c7fd041278`. Distribution filename `CoordiWorld_Return_Numerics_v01.zip` is only an alias of `CoordiWorld_Return_Numerics_v01_candidate.zip`; both designate the same unchanged bytes. Packaging-state messages inside the archive describe its creation state and do not establish subsequent permission, publication or anonymous verification. No internal manifest or scientific file is rewritten by renaming the outer ZIP.
 
-After an authorized copy is actually provided, start in the directory containing the ZIP, outside a repository checkout:
+Obtain [CoordiWorld_Return_Numerics_v01.zip](https://github.com/JinleLiu/CoordiWorld/releases/download/iotj-return-numerics-v01/CoordiWorld_Return_Numerics_v01.zip) once the Release is published. Start in the directory containing the ZIP, outside a repository checkout:
 
 ```bash
 unzip CoordiWorld_Return_Numerics_v01.zip
@@ -32,7 +32,7 @@ Outputs under `../reproduced/` include:
 | `layout/geometry/` | Frozen geometry strata, GP1/GP2 summary and original numerical plots |
 | `closed_loop/` | H/S/V deterministic count checks from minimal real source fields |
 
-The unchanged archive `legacy/CoordiWorld_TableI_Supplementary_Data_and_Code.zip` has a historical TableI filename and now corresponds to **Table III**. H preserves historical study/method summaries and common keys; S/V retain real episode-level projections, with S's prestart failure separate and V's six bridges excluded from 72 confirmations. No H episodes are fabricated from summary counts. These minimal inputs are present, but their new distribution permission remains pending.
+The unchanged archive `legacy/CoordiWorld_TableI_Supplementary_Data_and_Code.zip` has a historical TableI filename and now corresponds to **Table III**. H preserves historical study/method summaries and common keys; S/V retain real episode-level projections, with S's prestart failure separate and V's six bridges excluded from 72 confirmations. No H episodes are fabricated from summary counts. The exact minimal inputs are included in the author-approved public archive; this approval does not extend to full raw traces or external assets.
 
 HistorySensitivity's original `SELECTIONS_v01.csv.bank_sha256` remains the feature-NPZ identity. The separate `history/SELECTION_BANK_VIEW_v01.csv` joins it to the true `frozen_pool` SHA. RawNC unknown values are not filled: E2/C1 known counts are 231/96/231 and E2/S1 228/96/229 (CW/GTRS/Simple), with paired support handled separately. See the package dictionary and the [table/figure map](TABLE_FIGURE_MAP.md).
 

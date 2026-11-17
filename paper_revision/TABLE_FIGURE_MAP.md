@@ -1,10 +1,10 @@
 # Locate current tables and figures
 
-The mappings below follow the current manuscript's LaTeX labels and content. Figure/table numbers are the checked return-manuscript numbering; manuscript identifiers such as `final-r12` do not rename the repository's `iotj-revision-v12` tag. See [access state and working directories](REPRODUCE.md) before running commands.
+The mappings below were checked against the effective final-r12 LaTeX sources and their actual asset paths. Figure/table numbers are the checked return-manuscript numbering; manuscript identifiers such as `final-r12` do not rename the repository's `iotj-revision-v12` tag. See [access state and working directories](REPRODUCE.md) before running commands.
 
 ## Unified return supplement
 
-All paths in this table are relative to the extracted **`CoordiWorld_Return_Numerics_v01/` numerical package**, not the repository. Run its `scripts/reproduce_all.py`; the individual analyzers below are staged by that entry. The package's exact file list is still awaiting distribution approval.
+All paths in this table are relative to the extracted **`CoordiWorld_Return_Numerics_v01/` numerical package**, not the repository. Run its `scripts/reproduce_all.py`; the individual analyzers below are staged by that entry. The exact package file list is approved for public distribution; see ACCESS.json and the independent Release for availability and anonymous verification.
 
 | Manuscript identity | Package inputs | Actual package implementation and output |
 |---|---|---|
