@@ -4,7 +4,7 @@ The mappings below were checked against the effective final-r12 LaTeX sources an
 
 ## Unified return supplement
 
-All paths in this table are relative to the extracted **`CoordiWorld_Return_Numerics_v01/` numerical package**, not the repository. Run its `scripts/reproduce_all.py`; the individual analyzers below are staged by that entry. The exact package file list is approved for public distribution; see ACCESS.json and the independent Release for availability and anonymous verification.
+All paths in this table are relative to the extracted **`CoordiWorld_Return_Numerics_v01/` numerical package**, not the repository. Run its `scripts/reproduce_all.py`; the individual analyzers below are staged by that entry. The exact package is public and passed fresh anonymous saved-value/figure acceptance on 2026-11-17; see ACCESS.json and the independent Release.
 
 | Manuscript identity | Package inputs | Actual package implementation and output |
 |---|---|---|

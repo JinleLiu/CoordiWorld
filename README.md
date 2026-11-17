@@ -14,7 +14,7 @@ These are related protocols on an exposed cohort, not three independent test set
 
 ## Install and reproduce saved results
 
-The unified return supplement contains the current statistics and Fig. 3 entry point. The author has approved its exact file list for public distribution through the independent [iotj-return-numerics-v01 Release](https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-return-numerics-v01). Publication and anonymous-reader verification are in progress; consult that Release for the current availability and verification record. [Access identity](paper_revision/ACCESS.json) and [reproduction instructions](paper_revision/REPRODUCE.md) distinguish it from the existing public version.
+The unified return supplement contains the current statistics and Fig. 3 entry point. Download the public [iotj-return-numerics-v01 Release](https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-return-numerics-v01) attachment `CoordiWorld_Return_Numerics_v01.zip`. Anonymous download and saved-result/figure acceptance passed on 2026-11-17. [Access identity](paper_revision/ACCESS.json) and [reproduction instructions](paper_revision/REPRODUCE.md) distinguish it from the existing public version.
 
 After downloading `CoordiWorld_Return_Numerics_v01.zip` from that Release, extract it and run **inside its `CoordiWorld_Return_Numerics_v01/` directory** (Python 3.9–3.12):
 
@@ -24,7 +24,7 @@ python3 -m venv ../reader_env
 ../reader_env/bin/python -I scripts/reproduce_all.py --output ../reproduced
 ```
 
-Keep the environment and new output directory outside the package. `scripts/reproduce_all.py` belongs to the numerical package, not this repository root. It verifies the manifest, recalculates saved values using frozen draws and runs the original pressure/geometry plotting scripts. The supplement passed local reader acceptance; public-URL acceptance has not occurred.
+Keep the environment and new output directory outside the package. `scripts/reproduce_all.py` belongs to the numerical package, not this repository root. It verifies the manifest, recalculates saved values using frozen draws and runs the original pressure/geometry plotting scripts. The published archive passed fresh-environment acceptance without author credentials; full-precision checks use rtol=0, atol=1e-10.
 
 The fixed [iotj-revision-v12 Release](https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-revision-v12) remains public and unchanged. Its repository-root commands reproduce the original policy-history/conditional results and historical plots; see [legacy commands](paper_revision/REPRODUCE.md#original-public-version-iotj-revision-v12). Saved-result checks do not reproduce model inference, native scoring, simulation or training; those require the [external assets and environments](paper_revision/DATA_MODELS.md).
 
