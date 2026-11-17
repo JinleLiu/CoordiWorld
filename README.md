@@ -1,50 +1,35 @@
 # CoordiWorld: Penalty-Coupled Utility Learning for Structured Trajectory Evaluation
 
-CoordiWorld evaluates structured candidate trajectories using a frozen factual predictor, six learned readout heads, a four-moment projection and candidate eligibility rules. The current paper policy, **C1 (`PNC_H3P_staticGuard_live_v01`)**, adds a current-only stopped-vehicle guard to PNC_H3P; it reuses the frozen world model and readout heads.
+CoordiWorld evaluates structured trajectories using a frozen factual predictor, six learned readout heads, a four-moment projection and candidate eligibility rules. The deployed **C1 (`PNC_H3P_staticGuard_live_v01`)** adds a current-only stopped-vehicle guard to PNC_H3P and reuses its frozen models. S1 is the frozen Simple `A_lexicographic` selector with the same guard. See the [method–code map](paper_revision/METHOD_CODE.md) for C0/S0, learned upstream dependencies and the separate matched-refit arms.
 
-The main comparison is C1 versus **S1**, the frozen Simple `A_lexicographic` rule with the same guard, each using its own saved history. The nominal PDM proposer is rule based; shared H3 supply depends on a learned CW shadow choice. See the [method and policy identities](paper_revision/METHOD_CODE.md) for C0/S0 and implementation details.
+## Key results
 
-## Environment and quick start
+| Protocol and predecessor | Scenes / drives | Score difference | Paired-drive 95% CI |
+|---|---:|---:|---:|
+| Original shared proposal pipeline; each policy propagates its own history: C1 − S1 | 1,336 / 20 | +2.36 | [1.33, 3.65] |
+| External common E2 candidates; common recorded C1 predecessor: CW − GTRS | 232 / 20 | +9.16 | [5.41, 13.00] |
+| The same 232 scenes and fixed E2 candidates; common recorded S1 predecessor: CW − GTRS | 232 / 20 | +8.51 | [5.00, 12.19] |
 
-Use Python 3.9–3.12 with the pinned requirements. From a checkout of this repository:
+These are related protocols on an exposed cohort, not three independent test sets or complete-system SOTA comparisons. The predecessor-source interaction is −0.65 [−2.01, 0.80]; it does not establish equivalence. Current **Fig. 3** shows common-candidate expansion; the earlier drive-effect figure is **Supplementary Fig. S1**. [Table/figure mapping](paper_revision/TABLE_FIGURE_MAP.md) locates all four main tables, mechanism, geometry and sensitivity results.
 
-```bash
-python3 -m venv .venv-paper
-.venv-paper/bin/python -m pip install -r paper_revision/requirements-cpu.txt
-.venv-paper/bin/python scripts/download_paper_inputs.py
-```
+## Install and reproduce saved results
 
-The downloader retrieves the public [numerical attachment](https://github.com/JinleLiu/CoordiWorld/releases/download/iotj-revision-v12/CoordiWorld_numerics_v12a.zip), checks its SHA and every member, and installs inputs under `paper_revision/numerics/`. No author credentials are required. [Manual installation and model access](paper_revision/DATA_MODELS.md) are also available. The fixed paper version is [iotj-revision-v12](https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-revision-v12).
+The unified return supplement contains the current statistics and Fig. 3 entry point. The author has approved its exact file list for public distribution through the independent [iotj-return-numerics-v01 Release](https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-return-numerics-v01). Publication and anonymous-reader verification are in progress; consult that Release for the current availability and verification record. [Access identity](paper_revision/ACCESS.json) and [reproduction instructions](paper_revision/REPRODUCE.md) distinguish it from the existing public version.
 
-## Main result
-
-On the exposed 1,336-scene / 20-drive cohort under the frozen non-reactive protocol:
-
-| C1 score | S1 score | C1 − S1 | Paired drive-cluster 95% CI |
-|---:|---:|---:|---:|
-| 87.21 | 84.85 | +2.36 | [1.33, 3.65] |
-
-The comparison uses 10,000 paired drive-cluster resamples, seed 170018, and equal scene weighting; 19 drive means are positive and one is negative. This is an evaluation-layer comparison on shared learned supply in this cohort. Full-precision results, event transitions, missing denominators and all five frozen comparisons are retained in the numerical inputs and recalculation output.
-
-## Recalculate statistics and generate figures
+After downloading `CoordiWorld_Return_Numerics_v01.zip` from that Release, extract it and run **inside its `CoordiWorld_Return_Numerics_v01/` directory** (Python 3.9–3.12):
 
 ```bash
-.venv-paper/bin/python scripts/reproduce_paper.py --output new_saved_output
-.venv-paper/bin/python -m pip install -r paper_revision/figures/requirements-figures-v12.txt
-.venv-paper/bin/python scripts/reproduce_figures.py --assets-dir paper_revision/numerics/paper_assets --output new_figures
+python3 -m venv ../reader_env
+../reader_env/bin/python -m pip install -r requirements.txt
+../reader_env/bin/python -I scripts/reproduce_all.py --output ../reproduced
 ```
 
-Use new output directories. The commands verify input and script identities, then run the saved-result calculation and the paper's Python plotting implementation. See [recalculation details](paper_revision/REPRODUCE.md) and the [table/figure input map](paper_revision/TABLE_FIGURE_MAP.md).
+Keep the environment and new output directory outside the package. `scripts/reproduce_all.py` belongs to the numerical package, not this repository root. It verifies the manifest, recalculates saved values using frozen draws and runs the original pressure/geometry plotting scripts. The supplement passed local reader acceptance; public-URL acceptance has not occurred.
 
-**Verified scope:** anonymous acquisition, saved-result CPU recalculation and figure generation passed for the published tag; the [Release validation summary](https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-revision-v12) records the environment and results. Full raw-data-to-inference, native scoring and training still require external assets and compatible environments and have not been validated end to end. [Execution scope and scientific limits](paper_revision/SCOPE.md) describe those distinctions.
+The fixed [iotj-revision-v12 Release](https://github.com/JinleLiu/CoordiWorld/releases/tag/iotj-revision-v12) remains public and unchanged. Its repository-root commands reproduce the original policy-history/conditional results and historical plots; see [legacy commands](paper_revision/REPRODUCE.md#original-public-version-iotj-revision-v12). Saved-result checks do not reproduce model inference, native scoring, simulation or training; those require the [external assets and environments](paper_revision/DATA_MODELS.md).
 
-## Documentation
+## Documentation, citation and terms
 
-- [Method–code map](paper_revision/METHOD_CODE.md), [source identities](paper_revision/SOURCE_INDEX.csv) and [path/identifier transformations](paper_revision/PUBLICATION_TRANSFORMS.md).
-- [Data, models and dependencies](paper_revision/DATA_MODELS.md), including the existing synthetic model-integrity test; [download identity](paper_revision/ACCESS.json).
-- [Detailed reproduction](paper_revision/REPRODUCE.md) and [table/figure sources](paper_revision/TABLE_FIGURE_MAP.md).
-- [Version changes](paper_revision/CHANGELOG.md) and [historical methods and results](paper_revision/history/INDEX.md), including separate H/S/V evidence.
+[Method and source identities](paper_revision/METHOD_CODE.md) · [table/figure inputs](paper_revision/TABLE_FIGURE_MAP.md) · [data and models](paper_revision/DATA_MODELS.md) · [validation scope](paper_revision/SCOPE.md) · [version changes](paper_revision/CHANGELOG.md) · [historical results](paper_revision/history/INDEX.md).
 
-## Citation and licenses
-
-Use the [manuscript and software citation](CITATION.md). Existing [license files](LICENSES/) and [third-party notices](THIRD_PARTY_NOTICES.md) apply; consult the [data/model access conditions](paper_revision/DATA_MODELS.md) for external assets.
+Use the [manuscript/software citation](CITATION.md). Existing [license files](LICENSES/) and [third-party notices](THIRD_PARTY_NOTICES.md) remain applicable; no new license is assigned.
